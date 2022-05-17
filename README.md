@@ -2,7 +2,7 @@
 
 <img src="./img/Finder.PNG" alt="ICarros-Front">
 
-> Site com modelo E-Commerce para busca, compra e venda do setor automobilístico, desenvolvido para o projeto final do programa Acelera Icarros_Tech - Gama Academy.
+> Site E-Commerce para compra e venda do setor automobilístico, desenvolvido para o projeto final do programa Acelera Icarros_Tech - Gama Academy.
 
 ### Ajustes e melhorias
 
@@ -35,7 +35,7 @@ Pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/LZagatto">
+      <a href="https://github.com/LZagatto" target="_blank">
         <img src="./img/leoZagatto.png" width="100px;" alt="Foto do Leonardo Zagatto no GitHub"/><br>
         <sub>
           <b>Leonardo Zagatto</b>
@@ -43,7 +43,7 @@ Pessoas que contribuíram para este projeto:
       </a>
     </td>
 	<td align="center">
-      <a href="https://github.com/thaysouza">
+      <a href="https://github.com/thaysouza" target="_blank">
         <img src="./img/thay.jpg" width="100px;" alt="Foto da Tayane Souza no GitHub"/><br>
         <sub>
           <b>Tayane Souza</b>
@@ -51,7 +51,7 @@ Pessoas que contribuíram para este projeto:
       </a>
     </td>
 	<td align="center">
-      <a href="https://github.com/vivianebresolin">
+      <a href="https://github.com/vivianebresolin" target="_blank">
         <img src="./img/viviane.jpg" width="100px;" alt="Foto da Viviane Bresolin no GitHub"/><br>
         <sub>
           <b>Viviane Bresolin</b>
@@ -59,7 +59,7 @@ Pessoas que contribuíram para este projeto:
       </a>
     </td>
 	<td align="center">
-      <a href="https://github.com/leorangel">
+      <a href="https://github.com/leorangel" target="_blank">
         <img src="./img/leandro.jpg" width="100px;" alt="Foto do Leandro Rangel no GitHub"/><br>
         <sub>
           <b>Leandro Rangel</b>
@@ -67,7 +67,7 @@ Pessoas que contribuíram para este projeto:
       </a>
     </td>
 	<td align="center">
-      <a href="https://github.com/8bitsL">
+      <a href="https://github.com/8bitsL" target="_blank">
         <img src="./img/leoFernandes.jpg" width="100px;" alt="Foto do Leonardo Fernandes no GitHub"/><br>
         <sub>
           <b>Leonardo Fernandes</b>
