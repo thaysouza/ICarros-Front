@@ -1,0 +1,31 @@
+/* HEADER INICIO */
+
+#primaryNav{
+	margin-top: 20px;
+}
+.menuFinder{
+	display: flex;
+}
+
+.menuLogo{
+	margin-right: 30px;
+}
+
+.menu ul{
+	display: flex;
+	flex-direction: row;
+}
+
+.menu ul li{
+	margin: 0 7px 0 0;
+}
+
+.menuLogin{
+	border: solid 1px red;
+}
+
+.menuLogin :nth-child(1){
+	margin-right: 15px;
+}
+
+/* HEADER FIM */
