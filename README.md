@@ -1,18 +1,18 @@
 # ICarros-Front
 
-<img src="./img/frontPage.PNG" alt="ICarros-Front">
+<img src="./img/Finder.PNG" alt="ICarros-Front">
 
-> Ferramenta de criação automática de email para empresas.
+> Site com modelo E-Commerce para busca, compra e venda do setor automobilístico, desenvolvido para o projeto final do programa Acelera Icarros_Tech - Gama Academy.
 
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [ ] Tarefa 1 - Responsividade
-- [ ] Tarefa 2 - Correções de bugs visuais
-- [ ] Tarefa 3 - Adicionar código fonte em tela para o usuário
-- [ ] Tarefa 4 - Opção para configurar o domínio do email
-- [ ] Tarefa 5 - Opção para adicionar arquivo com a lista de nomes dos usuários
+- [ ] Tarefa 1 - Criar estrutura básica do Projeto
+- [ ] Tarefa 2 - Estilização do site (CSS3)
+- [ ] Tarefa 3 - Hospedar projeto na plataforma Vercel
+- [ ] Tarefa 4 - Responsividade
+- [ ] Tarefa 5 - Outros...
 
 
 ## 💻 Pré-requisitos
@@ -25,7 +25,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 ## Site
 
-Se deseja visualizar o modelo do site em funcionamento <a  href="https://test-mailtool.netlify.app/index.html" target="_blank">clique aqui </a>!
+Se deseja visualizar o modelo do site em funcionamento <a  href="#" target="_blank">clique aqui </a>!
 
 
 ## 🤝 Colaboradores
@@ -35,18 +35,42 @@ Pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
-        <img src="./img/profile.png" width="100px;" alt="Foto do Leonardo Zagatto no GitHub"/><br>
+      <a href="https://github.com/LZagatto">
+        <img src="./img/leoZagatto.png" width="100px;" alt="Foto do Leonardo Zagatto no GitHub"/><br>
         <sub>
           <b>Leonardo Zagatto</b>
         </sub>
       </a>
     </td>
 	<td align="center">
-      <a href="#">
-        <img src="./img/profile.png" width="100px;" alt="Foto da Tayane Souza no GitHub"/><br>
+      <a href="https://github.com/thaysouza">
+        <img src="./img/thay.jpg" width="100px;" alt="Foto da Tayane Souza no GitHub"/><br>
         <sub>
           <b>Tayane Souza</b>
+        </sub>
+      </a>
+    </td>
+	<td align="center">
+      <a href="https://github.com/vivianebresolin">
+        <img src="./img/viviane.jpg" width="100px;" alt="Foto da Viviane Bresolin no GitHub"/><br>
+        <sub>
+          <b>Viviane Bresolin</b>
+        </sub>
+      </a>
+    </td>
+	<td align="center">
+      <a href="https://github.com/leorangel">
+        <img src="./img/leandro.jpg" width="100px;" alt="Foto do Leandro Rangel no GitHub"/><br>
+        <sub>
+          <b>Leandro Rangel</b>
+        </sub>
+      </a>
+    </td>
+	<td align="center">
+      <a href="https://github.com/8bitsL">
+        <img src="./img/leoFernandes.jpg" width="100px;" alt="Foto do Leonardo Fernandes no GitHub"/><br>
+        <sub>
+          <b>Leonardo Fernandes</b>
         </sub>
       </a>
     </td>
