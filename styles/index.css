@@ -5,27 +5,44 @@
 }
 .menuFinder{
 	display: flex;
+	align-items: baseline;
 }
 
 .menuLogo{
-	margin-right: 30px;
+	margin-right: 50px;
+}
+.menuLogo p{
+	font-size: 26px;
+	font-weight: 400;
 }
 
 .menu ul{
 	display: flex;
-	flex-direction: row;
+	font-weight: 300;
+}
+
+.menu ul :nth-child(1){
+	opacity: 20%;
+    margin-right: 15px;
 }
 
 .menu ul li{
-	margin: 0 7px 0 0;
+	margin: 0 25px 0 0;
+	cursor: pointer;
 }
 
 .menuLogin{
-	border: solid 1px red;
+	font-weight: 300;
 }
 
 .menuLogin :nth-child(1){
 	margin-right: 15px;
+}
+
+#sellButton{
+	padding: 10px 30px;
+	border-radius: 5px;
+	background: var(--primary-color);
 }
 
 /* HEADER FIM */

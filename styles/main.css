@@ -19,12 +19,15 @@
 	padding: 0;
 	box-sizing: border-box;
 	list-style: none;
-	font-family: 'Noto-Sans';
+	font-family: 'Noto Sans', 'sans-serif';
+	color: #FFF;
+	background: #1F1B2D;
 }
 
 .container{
 	display: flex;
 	justify-content: space-around;
+	align-items: baseline;
 	width: 100%;
 	max-width: 1200px;
 	margin: auto;
