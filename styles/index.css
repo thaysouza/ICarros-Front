@@ -3,6 +3,7 @@
 #primaryNav{
 	margin-top: 20px;
 }
+
 .menuFinder{
 	display: flex;
 	align-items: baseline;
@@ -10,6 +11,18 @@
 
 .menuLogo{
 	margin-right: 50px;
+	position: relative;
+}
+
+.menuLogo i{
+	position: absolute;
+    top: 8px;
+    left: -30px;
+    padding: 1px 3px 1px 3px;
+    border-radius: 50%;
+    font-size: 20px;
+	cursor: pointer;
+    background: var(--primary-color);
 }
 .menuLogo p{
 	font-size: 26px;
@@ -31,18 +44,17 @@
 	cursor: pointer;
 }
 
-.menuLogin{
-	font-weight: 300;
-}
-
 .menuLogin :nth-child(1){
 	margin-right: 15px;
+	font-weight: 300;
+	font-style: normal;
 }
 
-#sellButton{
+#sellButton i{
 	padding: 10px 30px;
 	border-radius: 5px;
 	background: var(--primary-color);
+	font-weight: 400;
 }
 
 /* HEADER FIM */
