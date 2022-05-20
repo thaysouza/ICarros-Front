@@ -1,7 +1,10 @@
 /* HEADER INICIO */
 
-#primaryNav{
+#navHeader .container{
 	margin-top: 20px;
+	align-items: baseline;
+	justify-content: space-between;
+	align-items: baseline;
 }
 
 .menuFinder{
