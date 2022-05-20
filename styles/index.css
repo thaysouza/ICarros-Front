@@ -61,3 +61,147 @@
 }
 
 /* HEADER FIM */
+
+/* FOOTER INICIO */
+.link-content-head{
+	display: flex;
+  justify-content:space-around;
+  align-items: center;
+	margin: 0 0 20px 0;
+	padding-bottom: 20px;
+}
+
+/* divider */
+.divider{
+	position: absolute;
+	height: 0px;
+	left: 0%;
+	right: 0%;
+	top: 130px;
+	opacity: 0.15;
+	border: 1px solid #FFFFFF;
+}
+
+
+.link-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+	margin: 0 20vh 0 20vh;
+}
+
+.footer-links-news{
+	display: grid;
+  text-align: left;
+	height: 142px;
+
+}
+
+.footer-links-news a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.footer-links-news a:hover{
+  color: rgba(131, 131, 131, 0.933)
+}
+
+.footer-links-mid{
+	display: grid;
+  text-align: left;
+	margin: 50px ;
+	top: 0%;
+	height: 142px;
+}
+
+.footer-links-mid a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.footer-links-mid a:hover{
+  color: rgba(131, 131, 131, 0.933)
+}
+
+.footer-links{
+  display: grid;
+  text-align: left;
+}
+
+.footer-links a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.footer-links a:hover{
+  color: rgba(131, 131, 131, 0.933)
+}
+
+.footer-links-adress{
+	display: grid;
+  text-align: left;
+	height: 142px;
+}
+
+.footer-links-adress a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.footer-links-adress a:hover{
+  color: rgba(131, 131, 131, 0.933)
+}
+
+.footer-links-adress button{
+  width: 32px;
+	height: 32px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 12px -6px rgba(31, 27, 45, 0.2), 0px 8px 16px rgba(31, 27, 45, 0.16);
+	border-radius: 50%;
+}
+
+footer{
+	height: 458px;
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+	background: linear-gradient(0deg, rgba(69, 64, 86, 0.2), rgba(69, 64, 86, 0.2)), #1F1B2D;
+}
+
+.form-footer {
+  display:flex;
+  flex-direction:row;
+  background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 8px;
+  padding:2px;
+	width: 306px;
+	height: 42px;
+	left: 312px;
+	top: 223px;
+}
+
+.input-footer {
+  flex-grow:2;
+	border:none;
+	background: rgba(255, 255, 255, 0.04);
+	color: #fff;
+}
+
+.form-footer input:focus {
+  outline: none;
+}
+
+.button-footer {
+width: 36px;
+height: 36px;
+border:none;
+background: #FD5631;
+border-radius: 6px;
+}
+
+/* FOOTER FIM */
