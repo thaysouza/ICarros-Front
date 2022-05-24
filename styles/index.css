@@ -62,6 +62,75 @@
 
 /* HEADER FIM */
 
+/* section blog INICIO */
+
+.section-default{
+  height: 50vh;
+}
+
+.center-content{
+  display: flex;
+  justify-content:space-between;
+}
+
+.orange-bg--section{
+  background-color: #ff6300;
+  color: #fff;
+}
+
+.img-content{
+	width: 100%;
+	height: 200px;
+	border-radius: 12px;
+}
+
+.img-content-perfil{
+	width: 44px;
+	height: 44px;
+	border-radius: 50px;
+}
+
+.card-blog{
+width: 370px;
+height: 200px;
+}
+
+.card-blog-perfil{
+	width: 200px;
+	display: inline-flex;
+	margin-top: 15px ;
+}
+
+.card-blog-perfil div{
+ margin-left: 15px;
+}
+
+.card-date{
+font-size: 12px;
+margin-top: 5px;
+}
+
+.link-blog1{
+margin: 5px 0px;
+color: #FD5631;
+}
+
+.link-blog2{
+	margin: 3px 0px;
+	opacity: 0.7;
+}
+
+.main-blog{
+	margin: 25px 0px;
+	text-align: center;
+}
+
+.linkable-blog{
+	cursor: pointer;
+}
+
+/* section blog FIM */
+
 /* FOOTER INICIO */
 footer h3{
 	margin-bottom: 10px;
@@ -78,6 +147,8 @@ footer a{
 
 .p-footer{
 font-size: 15px;
+opacity: 0.5;
+
 }
 
 .container-footer {
@@ -91,7 +162,6 @@ font-size: 15px;
 	margin-bottom: 30px;
 }
 
-/*nao utilizado*/
 .link-content-head{
 	margin-top: -25px;
 	margin-bottom: 40px;
@@ -102,11 +172,10 @@ font-size: 15px;
 	height: 0px;
 	left: 0%;
 	right: 0%;
-	top: 130px;
 	opacity: 0.15;
 	border: 1px solid #FFFFFF;
+	margin-top: 60px;
 }
-
 
 .link-content{
   display: flex;
@@ -196,7 +265,7 @@ font-size: 15px;
 .footer-links-adress button{
   width: 32px;
 	height: 32px;
-	background: #FFFFFF;
+	background: rgba(255, 255, 255, 0.04);;
 	box-shadow: 0px 4px 12px -6px rgba(31, 27, 45, 0.2), 0px 8px 16px rgba(31, 27, 45, 0.16);
 	border-radius: 50%;
 }
@@ -245,11 +314,9 @@ border-radius: 6px;
 	border:none;
 	border-radius: 50px;
 	background: rgba(255, 255, 255, 0.04);
-	opacity: 0.5;
 }
 .link-button:last-child{
 	background: #fff;
-	opacity: 1;
 }
 
 .mail-footer{
@@ -259,9 +326,34 @@ font-size: 15px;
 .bi-messenger{
 color: #FD5631;
 }
-.bi{
-	
-	z-index: 333;
+i .bi-telegram .bi-twitter .bi-facebook {
+	color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 70px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+	border-radius: 10%;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .dropdown-links:hover{
+	color: #000000;
+	opacity: 1;
 }
 
 /* FOOTER FIM */
