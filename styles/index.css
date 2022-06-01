@@ -63,12 +63,10 @@
 
 .initial {
 	display: flex;
-	height: 30vh;
+	/* height: 30vh; */
 	width: 100%;
 	margin-top: 120px;
 }
-
-.textHeader {}
 
 .textHeader h1 {
 	font-size: 56px;
