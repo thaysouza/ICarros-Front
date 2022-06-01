@@ -101,6 +101,7 @@
 /* HEADER FIM */
 
 
+
 /* SECTION HEADER - START */
 
 .sectionHeader {
@@ -500,3 +501,112 @@
 }
 
 /* CAR CARDS (VERTICAL AND HORIZONTAL) - END */
+
+
+
+/* SECTION O QUE TEMOS DE DIFERENTE - INÍCIO */
+
+.cardsInfo{
+	display: flex;
+    justify-content:space-between;
+	padding: 15px 80px;
+	height: 85vh;
+}
+
+.titleCard, .titleCardTwo{
+	height: 10%;
+}
+
+.containerCardAll{
+	width: 40%;
+}
+
+.containerCard{
+	height: 80%;
+	text-align: end;
+}
+
+.infoCard, .infoCardTwo{
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 40px 0;
+}
+ 
+
+.infoCard h1, .infoCardTwo h1{
+	font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.infoCard p{
+	font-weight: 300;
+	font-size: 14px;
+	padding: 5px 0 0 60px;
+	text-align: right;
+}
+
+.infoCard .iconeCard{
+	margin-top: 2px;
+	padding-left:10px;
+}
+
+
+.containerCar{
+	width: 10%;
+	display: flex;
+	flex-direction: column;
+}
+
+.imgCar{
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+}
+
+.imgCar img{
+	width: 300px;
+}
+
+.imgLine{
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+}
+
+.titleCardTwo{
+    display: flex;
+	font-size: 10px;
+	justify-content: end;
+}
+
+.titleCardTwo h1{
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: 300;
+}
+
+.infoCardTwo .iconeCard{
+	margin-top: 2px;
+	padding-right: 10px;
+}
+
+.titleCardTwo img{
+	padding-left: 5px;
+}
+
+.infoCardTwo h1{
+	text-align: start;
+  }
+
+.infoCardTwo p{
+  font-weight: 300;
+  font-size: 14px;
+  text-align: start;
+  padding: 5px 60px 0 0;
+}
+
+/* SECTION O QUE TEMOS DE DIFERENTE - FIM */
