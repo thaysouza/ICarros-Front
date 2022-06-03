@@ -9,7 +9,6 @@
 	--warning-color: #FDBC31;
 	--info-color: #3C76F2;
 	--black-color: #000000;
-	--white-color: #FFFF;
 	--gray-900: #1F1B2D;
 	--gray-800: #454056;
 	--gray-700: #666276;
@@ -68,6 +67,13 @@ a:link, a:visited, a:hover, a:active {
 	color: var(--white);
 }
 
+button {
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	color: var(--white);
+}
+
 @media (min-width: 768px) {
 	
 	.hidden-when-md {
@@ -76,28 +82,31 @@ a:link, a:visited, a:hover, a:active {
 	.display-when-md {
 	  display: none !important;
 	}
-  }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
 	.hidden-when-md {
 	  display: none !important;
 	}
 	.display-when-md {
 	  display: flex !important;
 	}
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
 	.hidden-when-lg {
 	  display: flex !important;
 	}
 	.display-when-lg {
 	  display: none !important;
 	}
-  }
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
 	.hidden-when-lg {
 	  display: none !important;
 	}
 	.display-when-lg {
 		display: flex !important;
 	}
-	}
+}

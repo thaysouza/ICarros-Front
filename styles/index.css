@@ -134,7 +134,7 @@ header {
 	height: 4rem;
 	padding: 8px 16px;
 	border-radius: 8px;
-	background: var(--white-color);
+	background: var(--white);
 	box-shadow: var(--box-shadow-large);
 	color: var(--primary-color);
 }
@@ -187,7 +187,7 @@ select:focus {
 }
 
 #searchInput{
-	color: var(--white-color) !important;
+	color: var(--white) !important;
 }
 
 .selectHeader {
@@ -197,14 +197,14 @@ select:focus {
 
 .selectHeader option {
 	background: var(--gray-900);
-	color: var(--white-color);
+	color: var(--white);
 	
 }
 
 #searchButton {
 	width: 15rem;
 	padding: 1.4rem 3.2rem;
-	color: var(--white-color) !important;
+	color: var(--white) !important;
 	background: var(--primary-color) !important;
 	border-radius: 8px;
 	cursor: pointer;
@@ -249,7 +249,7 @@ select:focus {
 		width: 50%;
 		height: 5rem !important;
 		padding: 1.4rem 3.2rem;
-		color: var(--white-color) !important;
+		color: var(--white) !important;
 		background: var(--primary-color) !important;
 		border-radius: 8px;
 		cursor: pointer;
@@ -1728,6 +1728,117 @@ i .bi-telegram .bi-twitter .bi-facebook {
 
 /* SECTION ÚLTIMOS PUBLICADOS - FIM */
 
+
+/* SECTION CARROSSEL DE PRODUTOS - START */
+	#productsCarousel {
+		max-width: 1296px;
+		margin: auto;
+	}
+
+	.containerCarousel {
+		background: rgba(255, 255, 255, 0.04);
+		border-radius: 12px;
+	}
+
+	#carousel {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 48px;
+		max-height: 280px;
+	}
+
+	#leftElements {
+		padding: 8px 0 7px 0;
+	}
+
+	#leftElements h2 {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 130%;
+		margin-bottom: 16px;
+	}
+
+	#leftElements h6 {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+		opacity: 0.7;
+		margin-bottom: 40px;
+	}
+
+	#leftElements button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 24px;
+		width: 158px;
+		height: 44px;
+		background: var(--primary-color);
+		border-radius: 8px;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 150%;
+		gap: 10px;
+	}
+
+	#products {
+		display: flex;
+		justify-content: space-between;
+		width: 856px;
+		height: 184px;
+		overflow: hidden;
+	}
+
+	.product {
+		width: 196px;
+		height: 184px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.product img {
+		width: 168px;
+		height: 148px;
+		margin-bottom: 12px;
+	}
+
+	.product h6 {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+	}
+
+	#arrowsCarousel {
+		width: 88px;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 24px;
+	}
+
+	.arrow {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.04);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: 'Poppins, sans-serif';
+	}
+
+	.arrow:hover {
+		color: var(--primary-color);
+		background-color: var(--white);
+	}
+
+/* SECTION CARROSSEL DE PRODUTOS - END */
 
 
 /* SECTION BLOG - INÍCIO */
