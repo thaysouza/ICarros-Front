@@ -36,10 +36,13 @@
 	<!-- Importação de icones -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/93a20b3367.js" crossorigin="anonymous"></script>
 	<!-- Fim da importação -->
 
 	<title>Finder | E-Carros</title>
 
+	<!-- Scripts -->
+	<script defer src="./js/car-card-slider.js"></script>
 </head>
 
 <body>
@@ -51,7 +54,7 @@
 						<i class="fa fa-search"></i>
 						<p>Finder</p>
 					</div>
-					<div class="menu">
+					<div class="menu hidden-when-lg">
 						<ul>
 							<li>|</li>
 							<li>Novos</li>
@@ -61,6 +64,7 @@
 							<li>Novidades e reviews</li>
 						</ul>
 					</div>
+
 				</div>
 				<div class="menuLogin">
 					<span>
@@ -70,11 +74,14 @@
 						<i class="bi bi-plus"> Vender</i>
 					</span>
 				</div>
+				<div class="menuTogle display-when-lg">
+					<span><i class="bi bi-list"></i></span>
+				</div>
 			</div>
 		</nav>
 	</header>
+
 	<section id="sectionHeader">
-		<img id="imgShape" src="./img/shape.png" alt="Shape">
 		<div class="container">
 			<div class="initial">
 				<div class="textHeader">
@@ -82,11 +89,646 @@
 					<p>O Finder é um mercado digital líder para a indústria automotiva que conecta compradores de carros
 						a vendedores.</p>
 				</div>
-				<img id="imgMainCar"src="./img/carroPrincipal.png" alt="Carro Principal">
+				<img id="imgMainCar" src="./img/carroPrincipal.png" alt="Carro Principal">
 			</div>
 		</div>
 	</section>
 
+	<div class="container">
+		<nav id="searchCar">
+			<div id="buttonsHeader">
+				<div id="buttonNew">Novo</div>
+				<div id="buttonUsed">Usado</div>
+			</div>
+
+			<div id="formSearchCar">
+				<label for="searchInput" class="labelFormat">
+					<i class="bi bi-search"></i>
+					<input type="text" id="searchInput" placeholder="Pesquise por...">
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchMarca" class="labelFormat">
+					<i class="bi bi-star"></i>
+					<select name="searchMarca" id="searchMarca" class="selectHeader">
+						<option value="">Marca</option>
+						<option value="Vw">VW</option>
+						<!-- AQUI PRECISA FAZER COM JAVASCRIPT -->
+					</select>
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchModelo" class="labelFormat">
+					<i class="bi bi-view-stacked"></i>
+					<select name="searchModelo" id="searchModelo" class="selectHeader">
+						<option value="">Modelo</option>
+						<option value="Jetta">Jetta</option>
+					</select>
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchTipo" class="labelFormat">
+					<i class="fa fa-car-side"></i>
+					<select name="searchTipo" id="searchTipo" class="selectHeader">
+						<option value="">Tipo</option>
+						<option value="Sedan">Sedan</option>
+					</select>
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchLocal" class="labelFormat">
+					<i class="bi bi-geo-alt"></i>
+					<select name="searchLocal" id="searchLocal" class="selectHeader">
+						<option value="">Estado</option>
+						<option value="Sedan">RJ</option>
+					</select>
+				</label>
+
+				<input id="searchButton" type="submit" value="Pesquisar">
+			</div>
+		</nav>
+	</div>
+
+	<section id="ofertas">
+		<div class="container">
+
+			<div class="sectionHeader">
+				<h2>Ofertas</h2>
+
+				<div class="sectionHeaderOptions">
+					<a href="#" aria-label="Acessar a página de todas as ofertas">
+						Ver todas as ofertas
+						<img src="./img/icons/arrow-right.svg" alt="">
+					</a>
+				</div>
+			</div>
+
+			<div class="ofertasCarGrid">
+
+				<article class="carCardVertical">
+
+					<div class="carCardThumbnail">
+
+						<div class="carCardSlider">
+							<div class="mySlideList" id="car1">
+								<a href="#" class="mySlide active" data-slide-index="1">
+									<img src="./img/cars/car1.jpeg" alt="Imagem Carro" loading="lazy">
+								</a>
+
+								<a href="#" class="mySlide" data-slide-index="2">
+									<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
+								</a>
+
+								<a href="#" class="mySlide" data-slide-index="3">
+									<img src="./img/cars/car3.jpeg" alt="Imagem Carro" loading="lazy">
+								</a>
+							</div>
+
+							<button class="prevCardSlide" onclick="prevCardSlide('car1')">
+								<img src="./img/icons/chevron-left.svg" alt="">
+							</button>
+							<button class="nextCardSlide" onclick="nextCardSlide('car1')">
+								<img src="./img/icons/chevron-right.svg" alt="">
+							</button>
+						</div>
+
+						<button class="carCardWishlist">
+							<img src="./img/icons/heart.svg" alt="">
+						</button>
+
+						<div class="carCardBadges">
+							<!-- <span class="badge badgeNew">
+								Novo
+							</span> -->
+							<span class="badge badgeUsed">
+								Usado
+							</span>
+						</div>
+					</div>
+
+					<div class="carCardBody">
+						<div class="carYearCompare">
+							<div class="carYear">
+								<small>
+									2014
+								</small>
+							</div>
+
+							<label class="carCompare" for="carCompareCar1">
+								<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
+								<small>
+									Compare
+								</small>
+							</label>
+						</div>
+
+						<h3 class="carName">
+							<a href="#">
+								Mercedes Benz Convertible Coupe
+							</a>
+						</h3>
+
+						<p class="carPrice">
+							<strong>
+								$25,880
+							</strong>
+						</p>
+
+						<p class="carLocation">
+							<img src="./img/icons/location.svg" alt="">
+							<small>
+								New York
+							</small>
+						</p>
+
+					</div>
+
+					<div class="carCardFooter">
+						<ul class="carInfos">
+							<li title="mileage">
+								<img src="./img/icons/mileage.svg" alt="">
+								<small>48K mi</small>
+							</li>
+
+							<li title="transmission">
+								<img src="./img/icons/transmission.svg" alt="">
+								<small>Automatic</small>
+							</li>
+
+							<li title="fuel">
+								<img src="./img/icons/fuel.svg" alt="">
+								<small>Petrol</small>
+							</li>
+						</ul>
+					</div>
+
+				</article>
+
+				<article class="carCardHorizontal">
+
+					<div class="carCardThumbnail">
+
+						<div class="carCardSlider">
+							<div class="mySlideList" id="car2">
+								<a href="#" class="mySlide active" data-slide-index="1">
+									<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
+								</a>
+							</div>
+
+							<button class="prevCardSlide" onclick="prevCardSlide('car2')">
+								<img src="./img/icons/chevron-left.svg" alt="">
+							</button>
+							<button class="nextCardSlide" onclick="nextCardSlide('car2')">
+								<img src="./img/icons/chevron-right.svg" alt="">
+							</button>
+						</div>
+
+						<button class="carCardWishlist">
+							<img src="./img/icons/heart.svg" alt="">
+						</button>
+
+						<div class="carCardBadges">
+							<!-- <span class="badge badgeNew">
+								Novo
+							</span> -->
+							<span class="badge badgeUsed">
+								Usado
+							</span>
+						</div>
+					</div>
+
+					<div class="carCardBodyFooter">
+						<div class="carCardBody">
+							<div class="carYearCompare">
+								<div class="carYear">
+									<small>
+										1995
+									</small>
+								</div>
+
+								<label class="carCompare" for="carCompareCar2">
+									<input type="checkbox" id="carCompareCar2" name="carCompare" value="compare">
+									<small>
+										Compare
+									</small>
+								</label>
+							</div>
+
+							<h3 class="carName">
+								<a href="#">
+									Ford Truck Lifted
+								</a>
+							</h3>
+
+							<p class="carPrice">
+								<strong>
+									$24,000
+								</strong>
+							</p>
+
+							<p class="carLocation">
+								<img src="./img/icons/location.svg" alt="">
+								<small>
+									Chicago
+								</small>
+							</p>
+
+						</div>
+
+						<div class="carCardFooter">
+							<ul class="carInfos">
+								<li title="mileage">
+									<img src="./img/icons/mileage.svg" alt="">
+									<small>278K mi</small>
+								</li>
+
+								<li title="transmission">
+									<img src="./img/icons/transmission.svg" alt="">
+									<small>Manual</small>
+								</li>
+
+								<li title="fuel">
+									<img src="./img/icons/fuel.svg" alt="">
+									<small>Diesel</small>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</article>
+
+				<article class="carCardHorizontal">
+
+					<div class="carCardThumbnail">
+
+						<div class="carCardSlider">
+							<div class="mySlideList" id="car3">
+								<a href="#" class="mySlide active" data-slide-index="1">
+									<img src="./img/cars/car3.jpeg" alt="Imagem Carro" loading="lazy">
+								</a>
+							</div>
+
+							<button class="prevCardSlide" onclick="prevCardSlide('car3')">
+								<img src="./img/icons/chevron-left.svg" alt="">
+							</button>
+							<button class="nextCardSlide" onclick="nextCardSlide('car3')">
+								<img src="./img/icons/chevron-right.svg" alt="">
+							</button>
+						</div>
+
+						<button class="carCardWishlist">
+							<img src="./img/icons/heart.svg" alt="">
+						</button>
+
+						<div class="carCardBadges">
+							<span class="badge badgeNew">
+								Novo
+							</span>
+							<!-- <span class="badge badgeUsed">
+								Usado
+							</span> -->
+						</div>
+					</div>
+
+					<div class="carCardBodyFooter">
+						<div class="carCardBody">
+							<div class="carYearCompare">
+								<div class="carYear">
+									<small>
+										2019
+									</small>
+								</div>
+
+								<label class="carCompare" for="carCompareCar3">
+									<input type="checkbox" id="carCompareCar3" name="carCompare" value="compare">
+									<small>
+										Compare
+									</small>
+								</label>
+							</div>
+
+							<h3 class="carName">
+								<a href="#">
+									Mercedes Benz C300 Sport
+								</a>
+							</h3>
+
+							<p class="carPrice">
+								<strong>
+									$54,420
+								</strong>
+							</p>
+
+							<p class="carLocation">
+								<img src="./img/icons/location.svg" alt="">
+								<small>
+									San Francisco
+								</small>
+							</p>
+
+						</div>
+
+						<div class="carCardFooter">
+							<ul class="carInfos">
+								<li title="mileage">
+									<img src="./img/icons/mileage.svg" alt="">
+									<small>No mileage</small>
+								</li>
+
+								<li title="transmission">
+									<img src="./img/icons/transmission.svg" alt="">
+									<small>Automatic</small>
+								</li>
+
+								<li title="fuel">
+									<img src="./img/icons/fuel.svg" alt="">
+									<small>Hybrid</small>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</article>
+
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="cardsInfo">
+
+		<div class="containerCardAll">
+			<div class="titleCard">
+				<h1>O que temos de diferente</h1>
+			</div>
+
+			<div class="containerCard">
+				<div>
+					<div class="infoCard">
+						<div>
+							<h1>Loren ipsun</h1>
+							<p>That’s more than you’ll find on any other major online automotive marketplace in the USA.
+							</p>
+						</div>
+						<div class="iconeCard">
+							<img src="img/icon_file.png" alt="Icone de Arquivo">
+						</div>
+					</div>
+
+					<div class="infoCard">
+						<div>
+							<h1>Loren ipsun</h1>
+							<p>Our powerful search makes it easy to personalize your results so you only see the cars
+								and
+								features you care about.</p>
+						</div>
+						<div class="iconeCard">
+							<img src="img/icon_search.png" alt="Icone de Busca">
+						</div>
+					</div>
+
+					<div class="infoCard">
+						<div>
+							<h1>Loren ipsun</h1>
+							<p>Our team is constantly developing new features that make the process of buying and
+								selling a
+								car simpler.</p>
+						</div>
+						<div class="iconeCard">
+							<img src="img/icon_settings.png" alt="Icone de Configuração">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="containerCar">
+			<div class="imgCar">
+				<img src="img/auto.svg" alt="Imagem de Carro">
+			</div>
+			<div class="imgLine">
+				<img src="img/road-line.svg" alt="Imagem de Linha pontilhadas">
+			</div>
+		</div>
+
+
+		<div class="containerCardAll">
+			<div class="titleCardTwo">
+				<div>
+					<h1>Como vender carros no Finder
+						<img src="img/icon_arrow.png" alt="Icone de Seta">
+					</h1>
+				</div>
+			</div>
+
+			<div class="containerCard">
+				<div>
+					<div class="infoCardTwo">
+						<div class="iconeCard">
+							<img src="img/icon_info.png" alt="Icone de Informação">
+						</div>
+						<div>
+							<h1>Loren ipsun</h1>
+							<p>We provide free access to key info like dealer reviews, market value, price drops.</p>
+						</div>
+					</div>
+
+					<div class="infoCardTwo">
+						<div class="iconeCard">
+							<img src="img/icon_user.png" alt="Icone de Usuário">
+						</div>
+						<div>
+							<h1>Loren ipsun</h1>
+							<p>We focus on building the most transparent, trustworthy experience for our users, and
+								we’ve
+								proven that works for dealers, too.</p>
+						</div>
+					</div>
+
+					<div class="infoCardTwo">
+						<div class="iconeCard">
+							<img src="img/icon_calculador.png" alt="Icone de Calculadora">
+						</div>
+						<div>
+							<h1>Loren ipsun</h1>
+							<p>Specify the parameters of your car to form its market value on the basis of similar cars
+								on
+								Finder.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<main>
+		<section id="html" class=" section-default  ">
+			<div class="container center-content">
+				<div class="main-blog">
+					<h2>Ultimas novidades</h2>
+				</div>
+				<div class="main-blog">
+					<a class="linkable-blog">Go to blog <i class="bi bi-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="container center-content">
+				<div class="card-blog">
+					<img class="img-content" src="img/city.jpg" alt="">
+					<div class="link-blog1">
+						<a>Dicas</a>
+					</div>
+					<div class="link-blog2">
+						<a>Loren Ipsuns</a>
+					</div>
+					<div class="card-blog-perfil">
+						<img class="img-content-perfil" src="img/carroPrincipal.png" alt="">
+						<div>
+							<p>Jacob Jones</p>
+							<p class="card-date"> <i class="bi bi-calendar4"></i> 25 de Nov</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-blog">
+					<img class="img-content" src="img/GM-tracker_2021.jpg" alt="">
+					<div class="link-blog1">
+						<a>Ofertas</a>
+					</div>
+					<div class="link-blog2">
+						<a>Loren Ipsuns</a>
+					</div>
+					<div class="card-blog-perfil">
+						<img class="img-content-perfil" src="img/carroPrincipal.png" alt="">
+						<div>
+							<p>Jacob Jones</p>
+							<p class="card-date"> <i class="bi bi-calendar4"></i> 25 de Nov</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="card-blog">
+					<img class="img-content" src="img/urus.jpg" alt="">
+					<div class="link-blog1">
+						<a>Ofertas</a>
+					</div>
+					<div class="link-blog2">
+						<a>Loren Ipsuns</a>
+					</div>
+					<div class="card-blog-perfil">
+						<img class="img-content-perfil" src="img/carroPrincipal.png" alt="">
+						<div>
+							<p>Jacob Jones</p>
+							<p class="card-date"> <i class="bi bi-calendar4"></i> 25 de Nov</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="container-footer link-content-head">
+			<div class="footer-links menuLogo">
+				<i class="fa fa-search"></i>
+				<p>Finder</p>
+			</div>
+
+			<div class="link-content">
+				<div class="footer-links dropdown">
+					<a href="#html"> <i class="bi bi-globe"></i> pt-BR <i class="bi bi-caret-down"></i></a>
+					<div class="dropdown-content">
+						<a class="dropdown-links">EN-US</a>
+						<a class="dropdown-links">pt-PT</a>
+					</div>
+				</div>
+				<div class="footer-links">
+					<a href="#html"> | </a>
+				</div>
+				<div class="footer-links dropdown">
+					<a href="#html"><i class="bi bi-geo-alt"></i> São Paulo <i class="bi bi-caret-down"></i></a>
+					<div class="dropdown-content">
+						<a class="dropdown-links">Rio de Janeiro</a>
+						<a class="dropdown-links">Santa Catarina</a>
+						<a class="dropdown-links">Florianópolis</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="divider"></div>
+		</div>
+
+		<div class="container-footer">
+			<div class="footer-links-news">
+				<h2>Cadastre-se na newsletter</h2>
+				<a>Não perca nenhuma oferta relevante!</a>
+				<form class="form-footer">
+					<input class="input-footer" href="#js" placeholder="Informe seu email"></input>
+					<button class="button-footer" type="submit">></button>
+				</form>
+			</div>
+			<div class="link-content-mid">
+				<div class="footer-links-mid">
+					<h3 href="#">Comprar ou Vender</h3>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+				</div>
+
+				<div class="footer-links-mid">
+					<h3 href="#">Sobre</h3>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+				</div>
+
+				<div class="footer-links-mid">
+					<h3 href="#">Perfil</h3>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+				</div>
+			</div>
+			<div class="footer-links-adress">
+				<a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> (11) 1111-1111</a>
+				<a class="mail-footer"><i class="bi bi-envelope"></i> email@finder.com.br</a>
+				<div>
+					<button class="link-button"><i class="bi bi-facebook"></i></button>
+					<button class="link-button"><i class="bi bi-twitter"></i></button>
+					<button class="link-button"><i class="bi bi-telegram"></i></button>
+					<button class="link-button"><i class="bi bi-messenger"></i></button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-footer">
+			<div class="footer-links">
+				<p class="p-footer">Copyright © Finder | Gama Academy. Todos os direitos reservados - Este é um projeto
+					acadêmico.</p>
+			</div>
+
+			<div class="link-content">
+				<div class="footer-links">
+					<p class="p-footer">Termos de uso</p>
+				</div>
+				<div class="footer-links">
+					<p class="p-footer">Política de privacidade</p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
 </body>
 
 </html>
