@@ -700,15 +700,19 @@ select:focus {
 
 /* SECTION BRANDS - (MARCAS) INICIO */
 
-#brands span{
-	display: flex;
-    justify-content: space-between;
-    width: 100%;
+#brands{
 	margin-top: 9.6rem;
     margin-bottom: 10rem;
 }
 
-#brands img{
+#brandsLogo{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+#brandsLogo img{
 	cursor: pointer;
 }
 
