@@ -41,8 +41,10 @@
 
 	<title>Finder | E-Carros</title>
 
-	<!-- Scripts -->
+	<!-- Scripts Inicio -->
 	<script defer src="./js/car-card-slider.js"></script>
+	<script defer src="./js/search.js"></script>
+	<!-- Scripts Fim -->
 </head>
 
 <body>
@@ -113,7 +115,6 @@
 					<i class="bi bi-star"></i>
 					<select name="searchMarca" id="searchMarca" class="selectHeader">
 						<option value="">Marca</option>
-						<option value="Vw">VW</option>
 						<!-- AQUI PRECISA FAZER COM JAVASCRIPT -->
 					</select>
 				</label>
@@ -148,7 +149,7 @@
 					</select>
 				</label>
 
-				<input id="searchButton" type="submit" value="Pesquisar">
+				<input id="searchButton" type="submit" value="Pesquisar" onclick="searchCar()">
 			</div>
 		</nav>
 	</div>

@@ -187,24 +187,19 @@ select:focus {
 	padding: 0 10px;
 }
 
-.inputIcon {
-	align-self: center;
-	background: transparent;
-	color: var(--gray-700);
-	height: 100%;
-	border: 0;
-	/* margin: 0; */
-	padding: 0 10px;
-	width: 100%;
+#searchInput{
+	color: var(--white-color) !important;
 }
 
 .selectHeader {
 	padding-right: 1rem;
+	cursor: pointer;
 }
 
 .selectHeader option {
 	background: var(--gray-900);
 	color: var(--white-color);
+	
 }
 
 #searchButton {
@@ -213,6 +208,7 @@ select:focus {
 	color: var(--white-color) !important;
 	background: var(--primary-color) !important;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 .searchSeparator {
@@ -257,6 +253,7 @@ select:focus {
 		color: var(--white-color) !important;
 		background: var(--primary-color) !important;
 		border-radius: 8px;
+		cursor: pointer;
 	}
 
 	.searchSeparator {
