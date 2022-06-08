@@ -34,12 +34,15 @@
 	<!-- Importação de icones -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/93a20b3367.js" crossorigin="anonymous"></script>
 	<!-- Fim da importação -->
 
 	<title>Finder | E-Carros</title>
 
-	<!-- Scripts -->
+	<!-- Scripts Inicio -->
 	<script defer src="./js/car-card-slider.js"></script>
+	<script defer src="./js/search.js"></script>
+	<!-- Scripts Fim -->
 </head>
 
 <body>
@@ -51,7 +54,7 @@
 						<i class="fa fa-search"></i>
 						<p>Finder</p>
 					</div>
-					<div class="menu">
+					<div class="menu hidden-when-lg">
 						<ul>
 							<li>|</li>
 							<li>Novos</li>
@@ -61,6 +64,7 @@
 							<li>Novidades e reviews</li>
 						</ul>
 					</div>
+
 				</div>
 				<div class="menuLogin">
 					<span>
@@ -70,11 +74,14 @@
 						<i class="bi bi-plus"> Vender</i>
 					</span>
 				</div>
+				<div class="menuTogle display-when-lg">
+					<span><i class="bi bi-list"></i></span>
+				</div>
 			</div>
 		</nav>
 	</header>
+
 	<section id="sectionHeader">
-		<img id="imgShape" src="./img/shape.png" alt="Shape">
 		<div class="container">
 			<div class="initial">
 				<div class="textHeader">
@@ -82,10 +89,68 @@
 					<p>O Finder é um mercado digital líder para a indústria automotiva que conecta compradores de carros
 						a vendedores.</p>
 				</div>
-				<img id="imgMainCar"src="./img/carroPrincipal.png" alt="Carro Principal">
+				<img id="imgMainCar" src="./img/carroPrincipal.png" alt="Carro Principal">
 			</div>
 		</div>
 	</section>
+
+	<div class="container">
+		<nav id="searchCar">
+			<div id="buttonsHeader">
+				<div id="buttonNew">Novo</div>
+				<div id="buttonUsed">Usado</div>
+			</div>
+
+			<div id="formSearchCar">
+				<label for="searchInput" class="labelFormat">
+					<i class="bi bi-search"></i>
+					<input type="text" id="searchInput" placeholder="Pesquise por...">
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchMarca" class="labelFormat">
+					<i class="bi bi-star"></i>
+					<select name="searchMarca" id="searchMarca" class="selectHeader">
+						<option value="">Marca</option>
+						<!-- AQUI PRECISA FAZER COM JAVASCRIPT -->
+					</select>
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchModelo" class="labelFormat">
+					<i class="bi bi-view-stacked"></i>
+					<select name="searchModelo" id="searchModelo" class="selectHeader">
+						<option value="">Modelo</option>
+						<option value="Jetta">Jetta</option>
+					</select>
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchTipo" class="labelFormat">
+					<i class="fa fa-car-side"></i>
+					<select name="searchTipo" id="searchTipo" class="selectHeader">
+						<option value="">Tipo</option>
+						<option value="Sedan">Sedan</option>
+					</select>
+				</label>
+
+				<span class="searchSeparator"></span>
+
+				<label for="searchLocal" class="labelFormat">
+					<i class="bi bi-geo-alt"></i>
+					<select name="searchLocal" id="searchLocal" class="selectHeader">
+						<option value="">Estado</option>
+						<option value="Sedan">RJ</option>
+					</select>
+				</label>
+
+				<input id="searchButton" type="submit" value="Pesquisar" onclick="searchCar()">
+			</div>
+		</nav>
+	</div>
 
 	<section id="ofertas">
 		<div class="container">
@@ -393,9 +458,26 @@
 		</div>
 	</section>
 
+	<section id="brands">
+		<div class="container">
+			<span id="brandsLogo">
+				<img src="./img/icons/opel.svg" alt="Opel" title="Opel">
+				<img src="./img/icons/audi.svg" alt="Audi" title="Audi">
+				<img src="./img/icons/mercedes.svg" alt="Mercedes" title="Mercedes">
+				<img src="./img/icons/toyota.svg" alt="Toyota" title="Toyota">
+				<img src="./img/icons/mazda.svg" alt="Mazda" title="Mazda">
+				<img src="./img/icons/nissan.svg" alt="Nissan" title="Nissan">
+				<img src="./img/icons/hyundai.svg" alt="Hyundai" title="Hyundai">
+				<img src="./img/icons/lexus.svg" alt="Lexus" title="Lexus">
+				<img src="./img/icons/honda.svg" alt="Honda" title="Honda">
+				<img src="./img/icons/renault.svg" alt="Renault" title="Renault">
+				<img src="./img/icons/infiniti.svg" alt="Infiniti" title="Infiniti">
+				<img src="./img/icons/mitsubishi.svg" alt="Mitsubishi" title="Mitsubishi">
+			</span>
+		</div>
+	</section>
 
 	<section class="cardsInfo">
-	
 		<div class="containerCardAll">
 			<div class="titleCard">
 				<h1>O que temos de diferente</h1>

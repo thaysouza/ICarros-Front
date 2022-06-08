@@ -9,6 +9,7 @@
 	--warning-color: #FDBC31;
 	--info-color: #3C76F2;
 	--black-color: #000000;
+	--white-color: #FFFF;
 	--gray-900: #1F1B2D;
 	--gray-800: #454056;
 	--gray-700: #666276;
@@ -35,17 +36,19 @@
 	box-sizing: border-box;
 	list-style: none;
 	font-family: 'Noto Sans', 'sans-serif';
+	font-size: 1.6rem;
 }
 
 html {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	font-size: 10px;
 }
 
 body {
-	color: #FFF;
+	color: var(--white-color);
 	background: var(--gray-900);
-	font-size: 16px;
+	/* font-size: 16px; */
 }
 
 .container {
@@ -54,4 +57,38 @@ body {
 	max-width: 1200px;
 	margin: auto;
 	padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+	
+	.hidden-when-md {
+	  display: flex !important;
+	}
+	.display-when-md {
+	  display: none !important;
+	}
+  }
+  @media (max-width: 768px) {
+	.hidden-when-md {
+	  display: none !important;
+	}
+	.display-when-md {
+	  display: flex !important;
+	}
+  }
+  @media (min-width: 992px) {
+	.hidden-when-lg {
+	  display: flex !important;
+	}
+	.display-when-lg {
+	  display: none !important;
+	}
+  }
+  @media (max-width: 992px) {
+	.hidden-when-lg {
+	  display: none !important;
+	}
+	.display-when-lg {
+		display: flex !important;
+	}
 }
