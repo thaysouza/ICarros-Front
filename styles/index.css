@@ -78,7 +78,7 @@ header {
 }
 
 #sectionHeader {
-	position: relative;
+	/* position: relative; */
 	margin-bottom: 5rem;
 	background-image: url('../img/shape.png');
 	background-repeat: no-repeat;
