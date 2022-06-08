@@ -19,6 +19,7 @@
 	--gray-300: #EFECF3;
 	--gray-200: #F5F4F8;
 	--gray-100: #F9F8FA;
+	--white: #FFFFFF;
 
 	/* Gradients */
 	--gradient-color: linear-gradient(26.21deg, #5D3CF2 0%, #FD5631 108.88%);
@@ -54,9 +55,17 @@ body {
 .container {
 	display: flex;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1296px;
 	margin: auto;
 	padding: 0 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: var(--white);
 }
 
 @media (min-width: 768px) {
@@ -91,4 +100,4 @@ body {
 	.display-when-lg {
 		display: flex !important;
 	}
-}
+	}
