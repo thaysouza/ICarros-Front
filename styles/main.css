@@ -18,7 +18,6 @@
 	--gray-300: #EFECF3;
 	--gray-200: #F5F4F8;
 	--gray-100: #F9F8FA;
-	--white: #FFFFFF;
 
 	/* Gradients */
 	--gradient-color: linear-gradient(26.21deg, #5D3CF2 0%, #FD5631 108.88%);
@@ -44,7 +43,7 @@ html {
 }
 
 body {
-	color: var(--white);
+	color: #FFF;
 	background: var(--gray-900);
 	font-size: 16px;
 }
@@ -52,16 +51,7 @@ body {
 .container {
 	display: flex;
 	width: 100%;
-	max-width: 1296px;
+	max-width: 1200px;
 	margin: auto;
-	margin-bottom: 72px;
 	padding: 0 1rem;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:link, a:visited, a:hover, a:active {
-	color: var(--white);
 }

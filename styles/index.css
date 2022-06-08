@@ -100,6 +100,8 @@
 
 /* HEADER - FIM */
 
+
+
 /* SECTION HEADER - START */
 
 .sectionHeader {
@@ -139,99 +141,6 @@
 
 /* SECTION HEADER - END */
 
-/*SECTION MORE SEARCHED - START*/
-#moreSearched .container {
-	flex-direction: column;
-}
-
-#moreSearchedHeader {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 12px;
-}
-
-#cardsCarTypes {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
-
-.cardCarType {
-	margin-top: 20px;
-}
-
-.cardCarType a {
-	width: 240px;
-	height: 160px;
-	border-radius: 12px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-end;
-	padding-bottom: 20px;
-}
-
-.carTypeTitle {
-	font-weight: 700;
-	font-size: 16px;
-	text-align: center;
-	color: var(--white);
-	opacity: 0.7;
-	margin-top: 31.8px;
-}
-
-.cardCarType a:hover {
-	background: rgba(255, 255, 255, 0.04);
-}
-
-.cardCarType a:hover .carTypeTitle {
-	opacity: 1;
-}
-
-@media(max-width: 512px) {
-	#moreSearchedHeader {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	#moreSearchedHeader h2{
-		margin-bottom: 20px;
-	}
-
-	.cardCarType a {
-		width: 180px;
-		height: 120px;
-	}
-
-	.cardCarType img {
-		width: 90px;
-	}
-
-	.carTypeTitle {
-		font-size: 14px;
-		margin-top: 20px;
-	}
-}
-
-@media(max-width: 392px) {
-	.cardCarType a {
-		width: 148px;
-		height: 100px;
-	}
-
-	.cardCarType img {
-		width: 75px;
-	}
-
-	.carTypeTitle {
-		font-size: 12px;
-		margin-top: 15px;
-	}
-}
-
-/*SECTION MORE SEARCHED - END*/
 
 /* OFERTAS SECTION - START */
 
