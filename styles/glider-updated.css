@@ -1,0 +1,72 @@
+/* Classes atualizadas da lib de sliders Glider */
+
+.glider-track {
+    gap: 20px;
+}
+
+/* Next and Prev buttons */
+
+.glider-prev,
+.glider-next {
+	position: absolute;
+	width: 35px !important;
+	height: 35px !important;
+	border-radius: 50% !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+	border: none !important;
+	cursor: pointer !important;
+	transition: transform linear .2s !important;
+	background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.glider-prev {
+	left: -45px !important;
+}
+
+.glider-next {
+	right: -45px !important;
+}
+
+:is(.glider-prev, .glider-next) img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+}
+
+@media(max-width: 768px) {
+	.glider-track {
+		gap: 0px;
+    }
+}
+	
+@media(max-width: 1200px) {
+    .glider-prev,
+    .glider-next {
+        display: none !important;
+    }
+}
+
+
+/* Glider dots */
+
+.glider-dots {
+	margin-top: 20px !important;
+}
+
+.glider-dot {
+    color: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+    border-radius: 40px !important;
+    width: 16px !important;
+    height: 6px !important;
+    margin: 4px !important;
+	transition: transform linear .2s !important;
+
+}
+.glider-dot.active {
+    background: #FFFFFF !important;
+	width: 32px !important;
+}
