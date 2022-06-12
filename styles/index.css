@@ -719,110 +719,118 @@ select:focus {
 
 /* SECTION O QUE TEMOS DE DIFERENTE - INÍCIO */
 
-.cardsInfo {
+.cardsInfo{
+	display: flex;
+	height: 50rem;
+	flex-direction: column;
+	margin-bottom: 6rem;
+}
+
+.sectionTitles{
 	display: flex;
 	justify-content: space-between;
-	padding: 15px 80px;
-	height: 85vh;
+	margin-bottom: 7.2rem;
 }
 
-.titleCard,
-.titleCardTwo {
-	height: 10%;
+.titleCard h1{
+	font-size: 2.8rem;
+
 }
 
-.containerCardAll {
-	width: 40%;
+.sectionAll{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.containerCard {
-	height: 80%;
+.containerCard{
+	width: 41.6rem;
+    height: 36.8rem;
+	display: flex;
+	justify-content: end;
 	text-align: end;
 }
 
-.infoCard,
-.infoCardTwo {
-	padding: 10px;
+.infoCard, .infoCardTwo{
 	display: flex;
 	flex-direction: row;
-	width: 100%;
-	margin: 40px 0;
+	margin-bottom: 6.4rem;
 }
+ 
 
-
-.infoCard h1,
-.infoCardTwo h1 {
+.infoCard h1, .infoCardTwo h1{
 	font-family: 'Noto Sans';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
 }
 
-.infoCard p {
+.infoCard p{
 	font-weight: 300;
-	font-size: 14px;
-	padding: 5px 0 0 60px;
+	font-size: 1.4rem;
 	text-align: right;
+	width: 37.6rem;
+	margin-top: .4rem;
+	opacity: 0.7;
 }
 
-.infoCard .iconeCard {
-	margin-top: 2px;
-	padding-left: 10px;
+.infoCard .iconeCard{
+	margin-top: .2rem;
+	padding-left: 1.5rem; 
 }
 
-
-.containerCar {
-	width: 10%;
-	display: flex;
-	flex-direction: column;
+.imgCar{
+	margin: 0 6rem;
 }
 
-.imgCar {
-	height: 30vh;
-	display: flex;
-	justify-content: center;
+.imgCar img{
+	width: 12.8rem;
+	height: 19.5rem;
+	margin-top: -11rem;
 }
 
-.imgCar img {
-	width: 300px;
-}
-
-.imgLine {
-	height: 50vh;
+.imgLine{
+	height: 30rem;
 	display: flex;
 	justify-content: center;
 }
 
-.titleCardTwo {
-	display: flex;
-	font-size: 10px;
+.imgLine img{
+	width: 2rem;
+}
+
+.titleCardTwo{
+    display: flex;
+	font-size: 1rem;
 	justify-content: end;
 }
 
-.titleCardTwo h1 {
-	font-size: 14px;
+.titleCardTwo h1{
 	cursor: pointer;
 	font-weight: 300;
+	opacity: 0.7;
 }
 
-.infoCardTwo .iconeCard {
-	margin-top: 2px;
-	padding-right: 10px;
+.infoCardTwo .iconeCard{
+	margin-top: .2rem;
+	padding-right:  1.5rem;
 }
 
-.titleCardTwo img {
-	padding-left: 5px;
+.titleCardTwo img{
+	padding-left: .5rem;
 }
 
-.infoCardTwo h1 {
+.infoCardTwo h1{
 	text-align: start;
-}
+  }
 
-.infoCardTwo p {
-	font-weight: 300;
-	font-size: 14px;
-	text-align: start;
-	padding: 5px 60px 0 0;
+.infoCardTwo p{
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: start;
+  width: 37.6rem;
+  margin-top: .4rem;
+  opacity: 0.7;
 }
 
 /* SECTION O QUE TEMOS DE DIFERENTE - FIM */
@@ -1625,112 +1633,6 @@ i .bi-telegram .bi-twitter .bi-facebook {
 
 
 
-/* SECTION O QUE TEMOS DE DIFERENTE - INÍCIO */
-
-.cardsInfo{
-	display: flex;
-    justify-content:space-between;
-	padding: 15px 80px;
-	height: 85vh;
-}
-
-.titleCard, .titleCardTwo{
-	height: 10%;
-}
-
-.containerCardAll{
-	width: 40%;
-}
-
-.containerCard{
-	height: 80%;
-	text-align: end;
-}
-
-.infoCard, .infoCardTwo{
-	padding: 10px;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	margin: 40px 0;
-}
- 
-
-.infoCard h1, .infoCardTwo h1{
-	font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-.infoCard p{
-	font-weight: 300;
-	font-size: 14px;
-	padding: 5px 0 0 60px;
-	text-align: right;
-}
-
-.infoCard .iconeCard{
-	margin-top: 2px;
-	padding-left:10px;
-}
-
-
-.containerCar{
-	width: 10%;
-	display: flex;
-	flex-direction: column;
-}
-
-.imgCar{
-	height: 30vh;
-	display: flex;
-	justify-content: center;
-}
-
-.imgCar img{
-	width: 300px;
-}
-
-.imgLine{
-	height: 50vh;
-	display: flex;
-	justify-content: center;
-}
-
-.titleCardTwo{
-    display: flex;
-	font-size: 10px;
-	justify-content: end;
-}
-
-.titleCardTwo h1{
-	font-size: 14px;
-	cursor: pointer;
-	font-weight: 300;
-}
-
-.infoCardTwo .iconeCard{
-	margin-top: 2px;
-	padding-right: 10px;
-}
-
-.titleCardTwo img{
-	padding-left: 5px;
-}
-
-.infoCardTwo h1{
-	text-align: start;
-  }
-
-.infoCardTwo p{
-  font-weight: 300;
-  font-size: 14px;
-  text-align: start;
-  padding: 5px 60px 0 0;
-}
-
-/* SECTION O QUE TEMOS DE DIFERENTE - FIM */
 
 
 
