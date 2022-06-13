@@ -887,6 +887,40 @@ select:focus {
 /* SECTION O QUE TEMOS DE DIFERENTE - FIM */
 
 
+/*SECTION BAIXE O APP*/
+.containerApp{
+  display: flex;
+  flex-direction: row;
+  width: 1076px;
+  height: 440px;
+  margin-top: 48px;
+  margin-bottom: 72px;
+}
+
+.infoApp{
+	display: flex;
+	justify-content: center;
+	flex-direction:column;
+	width: 526px;
+	margin-right: 90px;
+   }
+
+.infoApp h1{
+	font-size: 32px;
+	margin-bottom: 24px;
+}
+
+.infoApp p{
+  font-size: 18px;
+  opacity: 0.7;
+  margin-bottom: 48px;
+}
+
+.buttonsApp img{
+  margin-right: 24px;
+}
+/*FIM SECTION BAIXE O APP*/
+
 
 /* SECTION BLOG - INÍCIO */
 
