@@ -721,9 +721,10 @@ select:focus {
 
 .cardsInfo{
 	display: flex;
-	height: 50rem;
+	/* height: 50rem; */
 	flex-direction: column;
 	margin-bottom: 6rem;
+	/* flex-wrap: nowrap; */
 }
 
 .sectionTitles{
@@ -831,6 +832,56 @@ select:focus {
   width: 37.6rem;
   margin-top: .4rem;
   opacity: 0.7;
+}
+
+@media(max-width: 768px) {
+.titleCard h1{
+	font-size: 1.6rem;
+	
+}
+
+.containerCar{
+	display: none;
+}
+
+.sectionAll{
+	flex-wrap: wrap;
+}
+
+.infoCard{
+	flex-direction:  row-reverse;
+}
+
+.infoCard .iconeCard{
+	margin-top: .2rem;
+	padding-right:  1.5rem;
+}
+
+.titleCard img{
+	padding-left: .5rem;
+}
+
+.infoCard h1{
+	text-align: start;
+  }
+
+  
+.infoCard h1, .infoCardTwo h1{
+    font-size: 1.4rem;
+}
+
+.infoCard p{
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: start;
+  width: 37.6rem;
+  margin-top: .4rem;
+  opacity: 0.7;
+}
+
+.containerCardAll{
+	margin-bottom: 5rem;
+}
 }
 
 /* SECTION O QUE TEMOS DE DIFERENTE - FIM */
