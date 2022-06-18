@@ -1,0 +1,481 @@
+/* CATALOG PAGE - START */
+
+#catalogPage {
+  width: 100%;
+  display: flex;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+#catalogPage aside {
+  width: 100%;
+  max-width: 300px;
+}
+
+#catalogPage main {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  #catalogPage {
+    flex-direction: column;
+  }
+
+  #catalogPage aside {
+    max-width: unset;
+  }
+}
+
+/* CATALOG PAGE - END */
+
+/* FILTERS FORM ADVANCED - START */
+
+#filtersFormAdvanced {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+}
+
+#filtersFormAdvanced h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+fieldset {
+  width: auto;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+fieldset legend {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+
+fieldset > div > label {
+  margin-bottom: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+fieldset .doubleFields {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+fieldset .doubleFields > div {
+  width: 100%;
+}
+fieldset .doubleFields .separator {
+  width: 3rem;
+  margin: 0 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: white;
+
+  padding: 1.25rem 1.6rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: white;
+  padding: 1.25rem 1.6rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: fit-content;
+}
+
+input[type="checkbox"]:not(:checked) {
+  all: unset;
+  width: 9.82px;
+  height: 9.82px;
+  padding: 0;
+  background-color: transparent;
+  border: 1.1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px !important;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--primary-color);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 1.2rem) center !important;
+  background: rgba(255, 255, 255, 0.04) url("../img/icons/chevron-down.svg")
+    no-repeat;
+  padding-right: 3rem;
+}
+
+select option {
+  color: initial;
+}
+
+select::-ms-expand {
+  /* To remove the arrow of select element in IE */
+  display: none;
+}
+
+:is(input, textarea, select):focus {
+  outline: none !important;
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: var(--box-shadow-dafault);
+}
+
+:is(input, textarea, select):disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+:is(input, textarea):-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+:is(input, textarea)::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkboxBtnToggle {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.25rem;
+}
+
+.checkboxBtnToggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border: none !important;
+}
+
+.checkboxBtnToggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.checkboxBtnToggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.checkboxBtnToggle input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.checkboxBtnToggle input:focus + .slider {
+  box-shadow: var(--box-shadow-dafault);
+}
+
+.checkboxBtnToggle input:checked + .slider:before {
+  -webkit-transform: translate(1.35rem, -50%);
+  -ms-transform: translate(1.35rem, -50%);
+  transform: translate(1.35rem, -50%);
+}
+
+.radioBtnsGroup {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem !important;
+}
+
+.radioBtnsGroup input[type="radio"] {
+  display: none;
+}
+
+.radioBtnsGroup input[type="radio"]:checked + label {
+  color: var(--primary-color);
+  background: white;
+}
+
+.radioBtnsGroup.iconBtn input[type="radio"]:checked + label {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.radioBtnsGroup label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 8px 16px;
+  color: white;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.radioBtnsGroup.iconBtn label {
+  padding: 8px;
+  background: transparent;
+}
+
+.radioBtnsGroup label:hover {
+  filter: brightness(0.9);
+}
+
+/* FILTERS FORM ADVANCED - END */
+
+/* FILTERED CARS - START */
+
+#filteredCars {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/* Grid */
+
+.filteredCarsGrid {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1200px) {
+  .filteredCarsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Header and Footer */
+
+.filteredCarsHeader,
+.filteredCarsFooter {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+:is(.filteredCarsHeader, .filteredCarsFooter) > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+:is(.filteredCarsHeader, .filteredCarsFooter) .option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.filteredCarsHeader h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 130%;
+}
+
+:is(.filteredCarsHeader, .filteredCarsFooter) a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Options */
+
+.filteredCarsOptions > fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filteredCarsOptions > fieldset:first-child {
+  flex: 1;
+}
+
+.filteredCarsOptions label {
+  margin: 0;
+  gap: 1.2rem;
+}
+
+.filteredCarsOptions select {
+  width: max-content;
+}
+
+.filteredCarsOptions .btnCompare {
+  display: flex;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.filteredCarsOptions .btnCompare button {
+  width: 100%;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .filteredCarsOptions .btnCompare {
+    padding-left: unset;
+    border-left: none;
+  }
+}
+
+/* FILTERED CARS - END */
+
+/* BREADCRUMBS - START */
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.8rem;
+}
+
+.breadcrumbs a {
+  font-size: 1.4rem !important;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child) a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  background-image: url("../img/icons/chevron-right.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  content: "";
+  margin-left: 0.8rem;
+}
+
+/* BREADCRUMBS - END */
+
+/* PAGINATION - START */
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pagination li :is(a, button) {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 150%;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pagination li :is(a, button) img {
+  filter: brightness(0.7);
+}
+
+.pagination li :is(a, button).active {
+  font-weight: 700;
+  color: var(--primary-color);
+  background-color: #fff;
+}
+
+.pagination li :is(a, button):not(.active):hover {
+  color: #fff;
+}
+
+.pagination li :is(a, button):not(.active):hover img {
+  filter: brightness(1);
+}
+
+.pagination li :is(a, button) :is(span, img, svg) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* PAGINATION - END */
