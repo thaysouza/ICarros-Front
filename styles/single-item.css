@@ -1,0 +1,378 @@
+/* SINGLE ITEM PAGE - START */
+
+#singleItemPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem 0;
+}
+
+#singleItemPage :is(h1, h2, h3) {
+  font-weight: 700;
+  line-height: 130%;
+}
+
+#singleItemPage h1 {
+  font-size: 4rem;
+}
+
+#singleItemPage h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+#singleItemPage h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#singleItemPage main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+
+#singleItemPage .singleItemPageHeader {
+  width: 100%;
+}
+
+#singleItemPage .singleItemPageContent {
+  flex: 1;
+}
+
+#singleItemPage .singleItemPageSidebar {
+  width: 100%;
+  max-width: 450px;
+}
+
+@media (max-width: 992px) {
+  #singleItemPage main {
+    flex-direction: column;
+  }
+
+  #singleItemPage .singleItemPageSidebar {
+    max-width: unset;
+  }
+}
+
+/* Header */
+
+.singleItemPageHeader {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.singleItemPageHeader > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.singleItemPageHeader .option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.singleItemPageHeader a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* Options */
+
+.singleItemOptions {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.singleItemOptions li :is(a, button) {
+  width: 3.2rem;
+  height: 3.2rem;
+  line-height: 150%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--box-shadow-dafault);
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.singleItemOptions li :is(a, button):hover {
+  color: var(--primary-color);
+  background-color: #fff;
+}
+
+.singleItemOptions li :is(a, button) :is(span, img, svg) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Content */
+
+.singleItemPageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.singleItemPageContent a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.specifications :is(h2, strong) {
+  color: #fff;
+}
+
+.banner {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.banner span {
+  font-size: 1.4rem;
+}
+.banner .bannerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+.banner .bannerIcon {
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--gray-900);
+  position: relative;
+  border-radius: 1.2rem;
+}
+.banner .bannerIcon :is(img, svg) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Sidebar */
+
+.singleItemPageSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.authorCard {
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.authorCard a {
+  text-decoration: underline;
+}
+
+.authorCard .author {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.authorCard .author > img {
+  width: 5.5rem;
+  height: 5.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.myBtn {
+  height: fit-content;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--primary-color);
+  border: 1.25px solid var(--primary-color);
+  border-radius: 0.8rem;
+  display: flex;
+  gap: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.myBtn.btnOutlined {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.myBtn:hover {
+  filter: brightness(0.9);
+}
+
+.review {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  gap: 0.5rem;
+}
+
+/* Subscribe */
+
+.subscribe {
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.subscribe label {
+  gap: 1rem;
+}
+
+.subscribe small {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  flex: 1;
+}
+
+.subscribe fieldset {
+  gap: 2rem;
+}
+
+/* Subscribe Email */
+
+.subscribeEmail {
+  display: flex;
+}
+
+.subscribeEmail label {
+  position: relative;
+  flex: 1;
+  gap: 0;
+}
+
+.subscribeEmail label > img {
+  position: absolute;
+  left: 1.6rem;
+}
+
+.subscribeEmail input[type="email"] {
+  height: 100%;
+  padding-left: 5rem !important;
+  border-radius: 8px 0 0 8px;
+  border-right: none !important;
+}
+
+.subscribeEmail input[type="email"]:focus {
+  border-right: none !important;
+}
+
+.subscribeEmail input[type="email"]:focus + .subscribeButton {
+  outline: none !important;
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: var(--box-shadow-dafault);
+  border-left: none !important;
+}
+
+.subscribeEmail .subscribeButton {
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 8px 8px 0;
+  border-left: none !important;
+  margin: 0;
+}
+
+.subscribeEmail :is(input[type="submit"], button, a) {
+  width: max-content;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+}
+
+/* Infos List */
+
+.infosList {
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infosList a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.infosList :is(img, svg) {
+  fill: rgba(255, 255, 255, 0.7);
+  filter: brightness(0.7);
+}
+
+.infosList > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.infosList > div:not(:last-child) {
+  padding-right: 2rem;
+  margin-right: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* SINGLE ITEM PAGE - END */
+
+/* SECTION VOCÊ PODE ESTAR INTERESSADO - INÍCIO */
+
+#youMightBeInterested {
+  padding: 1rem 0;
+}
+
+#youMightBeInterested .container {
+  flex-direction: column;
+}
+
+/* SECTION VOCÊ PODE ESTAR INTERESSADO - FIM */
