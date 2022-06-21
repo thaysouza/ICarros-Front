@@ -1,3 +1,52 @@
+/* HEADER - START*/
+#navHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+#menuLogo {
+  margin-right: 56px;
+}
+
+#menuLogin {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+#enterButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 64px;
+  height: 21px;
+  opacity: 0.7;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+#sellButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+	background-color: var(--primary-color);
+  width: 110px;
+  height: 36px;
+	font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 8px;
+  gap: 10px;
+}
+/* HEADER - END*/
+
 /* CATALOG PAGE - START */
 
 #catalogPage {
