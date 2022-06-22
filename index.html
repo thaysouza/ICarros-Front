@@ -3,50 +3,61 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="language" content="pt-BR">
 
-		<!-- OG Tags global início -->
-		<!-- <meta property="og:site" content="https://icarros-gama-douglas.netlify.app/" />
-	<meta property="og:site_name" content="ICarros Academy" />
-	<meta property="og:image" content="https://icarros-gama-douglas.netlify.app/img/ico.jpeg" />
-	<meta property="og:description" content="Falando sobre desenvolvimento de softwares" /> -->
-		<!-- OG Tags global fim -->
+		<title>Compre e venda carros com facilidade - Finder</title>
+		<link rel="icon" type="image/png" href="img/ico.png">
+		<link rel="canonical" href="https://icarros-front.vercel.app/" />
 
-		<!-- OG Tags Twitter iniicio -->
-		<!-- <meta property="twitter:title" content="ICarros Academy"/>
-	<meta property="twitter:description" content="Falando sobre desenvolvimento de softwares" />
-	<meta property="twitter:image" content="img/ico.jpeg" /> -->
-		<!-- OG Tags Twitter fim -->
+		<meta name="description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+		<meta name="robots" content="index,follow">
+		<meta name="author" content="Finder" />
+		<meta name="keywords" content="carros, veículos, automóveis, carros novos, carros usados, comprar, vender, facilidade, comparar, compre, venda, finder" />
+		<meta name="copyright" content="© 2022 | Finder" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
 
-		<!-- Tags Google início -->
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description"
-			content="O Finder é um mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores." />
-		<meta name="keywords"
-			content="Finder, Carros, finder, carros, pesquisa, mercado digital, industria automotiva, automovel">
-		<meta name="copyright" content="Desenvolvido por ICarros Academy" />
-		<!-- Tags Google fim -->
+		<!-- OG Tags global - Início -->
+		<meta property="og:type" content="page" />
+		<meta property="og:url" content="https://icarros-front.vercel.app/" />
+		<meta property="og:site" content="https://icarros-front.vercel.app/" />
+		<meta property="og:site_name" content="Compre e venda carros com facilidade - Finder" />
+		<meta property="og:title" content="Compre e venda carros com facilidade - Finder" />
+		<meta property="og:image" content="img/ico.png" />
+		<meta property="og:description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+		<!-- OG Tags global - Fim -->
 
-		<!-- CSS  Inicio-->
+		<meta property="article:author" content="Finder" />
+
+		<!-- OG Tags Twitter - Início -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@" />
+		<meta name="twitter:title" content="Compre e venda carros com facilidade - Finder" />
+		<meta name="twitter:creator" content="@" />
+		<meta name="twitter:description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+		<meta property="twitter:image" content="img/ico.png" />
+		<!-- OG Tags Twitter - Fim -->
+
+		<!-- CSS - Início -->
 		<link rel="stylesheet" href="./styles/main.css">
 		<link rel="stylesheet" href="./styles/index.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
 		<link rel="stylesheet" href="./styles/glider-updated.css">
-		<!-- CSS Fim  -->
+		<!-- CSS - Fim  -->
 
-		<!-- Importação de icones -->
+		<!-- Ícones - Início -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 		<script src="https://kit.fontawesome.com/93a20b3367.js" crossorigin="anonymous"></script>
-		<!-- Fim da importação -->
+		<!-- Ícones - Fim -->
 
-		<title>Finder | E-Carros</title>
-
-		<!-- Scripts Inicio -->
+		<!-- Scripts - Início -->
 		<script defer src="./js/car-card-slider.js"></script>
 		<script defer src="./js/search.js"></script>
-		<!-- Scripts Fim -->
+		<!-- Scripts - Fim -->
 	</head>
 
 	<body>
@@ -85,724 +96,194 @@
 			</nav>
 		</header>
 
-		<section id="sectionHeader">
+		<main>
+
+			<section id="sectionHeader">
+				<div class="container">
+					<div class="initial">
+						<div class="textHeader">
+							<h1>Compre e venda com facilidade.</h1>
+							<p>O Finder é um mercado digital líder para a indústria automotiva que conecta compradores de carros
+								a vendedores.</p>
+						</div>
+						<img id="imgMainCar" src="./img/carroPrincipal.png" alt="Carro Principal">
+					</div>
+				</div>
+			</section>
+
 			<div class="container">
-				<div class="initial">
-					<div class="textHeader">
-						<h1>Compre e venda com facilidade.</h1>
-						<p>O Finder é um mercado digital líder para a indústria automotiva que conecta compradores de carros
-							a vendedores.</p>
+				<nav id="searchCar">
+					<div id="buttonsHeader">
+						<div id="buttonNew">Novo</div>
+						<div id="buttonUsed">Usado</div>
 					</div>
-					<img id="imgMainCar" src="./img/carroPrincipal.png" alt="Carro Principal">
-				</div>
-			</div>
-		</section>
 
-		<div class="container">
-			<nav id="searchCar">
-				<div id="buttonsHeader">
-					<div id="buttonNew">Novo</div>
-					<div id="buttonUsed">Usado</div>
-				</div>
+					<div id="formSearchCar">
+						<label for="searchInput" class="labelFormat">
+							<i class="bi bi-search"></i>
+							<input type="text" id="searchInput" placeholder="Pesquise por...">
+						</label>
 
-				<div id="formSearchCar">
-					<label for="searchInput" class="labelFormat">
-						<i class="bi bi-search"></i>
-						<input type="text" id="searchInput" placeholder="Pesquise por...">
-					</label>
+						<span class="searchSeparator"></span>
 
-					<span class="searchSeparator"></span>
+						<label for="searchMarca" class="labelFormat">
+							<i class="bi bi-star"></i>
+							<select name="searchMarca" id="searchMarca" class="selectHeader">
+								<option value="">Marca</option>
+								<!-- AQUI PRECISA FAZER COM JAVASCRIPT -->
+							</select>
+						</label>
 
-					<label for="searchMarca" class="labelFormat">
-						<i class="bi bi-star"></i>
-						<select name="searchMarca" id="searchMarca" class="selectHeader">
-							<option value="">Marca</option>
-							<!-- AQUI PRECISA FAZER COM JAVASCRIPT -->
-						</select>
-					</label>
+						<span class="searchSeparator"></span>
 
-					<span class="searchSeparator"></span>
+						<label for="searchModelo" class="labelFormat">
+							<i class="bi bi-view-stacked"></i>
+							<select name="searchModelo" id="searchModelo" class="selectHeader">
+								<option value="">Modelo</option>
+								<option value="Jetta">Jetta</option>
+							</select>
+						</label>
 
-					<label for="searchModelo" class="labelFormat">
-						<i class="bi bi-view-stacked"></i>
-						<select name="searchModelo" id="searchModelo" class="selectHeader">
-							<option value="">Modelo</option>
-							<option value="Jetta">Jetta</option>
-						</select>
-					</label>
+						<span class="searchSeparator"></span>
 
-					<span class="searchSeparator"></span>
+						<label for="searchTipo" class="labelFormat">
+							<i class="fa fa-car-side"></i>
+							<select name="searchTipo" id="searchTipo" class="selectHeader">
+								<option value="">Tipo</option>
+								<option value="Sedan">Sedan</option>
+							</select>
+						</label>
 
-					<label for="searchTipo" class="labelFormat">
-						<i class="fa fa-car-side"></i>
-						<select name="searchTipo" id="searchTipo" class="selectHeader">
-							<option value="">Tipo</option>
-							<option value="Sedan">Sedan</option>
-						</select>
-					</label>
+						<span class="searchSeparator"></span>
 
-					<span class="searchSeparator"></span>
+						<label for="searchLocal" class="labelFormat">
+							<i class="bi bi-geo-alt"></i>
+							<select name="searchLocal" id="searchLocal" class="selectHeader">
+								<option value="">Estado</option>
+								<option value="Sedan">RJ</option>
+							</select>
+						</label>
 
-					<label for="searchLocal" class="labelFormat">
-						<i class="bi bi-geo-alt"></i>
-						<select name="searchLocal" id="searchLocal" class="selectHeader">
-							<option value="">Estado</option>
-							<option value="Sedan">RJ</option>
-						</select>
-					</label>
-
-					<input id="searchButton" type="submit" value="Pesquisar" onclick="searchCar()">
-				</div>
-			</nav>
-		</div>
-
-		<section id="moreSearched">
-			<div class="container">
-				<div id="moreSearchedHeader">
-					<h2 class="sectionTitle">Mais procurados</h2>
-					<div class="sectionHeaderOptions">
-						<a href="#" aria-label="Acessar a página com todos os tipos de carros">
-							Ver todos
-							<img src="./img/icons/arrow-right.svg" alt="Seta apontando para a direita">
-						</a>
+						<input id="searchButton" type="submit" value="Pesquisar" onclick="searchCar()">
 					</div>
-				</div>
-				<div id="cardsCarTypes">
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/sedan.png" />
-							<h6 class="carTypeTitle">Sedan</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/suv.png" />
-							<h6 class="carTypeTitle">SUV</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/wagon.png" />
-							<h6 class="carTypeTitle">Wagon</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/crossover.png" />
-							<h6 class="carTypeTitle">Crossover</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/coupe.png" />
-							<h6 class="carTypeTitle">Coupe</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/pickup.png" />
-							<h6 class="carTypeTitle">Pickup</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/sportCoupe.png" />
-							<h6 class="carTypeTitle">Sport Coupe</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/compact.png" />
-							<h6 class="carTypeTitle">Compact</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/convertible.png" />
-							<h6 class="carTypeTitle">Convertible</h6>
-						</a>
-					</div>
-					<div class="cardCarType">
-						<a href="#" aria-label="Card clicável com um tipo de carro">
-							<img src="./img/moreSearched/familyMpv.png" />
-							<h6 class="carTypeTitle">Family MPV</h6>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="ofertas">
-			<div class="container">
-
-				<div class="sectionHeader">
-					<h2 class="sectionTitle">Ofertas</h2>
-
-					<div class="sectionHeaderOptions">
-						<a href="#" aria-label="Acessar a página de todas as ofertas">
-							Ver todas as ofertas
-							<img src="./img/icons/arrow-right.svg" alt="">
-						</a>
-					</div>
-				</div>
-
-				<div class="ofertasCarGrid">
-
-					<article class="carCardVertical">
-
-						<div class="carCardThumbnail">
-
-							<div class="carCardSlider">
-								<div class="mySlideList" id="car1">
-									<a href="#" class="mySlide active" data-slide-index="1">
-										<img src="./img/cars/car1.jpeg" alt="Imagem Carro" loading="lazy">
-									</a>
-
-									<a href="#" class="mySlide" data-slide-index="2">
-										<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
-									</a>
-
-									<a href="#" class="mySlide" data-slide-index="3">
-										<img src="./img/cars/car3.jpeg" alt="Imagem Carro" loading="lazy">
-									</a>
-								</div>
-
-								<button class="prevCardSlide" onclick="prevCardSlide('car1')">
-									<img src="./img/icons/chevron-left.svg" alt="">
-								</button>
-								<button class="nextCardSlide" onclick="nextCardSlide('car1')">
-									<img src="./img/icons/chevron-right.svg" alt="">
-								</button>
-							</div>
-
-							<button class="carCardWishlist">
-								<img src="./img/icons/heart.svg" alt="">
-							</button>
-
-							<div class="carCardBadges">
-								<!-- <span class="badge badgeNew">
-								Novo
-							</span> -->
-								<span class="badge badgeUsed">
-									Usado
-								</span>
-							</div>
-						</div>
-
-						<div class="carCardBody">
-							<div class="carYearCompare">
-								<div class="carYear">
-									<small>
-										2014
-									</small>
-								</div>
-
-								<label class="carCompare" for="carCompareCar1">
-									<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-									<small>
-										Compare
-									</small>
-								</label>
-							</div>
-
-							<h3 class="carName">
-								<a href="#">
-									Mercedes Benz Convertible Coupe
-								</a>
-							</h3>
-
-							<p class="carPrice">
-								<strong>
-									$25,880
-								</strong>
-							</p>
-
-							<p class="carLocation">
-								<img src="./img/icons/location.svg" alt="">
-								<small>
-									New York
-								</small>
-							</p>
-
-						</div>
-
-						<div class="carCardFooter">
-							<ul class="carInfos">
-								<li title="mileage">
-									<img src="./img/icons/mileage.svg" alt="">
-									<small>48K mi</small>
-								</li>
-
-								<li title="transmission">
-									<img src="./img/icons/transmission.svg" alt="">
-									<small>Automatic</small>
-								</li>
-
-								<li title="fuel">
-									<img src="./img/icons/fuel.svg" alt="">
-									<small>Petrol</small>
-								</li>
-							</ul>
-						</div>
-
-					</article>
-
-					<article class="carCardHorizontal">
-
-						<div class="carCardThumbnail">
-
-							<div class="carCardSlider">
-								<div class="mySlideList" id="car2">
-									<a href="#" class="mySlide active" data-slide-index="1">
-										<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
-									</a>
-								</div>
-
-								<button class="prevCardSlide" onclick="prevCardSlide('car2')">
-									<img src="./img/icons/chevron-left.svg" alt="">
-								</button>
-								<button class="nextCardSlide" onclick="nextCardSlide('car2')">
-									<img src="./img/icons/chevron-right.svg" alt="">
-								</button>
-							</div>
-
-							<button class="carCardWishlist">
-								<img src="./img/icons/heart.svg" alt="">
-							</button>
-
-							<div class="carCardBadges">
-								<!-- <span class="badge badgeNew">
-								Novo
-							</span> -->
-								<span class="badge badgeUsed">
-									Usado
-								</span>
-							</div>
-						</div>
-
-						<div class="carCardBodyFooter">
-							<div class="carCardBody">
-								<div class="carYearCompare">
-									<div class="carYear">
-										<small>
-											1995
-										</small>
-									</div>
-
-									<label class="carCompare" for="carCompareCar2">
-										<input type="checkbox" id="carCompareCar2" name="carCompare" value="compare">
-										<small>
-											Compare
-										</small>
-									</label>
-								</div>
-
-								<h3 class="carName">
-									<a href="#">
-										Ford Truck Lifted
-									</a>
-								</h3>
-
-								<p class="carPrice">
-									<strong>
-										$24,000
-									</strong>
-								</p>
-
-								<p class="carLocation">
-									<img src="./img/icons/location.svg" alt="">
-									<small>
-										Chicago
-									</small>
-								</p>
-
-							</div>
-
-							<div class="carCardFooter">
-								<ul class="carInfos">
-									<li title="mileage">
-										<img src="./img/icons/mileage.svg" alt="">
-										<small>278K mi</small>
-									</li>
-
-									<li title="transmission">
-										<img src="./img/icons/transmission.svg" alt="">
-										<small>Manual</small>
-									</li>
-
-									<li title="fuel">
-										<img src="./img/icons/fuel.svg" alt="">
-										<small>Diesel</small>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-					</article>
-
-					<article class="carCardHorizontal">
-
-						<div class="carCardThumbnail">
-
-							<div class="carCardSlider">
-								<div class="mySlideList" id="car3">
-									<a href="#" class="mySlide active" data-slide-index="1">
-										<img src="./img/cars/car3.jpeg" alt="Imagem Carro" loading="lazy">
-									</a>
-								</div>
-
-								<button class="prevCardSlide" onclick="prevCardSlide('car3')">
-									<img src="./img/icons/chevron-left.svg" alt="">
-								</button>
-								<button class="nextCardSlide" onclick="nextCardSlide('car3')">
-									<img src="./img/icons/chevron-right.svg" alt="">
-								</button>
-							</div>
-
-							<button class="carCardWishlist">
-								<img src="./img/icons/heart.svg" alt="">
-							</button>
-
-							<div class="carCardBadges">
-								<span class="badge badgeNew">
-									Novo
-								</span>
-								<!-- <span class="badge badgeUsed">
-								Usado
-							</span> -->
-							</div>
-						</div>
-
-						<div class="carCardBodyFooter">
-							<div class="carCardBody">
-								<div class="carYearCompare">
-									<div class="carYear">
-										<small>
-											2019
-										</small>
-									</div>
-
-									<label class="carCompare" for="carCompareCar3">
-										<input type="checkbox" id="carCompareCar3" name="carCompare" value="compare">
-										<small>
-											Compare
-										</small>
-									</label>
-								</div>
-
-								<h3 class="carName">
-									<a href="#">
-										Mercedes Benz C300 Sport
-									</a>
-								</h3>
-
-								<p class="carPrice">
-									<strong>
-										$54,420
-									</strong>
-								</p>
-
-								<p class="carLocation">
-									<img src="./img/icons/location.svg" alt="">
-									<small>
-										San Francisco
-									</small>
-								</p>
-
-							</div>
-
-							<div class="carCardFooter">
-								<ul class="carInfos">
-									<li title="mileage">
-										<img src="./img/icons/mileage.svg" alt="">
-										<small>No mileage</small>
-									</li>
-
-									<li title="transmission">
-										<img src="./img/icons/transmission.svg" alt="">
-										<small>Automatic</small>
-									</li>
-
-									<li title="fuel">
-										<img src="./img/icons/fuel.svg" alt="">
-										<small>Hybrid</small>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-					</article>
-
-				</div>
-
-			</div>
-		</section>
-
-		<section id="brands">
-			<div class="container">
-				<span id="brandsLogo">
-					<img src="./img/icons/opel.svg" alt="Opel" title="Opel">
-					<img src="./img/icons/audi.svg" alt="Audi" title="Audi">
-					<img src="./img/icons/mercedes.svg" alt="Mercedes" title="Mercedes">
-					<img src="./img/icons/toyota.svg" alt="Toyota" title="Toyota">
-					<img src="./img/icons/mazda.svg" alt="Mazda" title="Mazda">
-					<img src="./img/icons/nissan.svg" alt="Nissan" title="Nissan">
-					<img src="./img/icons/hyundai.svg" alt="Hyundai" title="Hyundai">
-					<img src="./img/icons/lexus.svg" alt="Lexus" title="Lexus">
-					<img src="./img/icons/honda.svg" alt="Honda" title="Honda">
-					<img src="./img/icons/renault.svg" alt="Renault" title="Renault">
-					<img src="./img/icons/infiniti.svg" alt="Infiniti" title="Infiniti">
-					<img src="./img/icons/mitsubishi.svg" alt="Mitsubishi" title="Mitsubishi">
-				</span>
-			</div>
-		</section>
-
-		<section class="cardsInfo container">
-			<div class="sectionTitles">
-				<h2 class="sectionTitle">O que temos de diferente</h2>
-				<div class="titleCardTwo">
-					<div>
-						<h1>Como vender carros no Finder
-							<img src="img/icon_arrow.png" alt="Icone de Seta">
-						</h1>
-					</div>
-				</div>
+				</nav>
 			</div>
 
-			<div class="sectionAll">
-
-				<div class="containerCardAll">
-
-					<div class="containerCard">
-						<div>
-							<div class="infoCard">
-								<div>
-									<h1>Loren ipsun</h1>
-									<p>That’s more than you’ll find on any other major online automotive marketplace in the USA.</p>
-								</div>
-								<div class="iconeCard">
-									<img src="img/icon_file.png" alt="Icone de Arquivo">
-								</div>
-							</div>
-
-							<div class="infoCard">
-								<div>
-									<h1>Loren ipsun</h1>
-									<p>Our powerful search makes it easy to personalize your results so you only see the cars and
-										features you care about.</p>
-								</div>
-								<div class="iconeCard">
-									<img src="img/icon_search.png" alt="Icone de Busca">
-								</div>
-							</div>
-
-							<div class="infoCard">
-								<div>
-									<h1>Loren ipsun</h1>
-									<p>Our team is constantly developing new features that make the process of buying and selling a
-										car simpler.</p>
-								</div>
-								<div class="iconeCard">
-									<img src="img/icon_settings.png" alt="Icone de Configuração">
-								</div>
-							</div>
+			<section id="moreSearched">
+				<div class="container">
+					<div id="moreSearchedHeader">
+						<h2 class="sectionTitle">Mais procurados</h2>
+						<div class="sectionHeaderOptions">
+							<a href="#" aria-label="Acessar a página com todos os tipos de carros">
+								Ver todos
+								<img src="./img/icons/arrow-right.svg" alt="Seta apontando para a direita">
+							</a>
+						</div>
+					</div>
+					<div id="cardsCarTypes">
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/sedan.png" />
+								<h6 class="carTypeTitle">Sedan</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/suv.png" />
+								<h6 class="carTypeTitle">SUV</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/wagon.png" />
+								<h6 class="carTypeTitle">Wagon</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/crossover.png" />
+								<h6 class="carTypeTitle">Crossover</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/coupe.png" />
+								<h6 class="carTypeTitle">Coupe</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/pickup.png" />
+								<h6 class="carTypeTitle">Pickup</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/sportCoupe.png" />
+								<h6 class="carTypeTitle">Sport Coupe</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/compact.png" />
+								<h6 class="carTypeTitle">Compact</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/convertible.png" />
+								<h6 class="carTypeTitle">Convertible</h6>
+							</a>
+						</div>
+						<div class="cardCarType">
+							<a href="#" aria-label="Card clicável com um tipo de carro">
+								<img src="./img/moreSearched/familyMpv.png" />
+								<h6 class="carTypeTitle">Family MPV</h6>
+							</a>
 						</div>
 					</div>
 				</div>
+			</section>
 
+			<section id="ofertas">
+				<div class="container">
 
-				<div class="containerCar">
-					<div class="imgCar">
-						<img src="img/auto.svg" alt="Imagem de Carro">
-					</div>
-					<div class="imgLine">
-						<img src="img/road-line.svg" alt="Imagem de Linha pontilhadas">
-					</div>
-				</div>
+					<div class="sectionHeader">
+						<h2 class="sectionTitle">Ofertas</h2>
 
-
-				<div class="containerCardAllTwo">
-
-					<div class="containerCard">
-						<div>
-							<div class="infoCardTwo">
-								<div class="iconeCard">
-									<img src="img/icon_info.png" alt="Icone de Informação">
-								</div>
-								<div>
-									<h1>Loren ipsun</h1>
-									<p>We provide free access to key info like dealer reviews, market value, price drops.</p>
-								</div>
-							</div>
-
-							<div class="infoCardTwo">
-								<div class="iconeCard">
-									<img src="img/icon_user.png" alt="Icone de Usuário">
-								</div>
-								<div>
-									<h1>Loren ipsun</h1>
-									<p>We focus on building the most transparent, trustworthy experience for our users, and we’ve
-										proven that works for dealers, too.</p>
-								</div>
-							</div>
-
-							<div class="infoCardTwo">
-								<div class="iconeCard">
-									<img src="img/icon_calculador.png" alt="Icone de Calculadora">
-								</div>
-								<div>
-									<h1>Loren ipsun</h1>
-									<p>Specify the parameters of your car to form its market value on the basis of similar cars on
-										Finder.</p>
-								</div>
-							</div>
+						<div class="sectionHeaderOptions">
+							<a href="#" aria-label="Acessar a página de todas as ofertas">
+								Ver todas as ofertas
+								<img src="./img/icons/arrow-right.svg" alt="">
+							</a>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
 
-		<section id="latestPublished">
-			<div class="container">
-
-				<div class="sectionHeader">
-					<h2 class="sectionTitle">Últimos publicados</h2>
-
-					<div class="sectionHeaderOptions">
-
-						<div class="tab-cars" role="tablist">
-							<button data-index="0" aria-label="Carros novos" role="tab" class="tab-btn">
-								Novo
-							</button>
-							<button data-index="1" aria-label="Carros usados" role="tab" class="tab-btn active">
-								Usado
-							</button>
-						</div>
-
-						<a href="#" aria-label="Acessar a página de todas as ofertas">
-							Ver todos
-							<img src="./img/icons/arrow-right.svg" alt="">
-						</a>
-					</div>
-				</div>
-
-				<div class="glider-contain">
-					<div class="glider">
+					<div class="ofertasCarGrid">
 
 						<article class="carCardVertical">
 
 							<div class="carCardThumbnail">
 
 								<div class="carCardSlider">
-									<div class="mySlideList" id="car4">
+									<div class="mySlideList" id="car1">
 										<a href="#" class="mySlide active" data-slide-index="1">
-											<img src="./img/cars/car4.jpeg" alt="Imagem Carro" loading="lazy">
+											<img src="./img/cars/car1.jpeg" alt="Imagem Carro" loading="lazy">
 										</a>
 
 										<a href="#" class="mySlide" data-slide-index="2">
-											<img src="./img/cars/car5.jpeg" alt="Imagem Carro" loading="lazy">
+											<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
 										</a>
 
 										<a href="#" class="mySlide" data-slide-index="3">
-											<img src="./img/cars/car6.jpeg" alt="Imagem Carro" loading="lazy">
+											<img src="./img/cars/car3.jpeg" alt="Imagem Carro" loading="lazy">
 										</a>
 									</div>
 
-									<button class="prevCardSlide" onclick="prevCardSlide('car4')">
+									<button class="prevCardSlide" onclick="prevCardSlide('car1')">
 										<img src="./img/icons/chevron-left.svg" alt="">
 									</button>
-									<button class="nextCardSlide" onclick="nextCardSlide('car4')">
-										<img src="./img/icons/chevron-right.svg" alt="">
-									</button>
-								</div>
-
-								<button class="carCardWishlist">
-									<img src="./img/icons/heart.svg" alt="">
-								</button>
-
-								<div class="carCardBadges">
-									<span class="badge badgeNew">
-										Novo
-									</span>
-									<!-- <span class="badge badgeUsed">
-										Usado
-									</span> -->
-								</div>
-							</div>
-
-							<div class="carCardBody">
-								<div class="carYearCompare">
-									<div class="carYear">
-										<small>
-											1019
-										</small>
-									</div>
-
-									<label class="carCompare" for="carCompareCar1">
-										<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-										<small>
-											Compare
-										</small>
-									</label>
-								</div>
-
-								<h3 class="carName">
-									<a href="#">
-										Mazda MX-5 Miata Convertible
-									</a>
-								</h3>
-
-								<p class="carPrice">
-									<strong>
-										$38,500
-									</strong>
-								</p>
-
-								<p class="carLocation">
-									<img src="./img/icons/location.svg" alt="">
-									<small>
-										Los Angeles
-									</small>
-								</p>
-
-							</div>
-
-							<div class="carCardFooter">
-								<ul class="carInfos">
-									<li title="mileage">
-										<img src="./img/icons/mileage.svg" alt="">
-										<small>18K mi</small>
-									</li>
-
-									<li title="transmission">
-										<img src="./img/icons/transmission.svg" alt="">
-										<small>Manual</small>
-									</li>
-
-									<li title="fuel">
-										<img src="./img/icons/fuel.svg" alt="">
-										<small>Petrol</small>
-									</li>
-								</ul>
-							</div>
-
-						</article>
-
-						<article class="carCardVertical">
-
-							<div class="carCardThumbnail">
-
-								<div class="carCardSlider">
-									<div class="mySlideList" id="car5">
-										<a href="#" class="mySlide active" data-slide-index="1">
-											<img src="./img/cars/car5.jpeg" alt="Imagem Carro" loading="lazy">
-										</a>
-									</div>
-
-									<button class="prevCardSlide" onclick="prevCardSlide('car5')">
-										<img src="./img/icons/chevron-left.svg" alt="">
-									</button>
-									<button class="nextCardSlide" onclick="nextCardSlide('car5')">
+									<button class="nextCardSlide" onclick="nextCardSlide('car1')">
 										<img src="./img/icons/chevron-right.svg" alt="">
 									</button>
 								</div>
@@ -813,8 +294,8 @@
 
 								<div class="carCardBadges">
 									<!-- <span class="badge badgeNew">
-										Novo
-									</span> -->
+									Novo
+								</span> -->
 									<span class="badge badgeUsed">
 										Usado
 									</span>
@@ -825,7 +306,7 @@
 								<div class="carYearCompare">
 									<div class="carYear">
 										<small>
-											1019
+											2014
 										</small>
 									</div>
 
@@ -839,104 +320,13 @@
 
 								<h3 class="carName">
 									<a href="#">
-										BMW 640 XI Gran Turismo
+										Mercedes Benz Convertible Coupe
 									</a>
 								</h3>
 
 								<p class="carPrice">
 									<strong>
-										$44,920
-									</strong>
-								</p>
-
-								<p class="carLocation">
-									<img src="./img/icons/location.svg" alt="">
-									<small>
-										New Jersey
-									</small>
-								</p>
-
-							</div>
-
-							<div class="carCardFooter">
-								<ul class="carInfos">
-									<li title="mileage">
-										<img src="./img/icons/mileage.svg" alt="">
-										<small>10K mi</small>
-									</li>
-
-									<li title="transmission">
-										<img src="./img/icons/transmission.svg" alt="">
-										<small>Automatic</small>
-									</li>
-
-									<li title="fuel">
-										<img src="./img/icons/fuel.svg" alt="">
-										<small>Gasoline</small>
-									</li>
-								</ul>
-							</div>
-
-						</article>
-
-						<article class="carCardVertical">
-
-							<div class="carCardThumbnail">
-
-								<div class="carCardSlider">
-									<div class="mySlideList" id="car6">
-										<a href="#" class="mySlide active" data-slide-index="1">
-											<img src="./img/cars/car6.jpeg" alt="Imagem Carro" loading="lazy">
-										</a>
-									</div>
-
-									<button class="prevCardSlide" onclick="prevCardSlide('car6')">
-										<img src="./img/icons/chevron-left.svg" alt="">
-									</button>
-									<button class="nextCardSlide" onclick="nextCardSlide('car6')">
-										<img src="./img/icons/chevron-right.svg" alt="">
-									</button>
-								</div>
-
-								<button class="carCardWishlist">
-									<img src="./img/icons/heart.svg" alt="">
-								</button>
-
-								<div class="carCardBadges">
-									<!-- <span class="badge badgeNew">
-										Novo
-									</span> -->
-									<span class="badge badgeUsed">
-										Usado
-									</span>
-								</div>
-							</div>
-
-							<div class="carCardBody">
-								<div class="carYearCompare">
-									<div class="carYear">
-										<small>
-											1019
-										</small>
-									</div>
-
-									<label class="carCompare" for="carCompareCar1">
-										<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-										<small>
-											Compare
-										</small>
-									</label>
-								</div>
-
-								<h3 class="carName">
-									<a href="#">
-										Nissan 370Z Nismo
-									</a>
-								</h3>
-
-								<p class="carPrice">
-									<strong>
-										$37,900
+										$25,880
 									</strong>
 								</p>
 
@@ -953,7 +343,7 @@
 								<ul class="carInfos">
 									<li title="mileage">
 										<img src="./img/icons/mileage.svg" alt="">
-										<small>16K mi</small>
+										<small>48K mi</small>
 									</li>
 
 									<li title="transmission">
@@ -963,28 +353,28 @@
 
 									<li title="fuel">
 										<img src="./img/icons/fuel.svg" alt="">
-										<small>Diesel</small>
+										<small>Petrol</small>
 									</li>
 								</ul>
 							</div>
 
 						</article>
 
-						<article class="carCardVertical">
+						<article class="carCardHorizontal">
 
 							<div class="carCardThumbnail">
 
 								<div class="carCardSlider">
-									<div class="mySlideList" id="car7">
+									<div class="mySlideList" id="car2">
 										<a href="#" class="mySlide active" data-slide-index="1">
 											<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
 										</a>
 									</div>
 
-									<button class="prevCardSlide" onclick="prevCardSlide('car7')">
+									<button class="prevCardSlide" onclick="prevCardSlide('car2')">
 										<img src="./img/icons/chevron-left.svg" alt="">
 									</button>
-									<button class="nextCardSlide" onclick="nextCardSlide('car7')">
+									<button class="nextCardSlide" onclick="nextCardSlide('car2')">
 										<img src="./img/icons/chevron-right.svg" alt="">
 									</button>
 								</div>
@@ -995,145 +385,767 @@
 
 								<div class="carCardBadges">
 									<!-- <span class="badge badgeNew">
-										Novo
-									</span> -->
+									Novo
+								</span> -->
 									<span class="badge badgeUsed">
 										Usado
 									</span>
 								</div>
 							</div>
 
-							<div class="carCardBody">
-								<div class="carYearCompare">
-									<div class="carYear">
-										<small>
-											1995
-										</small>
+							<div class="carCardBodyFooter">
+								<div class="carCardBody">
+									<div class="carYearCompare">
+										<div class="carYear">
+											<small>
+												1995
+											</small>
+										</div>
+
+										<label class="carCompare" for="carCompareCar2">
+											<input type="checkbox" id="carCompareCar2" name="carCompare" value="compare">
+											<small>
+												Compare
+											</small>
+										</label>
 									</div>
 
-									<label class="carCompare" for="carCompareCar1">
-										<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
+									<h3 class="carName">
+										<a href="#">
+											Ford Truck Lifted
+										</a>
+									</h3>
+
+									<p class="carPrice">
+										<strong>
+											$24,000
+										</strong>
+									</p>
+
+									<p class="carLocation">
+										<img src="./img/icons/location.svg" alt="">
 										<small>
-											Compare
+											Chicago
 										</small>
-									</label>
+									</p>
+
 								</div>
 
-								<h3 class="carName">
-									<a href="#">
-										Ford Truck Lifted
-									</a>
-								</h3>
+								<div class="carCardFooter">
+									<ul class="carInfos">
+										<li title="mileage">
+											<img src="./img/icons/mileage.svg" alt="">
+											<small>278K mi</small>
+										</li>
 
-								<p class="carPrice">
-									<strong>
-										$24,000
-									</strong>
-								</p>
+										<li title="transmission">
+											<img src="./img/icons/transmission.svg" alt="">
+											<small>Manual</small>
+										</li>
 
-								<p class="carLocation">
-									<img src="./img/icons/location.svg" alt="">
-									<small>
-										Chicago
-									</small>
-								</p>
-
+										<li title="fuel">
+											<img src="./img/icons/fuel.svg" alt="">
+											<small>Diesel</small>
+										</li>
+									</ul>
+								</div>
 							</div>
 
-							<div class="carCardFooter">
-								<ul class="carInfos">
-									<li title="mileage">
-										<img src="./img/icons/mileage.svg" alt="">
-										<small>278K Mi</small>
-									</li>
+						</article>
 
-									<li title="transmission">
-										<img src="./img/icons/transmission.svg" alt="">
-										<small>Manual</small>
-									</li>
+						<article class="carCardHorizontal">
 
-									<li title="fuel">
-										<img src="./img/icons/fuel.svg" alt="">
-										<small>Diesel</small>
-									</li>
-								</ul>
+							<div class="carCardThumbnail">
+
+								<div class="carCardSlider">
+									<div class="mySlideList" id="car3">
+										<a href="#" class="mySlide active" data-slide-index="1">
+											<img src="./img/cars/car3.jpeg" alt="Imagem Carro" loading="lazy">
+										</a>
+									</div>
+
+									<button class="prevCardSlide" onclick="prevCardSlide('car3')">
+										<img src="./img/icons/chevron-left.svg" alt="">
+									</button>
+									<button class="nextCardSlide" onclick="nextCardSlide('car3')">
+										<img src="./img/icons/chevron-right.svg" alt="">
+									</button>
+								</div>
+
+								<button class="carCardWishlist">
+									<img src="./img/icons/heart.svg" alt="">
+								</button>
+
+								<div class="carCardBadges">
+									<span class="badge badgeNew">
+										Novo
+									</span>
+									<!-- <span class="badge badgeUsed">
+									Usado
+								</span> -->
+								</div>
+							</div>
+
+							<div class="carCardBodyFooter">
+								<div class="carCardBody">
+									<div class="carYearCompare">
+										<div class="carYear">
+											<small>
+												2019
+											</small>
+										</div>
+
+										<label class="carCompare" for="carCompareCar3">
+											<input type="checkbox" id="carCompareCar3" name="carCompare" value="compare">
+											<small>
+												Compare
+											</small>
+										</label>
+									</div>
+
+									<h3 class="carName">
+										<a href="#">
+											Mercedes Benz C300 Sport
+										</a>
+									</h3>
+
+									<p class="carPrice">
+										<strong>
+											$54,420
+										</strong>
+									</p>
+
+									<p class="carLocation">
+										<img src="./img/icons/location.svg" alt="">
+										<small>
+											San Francisco
+										</small>
+									</p>
+
+								</div>
+
+								<div class="carCardFooter">
+									<ul class="carInfos">
+										<li title="mileage">
+											<img src="./img/icons/mileage.svg" alt="">
+											<small>No mileage</small>
+										</li>
+
+										<li title="transmission">
+											<img src="./img/icons/transmission.svg" alt="">
+											<small>Automatic</small>
+										</li>
+
+										<li title="fuel">
+											<img src="./img/icons/fuel.svg" alt="">
+											<small>Hybrid</small>
+										</li>
+									</ul>
+								</div>
 							</div>
 
 						</article>
 
 					</div>
 
-					<button aria-label="Previous" class="glider-prev">
-						<img src="./img/icons/chevron-left.svg" alt="">
-					</button>
-					<button aria-label="Next" class="glider-next">
-						<img src="./img/icons/chevron-right.svg" alt="">
-					</button>
+				</div>
+			</section>
 
-					<div role="tablist" class="dots"></div>
+			<section id="brands">
+				<div class="container">
+					<span id="brandsLogo">
+						<img src="./img/icons/opel.svg" alt="Opel" title="Opel">
+						<img src="./img/icons/audi.svg" alt="Audi" title="Audi">
+						<img src="./img/icons/mercedes.svg" alt="Mercedes" title="Mercedes">
+						<img src="./img/icons/toyota.svg" alt="Toyota" title="Toyota">
+						<img src="./img/icons/mazda.svg" alt="Mazda" title="Mazda">
+						<img src="./img/icons/nissan.svg" alt="Nissan" title="Nissan">
+						<img src="./img/icons/hyundai.svg" alt="Hyundai" title="Hyundai">
+						<img src="./img/icons/lexus.svg" alt="Lexus" title="Lexus">
+						<img src="./img/icons/honda.svg" alt="Honda" title="Honda">
+						<img src="./img/icons/renault.svg" alt="Renault" title="Renault">
+						<img src="./img/icons/infiniti.svg" alt="Infiniti" title="Infiniti">
+						<img src="./img/icons/mitsubishi.svg" alt="Mitsubishi" title="Mitsubishi">
+					</span>
+				</div>
+			</section>
+
+			<section class="cardsInfo container">
+				<div class="sectionTitles">
+					<h2 class="sectionTitle">O que temos de diferente</h2>
+					<div class="titleCardTwo">
+						<div>
+							<h1>Como vender carros no Finder
+								<img src="img/icon_arrow.png" alt="Icone de Seta">
+							</h1>
+						</div>
+					</div>
 				</div>
 
+				<div class="sectionAll">
 
-			</div>
-		</section>
+					<div class="containerCardAll">
 
-		<section id="productsCarousel">
-			<div class="container containerCarousel">
-				<div id="carousel">
-					<div id="leftElements">
-						<h2>Loren ipsun</h2>
-						<h6>Loren ipsun sit amet</h6>
-						<button>
-							Ir para loja
-							<img src="./img/productsCarousel/rightArrow.png" />
+						<div class="containerCard">
+							<div>
+								<div class="infoCard">
+									<div>
+										<h1>Loren ipsun</h1>
+										<p>That’s more than you’ll find on any other major online automotive marketplace in the USA.</p>
+									</div>
+									<div class="iconeCard">
+										<img src="img/icon_file.png" alt="Icone de Arquivo">
+									</div>
+								</div>
+
+								<div class="infoCard">
+									<div>
+										<h1>Loren ipsun</h1>
+										<p>Our powerful search makes it easy to personalize your results so you only see the cars and
+											features you care about.</p>
+									</div>
+									<div class="iconeCard">
+										<img src="img/icon_search.png" alt="Icone de Busca">
+									</div>
+								</div>
+
+								<div class="infoCard">
+									<div>
+										<h1>Loren ipsun</h1>
+										<p>Our team is constantly developing new features that make the process of buying and selling a
+											car simpler.</p>
+									</div>
+									<div class="iconeCard">
+										<img src="img/icon_settings.png" alt="Icone de Configuração">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="containerCar">
+						<div class="imgCar">
+							<img src="img/auto.svg" alt="Imagem de Carro">
+						</div>
+						<div class="imgLine">
+							<img src="img/road-line.svg" alt="Imagem de Linha pontilhadas">
+						</div>
+					</div>
+
+
+					<div class="containerCardAllTwo">
+
+						<div class="containerCard">
+							<div>
+								<div class="infoCardTwo">
+									<div class="iconeCard">
+										<img src="img/icon_info.png" alt="Icone de Informação">
+									</div>
+									<div>
+										<h1>Loren ipsun</h1>
+										<p>We provide free access to key info like dealer reviews, market value, price drops.</p>
+									</div>
+								</div>
+
+								<div class="infoCardTwo">
+									<div class="iconeCard">
+										<img src="img/icon_user.png" alt="Icone de Usuário">
+									</div>
+									<div>
+										<h1>Loren ipsun</h1>
+										<p>We focus on building the most transparent, trustworthy experience for our users, and we’ve
+											proven that works for dealers, too.</p>
+									</div>
+								</div>
+
+								<div class="infoCardTwo">
+									<div class="iconeCard">
+										<img src="img/icon_calculador.png" alt="Icone de Calculadora">
+									</div>
+									<div>
+										<h1>Loren ipsun</h1>
+										<p>Specify the parameters of your car to form its market value on the basis of similar cars on
+											Finder.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="latestPublished">
+				<div class="container">
+
+					<div class="sectionHeader">
+						<h2 class="sectionTitle">Últimos publicados</h2>
+
+						<div class="sectionHeaderOptions">
+
+							<div class="tab-cars" role="tablist">
+								<button data-index="0" aria-label="Carros novos" role="tab" class="tab-btn">
+									Novo
+								</button>
+								<button data-index="1" aria-label="Carros usados" role="tab" class="tab-btn active">
+									Usado
+								</button>
+							</div>
+
+							<a href="#" aria-label="Acessar a página de todas as ofertas">
+								Ver todos
+								<img src="./img/icons/arrow-right.svg" alt="">
+							</a>
+						</div>
+					</div>
+
+					<div class="glider-contain">
+						<div class="glider">
+
+							<article class="carCardVertical">
+
+								<div class="carCardThumbnail">
+
+									<div class="carCardSlider">
+										<div class="mySlideList" id="car4">
+											<a href="#" class="mySlide active" data-slide-index="1">
+												<img src="./img/cars/car4.jpeg" alt="Imagem Carro" loading="lazy">
+											</a>
+
+											<a href="#" class="mySlide" data-slide-index="2">
+												<img src="./img/cars/car5.jpeg" alt="Imagem Carro" loading="lazy">
+											</a>
+
+											<a href="#" class="mySlide" data-slide-index="3">
+												<img src="./img/cars/car6.jpeg" alt="Imagem Carro" loading="lazy">
+											</a>
+										</div>
+
+										<button class="prevCardSlide" onclick="prevCardSlide('car4')">
+											<img src="./img/icons/chevron-left.svg" alt="">
+										</button>
+										<button class="nextCardSlide" onclick="nextCardSlide('car4')">
+											<img src="./img/icons/chevron-right.svg" alt="">
+										</button>
+									</div>
+
+									<button class="carCardWishlist">
+										<img src="./img/icons/heart.svg" alt="">
+									</button>
+
+									<div class="carCardBadges">
+										<span class="badge badgeNew">
+											Novo
+										</span>
+										<!-- <span class="badge badgeUsed">
+											Usado
+										</span> -->
+									</div>
+								</div>
+
+								<div class="carCardBody">
+									<div class="carYearCompare">
+										<div class="carYear">
+											<small>
+												1019
+											</small>
+										</div>
+
+										<label class="carCompare" for="carCompareCar1">
+											<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
+											<small>
+												Compare
+											</small>
+										</label>
+									</div>
+
+									<h3 class="carName">
+										<a href="#">
+											Mazda MX-5 Miata Convertible
+										</a>
+									</h3>
+
+									<p class="carPrice">
+										<strong>
+											$38,500
+										</strong>
+									</p>
+
+									<p class="carLocation">
+										<img src="./img/icons/location.svg" alt="">
+										<small>
+											Los Angeles
+										</small>
+									</p>
+
+								</div>
+
+								<div class="carCardFooter">
+									<ul class="carInfos">
+										<li title="mileage">
+											<img src="./img/icons/mileage.svg" alt="">
+											<small>18K mi</small>
+										</li>
+
+										<li title="transmission">
+											<img src="./img/icons/transmission.svg" alt="">
+											<small>Manual</small>
+										</li>
+
+										<li title="fuel">
+											<img src="./img/icons/fuel.svg" alt="">
+											<small>Petrol</small>
+										</li>
+									</ul>
+								</div>
+
+							</article>
+
+							<article class="carCardVertical">
+
+								<div class="carCardThumbnail">
+
+									<div class="carCardSlider">
+										<div class="mySlideList" id="car5">
+											<a href="#" class="mySlide active" data-slide-index="1">
+												<img src="./img/cars/car5.jpeg" alt="Imagem Carro" loading="lazy">
+											</a>
+										</div>
+
+										<button class="prevCardSlide" onclick="prevCardSlide('car5')">
+											<img src="./img/icons/chevron-left.svg" alt="">
+										</button>
+										<button class="nextCardSlide" onclick="nextCardSlide('car5')">
+											<img src="./img/icons/chevron-right.svg" alt="">
+										</button>
+									</div>
+
+									<button class="carCardWishlist">
+										<img src="./img/icons/heart.svg" alt="">
+									</button>
+
+									<div class="carCardBadges">
+										<!-- <span class="badge badgeNew">
+											Novo
+										</span> -->
+										<span class="badge badgeUsed">
+											Usado
+										</span>
+									</div>
+								</div>
+
+								<div class="carCardBody">
+									<div class="carYearCompare">
+										<div class="carYear">
+											<small>
+												1019
+											</small>
+										</div>
+
+										<label class="carCompare" for="carCompareCar1">
+											<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
+											<small>
+												Compare
+											</small>
+										</label>
+									</div>
+
+									<h3 class="carName">
+										<a href="#">
+											BMW 640 XI Gran Turismo
+										</a>
+									</h3>
+
+									<p class="carPrice">
+										<strong>
+											$44,920
+										</strong>
+									</p>
+
+									<p class="carLocation">
+										<img src="./img/icons/location.svg" alt="">
+										<small>
+											New Jersey
+										</small>
+									</p>
+
+								</div>
+
+								<div class="carCardFooter">
+									<ul class="carInfos">
+										<li title="mileage">
+											<img src="./img/icons/mileage.svg" alt="">
+											<small>10K mi</small>
+										</li>
+
+										<li title="transmission">
+											<img src="./img/icons/transmission.svg" alt="">
+											<small>Automatic</small>
+										</li>
+
+										<li title="fuel">
+											<img src="./img/icons/fuel.svg" alt="">
+											<small>Gasoline</small>
+										</li>
+									</ul>
+								</div>
+
+							</article>
+
+							<article class="carCardVertical">
+
+								<div class="carCardThumbnail">
+
+									<div class="carCardSlider">
+										<div class="mySlideList" id="car6">
+											<a href="#" class="mySlide active" data-slide-index="1">
+												<img src="./img/cars/car6.jpeg" alt="Imagem Carro" loading="lazy">
+											</a>
+										</div>
+
+										<button class="prevCardSlide" onclick="prevCardSlide('car6')">
+											<img src="./img/icons/chevron-left.svg" alt="">
+										</button>
+										<button class="nextCardSlide" onclick="nextCardSlide('car6')">
+											<img src="./img/icons/chevron-right.svg" alt="">
+										</button>
+									</div>
+
+									<button class="carCardWishlist">
+										<img src="./img/icons/heart.svg" alt="">
+									</button>
+
+									<div class="carCardBadges">
+										<!-- <span class="badge badgeNew">
+											Novo
+										</span> -->
+										<span class="badge badgeUsed">
+											Usado
+										</span>
+									</div>
+								</div>
+
+								<div class="carCardBody">
+									<div class="carYearCompare">
+										<div class="carYear">
+											<small>
+												1019
+											</small>
+										</div>
+
+										<label class="carCompare" for="carCompareCar1">
+											<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
+											<small>
+												Compare
+											</small>
+										</label>
+									</div>
+
+									<h3 class="carName">
+										<a href="#">
+											Nissan 370Z Nismo
+										</a>
+									</h3>
+
+									<p class="carPrice">
+										<strong>
+											$37,900
+										</strong>
+									</p>
+
+									<p class="carLocation">
+										<img src="./img/icons/location.svg" alt="">
+										<small>
+											New York
+										</small>
+									</p>
+
+								</div>
+
+								<div class="carCardFooter">
+									<ul class="carInfos">
+										<li title="mileage">
+											<img src="./img/icons/mileage.svg" alt="">
+											<small>16K mi</small>
+										</li>
+
+										<li title="transmission">
+											<img src="./img/icons/transmission.svg" alt="">
+											<small>Automatic</small>
+										</li>
+
+										<li title="fuel">
+											<img src="./img/icons/fuel.svg" alt="">
+											<small>Diesel</small>
+										</li>
+									</ul>
+								</div>
+
+							</article>
+
+							<article class="carCardVertical">
+
+								<div class="carCardThumbnail">
+
+									<div class="carCardSlider">
+										<div class="mySlideList" id="car7">
+											<a href="#" class="mySlide active" data-slide-index="1">
+												<img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
+											</a>
+										</div>
+
+										<button class="prevCardSlide" onclick="prevCardSlide('car7')">
+											<img src="./img/icons/chevron-left.svg" alt="">
+										</button>
+										<button class="nextCardSlide" onclick="nextCardSlide('car7')">
+											<img src="./img/icons/chevron-right.svg" alt="">
+										</button>
+									</div>
+
+									<button class="carCardWishlist">
+										<img src="./img/icons/heart.svg" alt="">
+									</button>
+
+									<div class="carCardBadges">
+										<!-- <span class="badge badgeNew">
+											Novo
+										</span> -->
+										<span class="badge badgeUsed">
+											Usado
+										</span>
+									</div>
+								</div>
+
+								<div class="carCardBody">
+									<div class="carYearCompare">
+										<div class="carYear">
+											<small>
+												1995
+											</small>
+										</div>
+
+										<label class="carCompare" for="carCompareCar1">
+											<input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
+											<small>
+												Compare
+											</small>
+										</label>
+									</div>
+
+									<h3 class="carName">
+										<a href="#">
+											Ford Truck Lifted
+										</a>
+									</h3>
+
+									<p class="carPrice">
+										<strong>
+											$24,000
+										</strong>
+									</p>
+
+									<p class="carLocation">
+										<img src="./img/icons/location.svg" alt="">
+										<small>
+											Chicago
+										</small>
+									</p>
+
+								</div>
+
+								<div class="carCardFooter">
+									<ul class="carInfos">
+										<li title="mileage">
+											<img src="./img/icons/mileage.svg" alt="">
+											<small>278K Mi</small>
+										</li>
+
+										<li title="transmission">
+											<img src="./img/icons/transmission.svg" alt="">
+											<small>Manual</small>
+										</li>
+
+										<li title="fuel">
+											<img src="./img/icons/fuel.svg" alt="">
+											<small>Diesel</small>
+										</li>
+									</ul>
+								</div>
+
+							</article>
+
+						</div>
+
+						<button aria-label="Previous" class="glider-prev">
+							<img src="./img/icons/chevron-left.svg" alt="">
 						</button>
+						<button aria-label="Next" class="glider-next">
+							<img src="./img/icons/chevron-right.svg" alt="">
+						</button>
+
+						<div role="tablist" class="dots"></div>
 					</div>
-					<div id="products">
-						<div class="product">
-							<img src="./img/productsCarousel/seat-covers.png" />
-							<h6>Bancos</h6>
+
+
+				</div>
+			</section>
+
+			<section id="productsCarousel">
+				<div class="container containerCarousel">
+					<div id="carousel">
+						<div id="leftElements">
+							<h2>Loren ipsun</h2>
+							<h6>Loren ipsun sit amet</h6>
+							<button>
+								Ir para loja
+								<img src="./img/productsCarousel/rightArrow.png" />
+							</button>
 						</div>
-						<div class="product">
-							<img src="./img/productsCarousel/tires.png" />
-							<h6>Pneus</h6>
-						</div>
-						<div class="product">
-							<img src="./img/productsCarousel/disks.png" />
-							<h6>Rodas</h6>
-						</div>
-						<div class="product">
-							<img src="./img/productsCarousel/childrenChair.png" />
-							<h6>Acessórios</h6>
+						<div id="products">
+							<div class="product">
+								<img src="./img/productsCarousel/seat-covers.png" />
+								<h6>Bancos</h6>
+							</div>
+							<div class="product">
+								<img src="./img/productsCarousel/tires.png" />
+								<h6>Pneus</h6>
+							</div>
+							<div class="product">
+								<img src="./img/productsCarousel/disks.png" />
+								<h6>Rodas</h6>
+							</div>
+							<div class="product">
+								<img src="./img/productsCarousel/childrenChair.png" />
+								<h6>Acessórios</h6>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="arrowsCarousel">
-				<button class="arrow">&lt;</button>
-				<button class="arrow">&gt;</button>
-			</div>
-		</section>
+				<div id="arrowsCarousel">
+					<button class="arrow">&lt;</button>
+					<button class="arrow">&gt;</button>
+				</div>
+			</section>
 
-		<section class="container containerApp">
-			<div class="infoApp">
-				<h1>Baixe o nosso app</h1>
-				<p>Baixe o Finder App e junte-se à comunidade de entusiastas de carros. 
-				   Não pare sua busca de carro quando sair do computador com nosso aplicativo
-				   para Android e iOS!</p>   			   
-				 <div class="buttonsApp">
-					<img src="img/app-store.png" alt="">
-					<img src="img/google-play.png" alt="">
-				 </div>
-			</div>
-	
-			<div class="imgApp">
-			   <img src="img/illustration.png" alt="">
-        
+			<section class="container containerApp">
+				<div class="infoApp">
+					<h1>Baixe o nosso app</h1>
+					<p>Baixe o Finder App e junte-se à comunidade de entusiastas de carros. 
+					Não pare sua busca de carro quando sair do computador com nosso aplicativo
+					para Android e iOS!</p>   			   
+					<div class="buttonsApp">
+						<img src="img/app-store.png" alt="">
+						<img src="img/google-play.png" alt="">
+					</div>
+				</div>
+		
+				<div class="imgApp">
+				<img src="img/illustration.png" alt="">
+			
 
-			</div>
-		</section>
+				</div>
+			</section>
 
-		<main>
 			<section id="html" class=" section-default  ">
 				<div class="container center-content">
 					<div class="main-blog">
@@ -1330,7 +1342,6 @@
 			});
 		</script>
 		<!-- Scripts - Fim -->
-
 	</body>
 
 </html>
