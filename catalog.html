@@ -16,6 +16,8 @@
 
   <!-- Scripts - Início -->
   <script src="./js/car-card-slider.js" defer></script>
+  <script src="./js/filters-form-advanced.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- Scripts - Fim -->
 </head>
 
@@ -27,15 +29,24 @@
       <aside>
         <form id="filtersFormAdvanced">
           
-          <fieldset class="radioBtnsGroup">
-            <div>
-              <input type="radio" id="formRadioStatusNew" name="formRadioStatus" checked />
-              <label for="formRadioStatusNew"> Novo </label>
-            </div>
-            <div>
-              <input type="radio" id="formRadioStatusUsed" name="formRadioStatus" />
-              <label for="formRadioStatusUsed"> Usado </label>
-            </div>
+          <fieldset id="formRadioCondition" class="radioBtnsGroup">
+              <div>
+                <input
+                  type="radio"
+                  id="formRadioConditionNovo"
+                  name="formRadioCondition"
+                  checked
+                />
+                <label for="formRadioConditionNovo">Novo</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="formRadioConditionUsado"
+                  name="formRadioCondition"
+                />
+                <label for="formRadioConditionUsado">Usado</label>
+              </div>
           </fieldset>
 
           <hr />
@@ -50,27 +61,17 @@
             </label>
             <select name="formSelectLocalizacao" id="formSelectLocalizacao">
               <option value="">Escolha o local</option>
-              <option value="local1">local 1</option>
-              <option value="local2">local 2</option>
-              <option value="local3">local 3</option>
             </select>
           </fieldset>
 
           <fieldset>
             <legend>Tipo</legend>
 
-            <div>
-              <label for="formCheckSedan">
-                <input type="checkbox" name="formCheckSedan" id="formCheckSedan" value="formCheckSedan" />
+            <div id="formCheckType">
+              <!-- <label for="formCheckTypeSedan">
+                <input type="checkbox" name="formCheckTypeSedan" id="formCheckTypeSedan" value="formCheckTypeSedan" />
                 Sedan
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckSUV">
-                <input type="checkbox" name="formCheckSUV" id="formCheckSUV" value="formCheckSUV" />
-                SUV
-              </label>
+              </label> -->
             </div>
           </fieldset>
 
@@ -78,26 +79,20 @@
             <legend>Marca e modelo</legend>
 
             <div>
-              <label for="formSelectMarca" class="visually-hidden">
+              <label for="formSelectBrand" class="visually-hidden">
                 Marca
               </label>
-              <select name="formSelectMarca" id="formSelectMarca">
+              <select name="formSelectBrand" id="formSelectBrand">
                 <option value="">Marca</option>
-                <option value="marca1">marca 1</option>
-                <option value="marca2">marca 2</option>
-                <option value="marca3">marca 3</option>
               </select>
             </div>
 
             <div>
-              <label for="formSelectModelo" class="visually-hidden">
+              <label for="formSelectModel" class="visually-hidden">
                 Modelo
               </label>
-              <select name="formSelectModelo" id="formSelectModelo" disabled>
+              <select name="formSelectModel" id="formSelectModel" disabled>
                 <option value="">Modelo</option>
-                <option value="modelo1">modelo 1</option>
-                <option value="modelo2">modelo 2</option>
-                <option value="modelo3">modelo 3</option>
               </select>
             </div>
           </fieldset>
@@ -112,9 +107,6 @@
                 </label>
                 <select name="formSelectAnoMin" id="formSelectAnoMin">
                   <option value="">Todos</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
                 </select>
               </div>
 
@@ -126,9 +118,6 @@
                 </label>
                 <select name="formSelectAnoMax" id="formSelectAnoMax">
                   <option value="">Todos</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
                 </select>
               </div>
             </div>
@@ -170,90 +159,57 @@
           </fieldset>
 
           <fieldset>
-            <legend>Tipo do carro</legend>
-
-            <div>
-              <label for="formCheckAWD4WD">
-                <input type="checkbox" name="formCheckAWD4WD" id="formCheckAWD4WD" value="formCheckAWD4WD" />
-                AWD/4WD
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckFrontWheelDrive">
-                <input type="checkbox" name="formCheckFrontWheelDrive" id="formCheckFrontWheelDrive"
-                  value="formCheckFrontWheelDrive" />
-                Front Wheel Drive
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset>
             <legend>Combustível</legend>
 
-            <div>
-              <label for="formCheckDiesel">
-                <input type="checkbox" name="formCheckDiesel" id="formCheckDiesel" value="formCheckDiesel" />
+            <div id="formCheckFuel">
+              <!-- <label for="formCheckFuelDiesel">
+                <input type="checkbox" name="formCheckFuelDiesel" id="formCheckFuelDiesel" value="formCheckDiesel" />
                 Diesel
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckEletric">
-                <input type="checkbox" name="formCheckEletric" id="formCheckEletric" value="formCheckEletric" />
-                Eletric
-              </label>
+              </label> -->
             </div>
           </fieldset>
 
           <fieldset>
             <legend>Transmissão</legend>
 
-            <div>
-              <label for="formCheckAutomatic">
-                <input type="checkbox" name="formCheckAutomatic" id="formCheckAutomatic" value="formCheckAutomatic" />
+            <div id="formCheckTransmission">
+              <!-- <label for="formCheckTransmissionAutomatic">
+                <input type="checkbox" name="formCheckTransmissionAutomatic" id="formCheckTransmissionAutomatic" value="formCheckTransmissionAutomatic" />
                 Automatic
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckManual5Speed">
-                <input type="checkbox" name="formCheckManual5Speed" id="formCheckManual5Speed"
-                  value="formCheckManual5Speed" />
-                Manual 5 Speed
-              </label>
+              </label> -->
             </div>
           </fieldset>
 
           <fieldset>
-            <legend>Kilometragem</legend>
+            <legend>Quilometragem</legend>
 
-            <label for="formSelectKilometragem" class="visually-hidden">
-              Kilometragem
+            <label for="formSelectMileage" class="visually-hidden">
+              Quilometragem
             </label>
-            <select name="formSelectKilometragem" id="formSelectKilometragem">
-              <option value="">Any</option>
-              <option value="kilometragem1">kilometragem 1</option>
-              <option value="kilometragem2">kilometragem 2</option>
-              <option value="kilometragem3">kilometragem 3</option>
+            <select name="formSelectMileage" id="formSelectMileage">
+              <option value="">Todas</option>
             </select>
           </fieldset>
 
           <fieldset>
             <legend>Cor</legend>
 
-            <div>
-              <label for="formCheckPreto">
-                <input type="checkbox" name="formCheckPreto" id="formCheckPreto" value="formCheckPreto" />
+            <div id="formCheckColor">
+              <!-- <label for="formCheckColorPreto">
+                <input type="checkbox" name="formCheckColorPreto" id="formCheckColorPreto" value="formCheckPreto" />
                 Preto
-              </label>
+              </label> -->
             </div>
+          </fieldset>
 
-            <div>
-              <label for="formCheckAzul">
-                <input type="checkbox" name="formCheckAzul" id="formCheckAzul" value="formCheckAzul" />
-                Azul
-              </label>
+          <fieldset>
+            <legend>Adicional</legend>
+
+            <div id="formCheckAdditional">
+              <!-- <label for="formCheckAdditionalTetoSolar">
+                <input type="checkbox" name="formCheckAdditionalTetoSolar" id="formCheckAdditionalTetoSolar" value="formCheckAdditionalTetoSolar" />
+                Teto solar
+              </label> -->
             </div>
           </fieldset>
         </form>
