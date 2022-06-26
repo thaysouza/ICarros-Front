@@ -16,8 +16,8 @@
 
   <!-- Scripts - Início -->
   <script src="./js/car-card-slider.js" defer></script>
-  <script src="./js/filters-form-advanced.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+  <script src="./js/catalog.js" defer></script>
   <!-- Scripts - Fim -->
 </head>
 
@@ -30,23 +30,23 @@
         <form id="filtersFormAdvanced">
           
           <fieldset id="formRadioCondition" class="radioBtnsGroup">
-              <div>
-                <input
-                  type="radio"
-                  id="formRadioConditionNovo"
-                  name="formRadioCondition"
-                  checked
-                />
-                <label for="formRadioConditionNovo">Novo</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  id="formRadioConditionUsado"
-                  name="formRadioCondition"
-                />
-                <label for="formRadioConditionUsado">Usado</label>
-              </div>
+            <div>
+              <input
+                type="radio"
+                id="formRadioConditionNovo"
+                name="formRadioCondition"
+                checked
+              />
+              <label for="formRadioConditionNovo">Novo</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="formRadioConditionUsado"
+                name="formRadioCondition"
+              />
+              <label for="formRadioConditionUsado">Usado</label>
+            </div>
           </fieldset>
 
           <hr />
@@ -56,10 +56,10 @@
           <fieldset>
             <legend>Localização</legend>
 
-            <label for="formSelectLocalizacao" class="visually-hidden">
+            <label for="formSelectLocation" class="visually-hidden">
               Localização
             </label>
-            <select name="formSelectLocalizacao" id="formSelectLocalizacao">
+            <select name="formSelectLocation" id="formSelectLocation">
               <option value="">Escolha o local</option>
             </select>
           </fieldset>
@@ -240,7 +240,7 @@
                 
                 <div class="option">
                   <img src="./img/icons/car.svg" alt="">
-                  <span>249 offers</span>
+                  <span id="qtdOffers">0 oferta(s)</span>
                 </div>
               </div>
               
@@ -282,7 +282,7 @@
             </div>
 
             <div class="filteredCarsGrid">
-              <article class="carCardVertical">
+              <!-- <article class="carCardVertical">
 	
                 <div class="carCardThumbnail">
     
@@ -317,9 +317,9 @@
                     <span class="badge badgeNew">
                       Novo
                     </span>
-                    <!-- <span class="badge badgeUsed">
+                    <span class="badge badgeUsed">
                       Usado
-                    </span> -->
+                    </span>
                   </div>
                 </div>
     
@@ -379,280 +379,7 @@
                   </ul>
                 </div>
     
-              </article>
-    
-              <article class="carCardVertical">
-    
-                <div class="carCardThumbnail">
-    
-                  <div class="carCardSlider">
-                    <div class="mySlideList" id="car5">
-                      <a href="#" class="mySlide active" data-slide-index="1">
-                        <img src="./img/cars/car5.jpeg" alt="Imagem Carro" loading="lazy">
-                      </a>
-                    </div>
-    
-                    <button class="prevCardSlide" onclick="prevCardSlide('car5')">
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                    <button class="nextCardSlide" onclick="nextCardSlide('car5')">
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </div>
-    
-                  <button class="carCardWishlist">
-                    <img src="./img/icons/heart.svg" alt="">
-                  </button>
-    
-                  <div class="carCardBadges">
-                    <!-- <span class="badge badgeNew">
-                      Novo
-                    </span> -->
-                    <span class="badge badgeUsed">
-                      Usado
-                    </span>
-                  </div>
-                </div>
-    
-                <div class="carCardBody">
-                  <div class="carYearCompare">
-                    <div class="carYear">
-                      <small>
-                        1019
-                      </small>
-                    </div>
-    
-                    <label class="carCompare" for="carCompareCar1">
-                      <input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-                      <small>
-                        Compare
-                      </small>
-                    </label>
-                  </div>
-    
-                  <h3 class="carName">
-                    <a href="#">
-                      BMW 640 XI Gran Turismo 
-                    </a>
-                  </h3>
-    
-                  <p class="carPrice">
-                    <strong>
-                      $44,920
-                    </strong>
-                  </p>
-    
-                  <p class="carLocation">
-                    <img src="./img/icons/location.svg" alt="">
-                    <small>
-                      New Jersey
-                    </small>
-                  </p>
-    
-                </div>
-    
-                <div class="carCardFooter">
-                  <ul class="carInfos">
-                    <li title="mileage">
-                      <img src="./img/icons/mileage.svg" alt="">
-                      <small>10K mi</small>
-                    </li>
-    
-                    <li title="transmission">
-                      <img src="./img/icons/transmission.svg" alt="">
-                      <small>Automatic</small>
-                    </li>
-    
-                    <li title="fuel">
-                      <img src="./img/icons/fuel.svg" alt="">
-                      <small>Gasoline</small>
-                    </li>
-                  </ul>
-                </div>
-    
-              </article>
-    
-              <article class="carCardVertical">
-    
-                <div class="carCardThumbnail">
-    
-                  <div class="carCardSlider">
-                    <div class="mySlideList" id="car6">
-                      <a href="#" class="mySlide active" data-slide-index="1">
-                        <img src="./img/cars/car6.jpeg" alt="Imagem Carro" loading="lazy">
-                      </a>
-                    </div>
-    
-                    <button class="prevCardSlide" onclick="prevCardSlide('car6')">
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                    <button class="nextCardSlide" onclick="nextCardSlide('car6')">
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </div>
-    
-                  <button class="carCardWishlist">
-                    <img src="./img/icons/heart.svg" alt="">
-                  </button>
-    
-                  <div class="carCardBadges">
-                    <!-- <span class="badge badgeNew">
-                      Novo
-                    </span> -->
-                    <span class="badge badgeUsed">
-                      Usado
-                    </span>
-                  </div>
-                </div>
-    
-                <div class="carCardBody">
-                  <div class="carYearCompare">
-                    <div class="carYear">
-                      <small>
-                        1019
-                      </small>
-                    </div>
-    
-                    <label class="carCompare" for="carCompareCar1">
-                      <input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-                      <small>
-                        Compare
-                      </small>
-                    </label>
-                  </div>
-    
-                  <h3 class="carName">
-                    <a href="#">
-                      Nissan 370Z Nismo 
-                    </a>
-                  </h3>
-    
-                  <p class="carPrice">
-                    <strong>
-                      $37,900
-                    </strong>
-                  </p>
-    
-                  <p class="carLocation">
-                    <img src="./img/icons/location.svg" alt="">
-                    <small>
-                      New York
-                    </small>
-                  </p>
-    
-                </div>
-    
-                <div class="carCardFooter">
-                  <ul class="carInfos">
-                    <li title="mileage">
-                      <img src="./img/icons/mileage.svg" alt="">
-                      <small>16K mi</small>
-                    </li>
-    
-                    <li title="transmission">
-                      <img src="./img/icons/transmission.svg" alt="">
-                      <small>Automatic</small>
-                    </li>
-    
-                    <li title="fuel">
-                      <img src="./img/icons/fuel.svg" alt="">
-                      <small>Diesel</small>
-                    </li>
-                  </ul>
-                </div>
-    
-              </article>
-  
-              <article class="carCardVertical">
-  
-                <div class="carCardThumbnail">
-      
-                  <div class="carCardSlider">
-                    <div class="mySlideList" id="car7">
-                      <a href="#" class="mySlide active" data-slide-index="1">
-                        <img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
-                      </a>
-                    </div>
-      
-                    <button class="prevCardSlide" onclick="prevCardSlide('car7')">
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                    <button class="nextCardSlide" onclick="nextCardSlide('car7')">
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </div>
-      
-                  <button class="carCardWishlist">
-                    <img src="./img/icons/heart.svg" alt="">
-                  </button>
-      
-                  <div class="carCardBadges">
-                    <!-- <span class="badge badgeNew">
-                      Novo
-                    </span> -->
-                    <span class="badge badgeUsed">
-                      Usado
-                    </span>
-                  </div>
-                </div>
-      
-                <div class="carCardBody">
-                  <div class="carYearCompare">
-                    <div class="carYear">
-                      <small>
-                        1995
-                      </small>
-                    </div>
-      
-                    <label class="carCompare" for="carCompareCar1">
-                      <input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-                      <small>
-                        Compare
-                      </small>
-                    </label>
-                  </div>
-      
-                  <h3 class="carName">
-                    <a href="#">
-                      Ford Truck Lifted
-                    </a>
-                  </h3>
-      
-                  <p class="carPrice">
-                    <strong>
-                      $24,000
-                    </strong>
-                  </p>
-      
-                  <p class="carLocation">
-                    <img src="./img/icons/location.svg" alt="">
-                    <small>
-                      Chicago
-                    </small>
-                  </p>
-      
-                </div>
-      
-                <div class="carCardFooter">
-                  <ul class="carInfos">
-                    <li title="mileage">
-                      <img src="./img/icons/mileage.svg" alt="">
-                      <small>278K Mi</small>
-                    </li>
-      
-                    <li title="transmission">
-                      <img src="./img/icons/transmission.svg" alt="">
-                      <small>Manual</small>
-                    </li>
-      
-                    <li title="fuel">
-                      <img src="./img/icons/fuel.svg" alt="">
-                      <small>Diesel</small>
-                    </li>
-                  </ul>
-                </div>
-      
-              </article>
+              </article> -->
             </div>
 
             <div class="filteredCarsFooter">
