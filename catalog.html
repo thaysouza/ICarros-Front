@@ -29,24 +29,16 @@
       <aside>
         <form id="filtersFormAdvanced">
           
-          <fieldset id="formRadioCondition" class="radioBtnsGroup">
-            <div>
+          <fieldset id="formCondition" class="radioBtnsGroup">
+            <!-- <div>
               <input
                 type="radio"
-                id="formRadioConditionNovo"
-                name="formRadioCondition"
+                id="formConditionNovo"
+                name="formCondition"
                 checked
               />
-              <label for="formRadioConditionNovo">Novo</label>
-            </div>
-            <div>
-              <input
-                type="radio"
-                id="formRadioConditionUsado"
-                name="formRadioCondition"
-              />
-              <label for="formRadioConditionUsado">Usado</label>
-            </div>
+              <label for="formConditionNovo">Novo</label>
+            </div> -->
           </fieldset>
 
           <hr />
@@ -56,10 +48,10 @@
           <fieldset>
             <legend>Localização</legend>
 
-            <label for="formSelectLocation" class="visually-hidden">
+            <label for="formLocation" class="visually-hidden">
               Localização
             </label>
-            <select name="formSelectLocation" id="formSelectLocation">
+            <select name="formLocation" id="formLocation">
               <option value="">Escolha o local</option>
             </select>
           </fieldset>
@@ -67,9 +59,9 @@
           <fieldset>
             <legend>Tipo</legend>
 
-            <div id="formCheckType">
-              <!-- <label for="formCheckTypeSedan">
-                <input type="checkbox" name="formCheckTypeSedan" id="formCheckTypeSedan" value="formCheckTypeSedan" />
+            <div id="formType">
+              <!-- <label for="formTypeSedan">
+                <input type="checkbox" name="formType" id="formTypeSedan" value="formTypeSedan" />
                 Sedan
               </label> -->
             </div>
@@ -79,19 +71,19 @@
             <legend>Marca e modelo</legend>
 
             <div>
-              <label for="formSelectBrand" class="visually-hidden">
+              <label for="formBrand" class="visually-hidden">
                 Marca
               </label>
-              <select name="formSelectBrand" id="formSelectBrand">
+              <select name="formBrand" id="formBrand">
                 <option value="">Marca</option>
               </select>
             </div>
 
             <div>
-              <label for="formSelectModel" class="visually-hidden">
+              <label for="formModel" class="visually-hidden">
                 Modelo
               </label>
-              <select name="formSelectModel" id="formSelectModel" disabled>
+              <select name="formModel" id="formModel" disabled>
                 <option value="">Modelo</option>
               </select>
             </div>
@@ -102,10 +94,10 @@
 
             <div class="doubleFields">
               <div>
-                <label for="formSelectAnoMin" class="visually-hidden">
+                <label for="formYearMin" class="visually-hidden">
                   Ano Min
                 </label>
-                <select name="formSelectAnoMin" id="formSelectAnoMin">
+                <select name="formYearMin" id="formYearMin">
                   <option value="">Todos</option>
                 </select>
               </div>
@@ -113,10 +105,10 @@
               <span class="separator"></span>
 
               <div>
-                <label for="formSelectAnoMax" class="visually-hidden">
+                <label for="formYearMax" class="visually-hidden">
                   Ano Max
                 </label>
-                <select name="formSelectAnoMax" id="formSelectAnoMax">
+                <select name="formYearMax" id="formYearMax">
                   <option value="">Todos</option>
                 </select>
               </div>
@@ -161,9 +153,9 @@
           <fieldset>
             <legend>Combustível</legend>
 
-            <div id="formCheckFuel">
-              <!-- <label for="formCheckFuelDiesel">
-                <input type="checkbox" name="formCheckFuelDiesel" id="formCheckFuelDiesel" value="formCheckDiesel" />
+            <div id="formFuel">
+              <!-- <label for="formFuelDiesel">
+                <input type="checkbox" name="formFuel" id="formFuelDiesel" value="formDiesel" />
                 Diesel
               </label> -->
             </div>
@@ -172,9 +164,9 @@
           <fieldset>
             <legend>Transmissão</legend>
 
-            <div id="formCheckTransmission">
-              <!-- <label for="formCheckTransmissionAutomatic">
-                <input type="checkbox" name="formCheckTransmissionAutomatic" id="formCheckTransmissionAutomatic" value="formCheckTransmissionAutomatic" />
+            <div id="formTransmission">
+              <!-- <label for="formTransmissionAutomatic">
+                <input type="checkbox" name="formTransmission" id="formTransmissionAutomatic" value="formTransmissionAutomatic" />
                 Automatic
               </label> -->
             </div>
@@ -183,10 +175,10 @@
           <fieldset>
             <legend>Quilometragem</legend>
 
-            <label for="formSelectMileage" class="visually-hidden">
+            <label for="formMileage" class="visually-hidden">
               Quilometragem
             </label>
-            <select name="formSelectMileage" id="formSelectMileage">
+            <select name="formMileage" id="formMileage">
               <option value="">Todas</option>
             </select>
           </fieldset>
@@ -194,9 +186,9 @@
           <fieldset>
             <legend>Cor</legend>
 
-            <div id="formCheckColor">
-              <!-- <label for="formCheckColorPreto">
-                <input type="checkbox" name="formCheckColorPreto" id="formCheckColorPreto" value="formCheckPreto" />
+            <div id="formColor">
+              <!-- <label for="formColorPreto">
+                <input type="checkbox" name="formColor" id="formColorPreto" value="formPreto" />
                 Preto
               </label> -->
             </div>
@@ -205,9 +197,9 @@
           <fieldset>
             <legend>Adicional</legend>
 
-            <div id="formCheckAdditional">
-              <!-- <label for="formCheckAdditionalTetoSolar">
-                <input type="checkbox" name="formCheckAdditionalTetoSolar" id="formCheckAdditionalTetoSolar" value="formCheckAdditionalTetoSolar" />
+            <div id="formAdditional">
+              <!-- <label for="formAdditionalTetoSolar">
+                <input type="checkbox" name="formAdditional" id="formAdditionalTetoSolar" value="formAdditionalTetoSolar" />
                 Teto solar
               </label> -->
             </div>
@@ -236,7 +228,7 @@
               </div>
 
               <div>
-                <h1>Carros usados</h1>
+                <h1 id="catalogTitle">Carros</h1>
                 
                 <div class="option">
                   <img src="./img/icons/car.svg" alt="">
@@ -246,11 +238,11 @@
               
               <div class="filteredCarsOptions">
                 <fieldset>
-                  <label for="formSelectSortBy">
+                  <label for="formSortBy">
                     <img src="./img/icons/align-left.svg" alt="">
                     Ordenar por:
                   </label>
-                  <select name="formSelectSortBy" id="formSelectSortBy">
+                  <select name="formSortBy" id="formSortBy">
                     <option value="maisnovo">Mais novo</option>
                     <option value="maisantigo">Mais antigo</option>
                   </select>
@@ -265,14 +257,14 @@
 
                 <fieldset class="radioBtnsGroup iconBtn">
                   <div>
-                    <input type="radio" id="formRadioShowList" name="formRadioStatus" checked />
-                    <label for="formRadioShowList">
+                    <input type="radio" id="formShowList" name="formStatus" checked />
+                    <label for="formShowList">
                       <img src="./img/icons/list.svg" alt="">
                     </label>
                   </div>
                   <div>
-                    <input type="radio" id="formRadioShowGrid" name="formRadioStatus" />
-                    <label for="formRadioShowGrid">
+                    <input type="radio" id="formShowGrid" name="formStatus" />
+                    <label for="formShowGrid">
                       <img src="./img/icons/grid.svg" alt="">
                     </label>
                   </div>
@@ -385,11 +377,11 @@
             <div class="filteredCarsFooter">
               <div class="filteredCarsOptions">
                 <fieldset>
-                  <label for="formSelectSortBy">
+                  <label for="formSortBy">
                     <img src="./img/icons/align-left.svg" alt="">
                     Ordenar por:
                   </label>
-                  <select name="formSelectSortBy" id="formSelectSortBy">
+                  <select name="formSortBy" id="formSortBy">
                     <option value="maisnovo">Mais novo</option>
                     <option value="maisantigo">Mais antigo</option>
                   </select>
