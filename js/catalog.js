@@ -14,6 +14,7 @@ window.onload = () => {
 
 // Get elements
 const formCondition = document.querySelector("#formCondition");
+const formLocale = document.querySelector("#formLocale");
 const formType = document.querySelector("#formType");
 const formBrand = document.querySelector("#formBrand");
 const formFuel = document.querySelector("#formFuel");
@@ -25,6 +26,7 @@ const formAdditional = document.querySelector("#formAdditional");
 // Update all form fields
 async function generateFormFields() {
   await generateFormRadioCondition();
+  await generateFormSelectLocale();
   await generateFormCheckType();
   await generateFormSelectBrand();
   await generateFormCheckFuel();
@@ -46,11 +48,12 @@ async function generateFormRadioCondition() {
   // Add child elements
   formCondition.innerHTML = `${carConditions
     .map((element, index) => {
-      let name = "Condition";
-      let id = `form${name}${normalizeStringToId(element)}`;
-      let on_change = `updateQueryParams(this, '${name.toLowerCase()}' ,'${element}')`;
+      let id = `formCondition${normalizeStringToId(element.label)}`;
+      let on_change = `updateQueryParams(this, 'condition' ,'${element.id}')`;
       let is_checked =
-        location.search.indexOf(encodeURI(element).replaceAll("%20", "+")) > -1
+        location.search.indexOf(
+          `condition=${encodeURI(element.id).replaceAll("%20", "+")}`
+        ) > -1
           ? "checked"
           : "";
 
@@ -60,24 +63,60 @@ async function generateFormRadioCondition() {
               type="radio"
               name="form${name}"
               id="${id}"
-              value="${element}"
+              value="${element.id}"
               onChange="${on_change}"
               ${is_checked}
           />
-          <label for="${id}" key="${index}">${element}</label>
+          <label for="${id}" key="${index}">${element.label}</label>
         </div>
       `;
     })
     .join("")}`;
 
   // If there is no radio checked, select the first one
-  if (location.search.indexOf("condition=") === -1) {
-    document.querySelector("input[name='formCondition']").checked = true;
-  }
+  // if (location.search.indexOf("condition=") === -1) {
+  //   document.querySelector("input[name='formCondition']").checked = true;
+  // }
 }
 async function getCarConditions() {
   const { data } = await api.get(`/condition`);
   return data;
+}
+async function getCarCondition(id) {
+  const { data } = await api.get(`/condition?id=${id}`);
+  return data[0];
+}
+
+// Locale
+async function generateFormSelectLocale() {
+  // Loading
+  formLocale.innerHTML = loader;
+
+  // Get data
+  const carLocales = await getCarLocales();
+  console.log("carLocales", carLocales);
+
+  // Add child elements
+  formLocale.innerHTML = `
+    <option value="" key="0">Escolha o local</option>
+    ${carLocales
+      .map((element, index) => {
+        return generateSelect("Location", element.value, element.id, index);
+      })
+      .join("")}`;
+
+  // Add event on change
+  formLocale.addEventListener("change", () =>
+    updateQueryParams(formLocale, "location")
+  );
+}
+async function getCarLocales() {
+  const { data } = await api.get(`/locale`);
+  return data;
+}
+async function getCarLocale(id) {
+  const { data } = await api.get(`/locale?id=${id}`);
+  return data[0];
 }
 
 // Type
@@ -92,7 +131,7 @@ async function generateFormCheckType() {
   // Add child elements
   formType.innerHTML = `${carTypes
     .map((element, index) => {
-      return generateCheckbox("Type", element, index);
+      return generateCheckbox("Cartype", element.value, element.value, index);
     })
     .join("")}`;
 }
@@ -115,21 +154,7 @@ async function generateFormSelectBrand() {
     <option value="" key="0">Marca</option>
     ${carBrands
       .map((element, index) => {
-        return `
-        <option
-            value="${element.id}"
-            key="${index + 1}"
-            ${
-              location.search.indexOf(
-                encodeURI(element.id).replaceAll("%20", "+")
-              ) > -1
-                ? "selected"
-                : ""
-            }
-        >
-            ${element.name}
-        </option>
-    `;
+        return generateSelect("Brand", element.name, element.id, index);
       })
       .join("")}`;
 
@@ -155,7 +180,7 @@ async function generateFormCheckFuel() {
   // Add child elements
   formFuel.innerHTML = `${carFuels
     .map((element, index) => {
-      return generateCheckbox("Fuel", element, index);
+      return generateCheckbox("Fuel", element.label, element.id, index);
     })
     .join("")}`;
 }
@@ -176,7 +201,7 @@ async function generateFormCheckTransmission() {
   // Add child elements
   formTransmission.innerHTML = `${carTransmissions
     .map((element, index) => {
-      return generateCheckbox("Transmission", element, index);
+      return generateCheckbox("Transmission", element.value, element.id, index);
     })
     .join("")}`;
 }
@@ -199,21 +224,7 @@ async function generateFormSelectMileage() {
     <option value="" key="0">Todas</option>
     ${carMileages
       .map((element, index) => {
-        return `
-        <option
-            value="${element}"
-            key="${index + 1}"
-            ${
-              location.search.indexOf(
-                encodeURI(element).replaceAll("%20", "+")
-              ) > -1
-                ? "selected"
-                : ""
-            }
-        >
-            ${element}
-        </option>
-    `;
+        return generateSelect("Mileage", element.value, element.value, index);
       })
       .join("")}`;
 
@@ -239,7 +250,7 @@ async function generateFormCheckColor() {
   // Add child elements
   formColor.innerHTML = `${carColors
     .map((element, index) => {
-      return generateCheckbox("Color", element, index);
+      return generateCheckbox("Color", element.value, element.value, index);
     })
     .join("")}`;
 }
@@ -260,7 +271,7 @@ async function generateFormCheckAdditional() {
   // Add child elements
   formAdditional.innerHTML = `${carAdditionals
     .map((element, index) => {
-      return generateCheckbox("Additional", element, index);
+      return generateCheckbox("Additional", element.value, element.id, index);
     })
     .join("")}`;
 }
@@ -269,12 +280,39 @@ async function getCarAdditionals() {
   return data;
 }
 
+// Return select html element
+function generateSelect(param_name, element_name, element_value, index) {
+  let is_selected =
+    location.search.indexOf(
+      `${param_name.toLowerCase()}=${encodeURI(element_value).replaceAll(
+        "%20",
+        "+"
+      )}`
+    ) > -1
+      ? "selected"
+      : "";
+
+  return `
+      <option
+          value="${element_value}"
+          key="${index + 1}"
+          ${is_selected}
+      >
+          ${element_name}
+      </option>`;
+}
+
 // Return checkbox html element
-function generateCheckbox(name, element, index) {
-  let id = `form${name}${normalizeStringToId(element)}`;
-  let on_change = `updateQueryParams(this, '${name.toLowerCase()}' ,'${element}')`;
+function generateCheckbox(param_name, element_name, element_value, index) {
+  let id = `form${param_name}${normalizeStringToId(element_name)}`;
+  let on_change = `updateQueryParams(this, '${param_name.toLowerCase()}' ,'${element_value}')`;
   let is_checked =
-    location.search.indexOf(encodeURI(element).replaceAll("%20", "+")) > -1
+    location.search.indexOf(
+      `${param_name.toLowerCase()}=${encodeURI(element_value).replaceAll(
+        "%20",
+        "+"
+      )}`
+    ) > -1
       ? "checked"
       : "";
 
@@ -282,13 +320,13 @@ function generateCheckbox(name, element, index) {
         <label for="${id}" key="${index}">
             <input
                 type="checkbox"
-                name="form${name}"
+                name="form${param_name}"
                 id="${id}"
-                value="${element}"
+                value="${element_value}"
                 onChange="${on_change}"
                 ${is_checked}
             />
-            ${element}
+            ${element_name}
         </label>
     `;
 }
@@ -386,20 +424,25 @@ async function updateCarsGrid() {
   qtdOffers.innerHTML = `${cars.length} oferta(s)`;
 
   // Update catalog title
-  let radioChecked = document
-    .querySelector("input[name='formCondition']:checked")
-    .value.toLowerCase();
-  document.querySelector("#catalogTitle").innerHTML = `Carros ${radioChecked}s`;
+  let radioChecked = document.querySelector(
+    "input[name='formCondition']:checked"
+  );
+  if (radioChecked) {
+    let condition = await getCarCondition(radioChecked.value);
+    document.querySelector(
+      "#catalogTitle"
+    ).innerHTML = `Carros ${condition.label.toLowerCase()}s`;
+  }
 
   if (cars.length > 0) {
     // Add child elements
     filteredCarsGrid.innerHTML = `${cars
       .map((element, index) => {
-        const slides = element.photos
+        let slides = element.photos
           .map((item, index) => {
             return `
                     <a
-                        href="single-item.html"
+                        href="single-item.html?car_id=${element.id}"
                         class="mySlide active"
                         data-slide-index="${index + 1}"
                         key="${index}"
@@ -442,7 +485,7 @@ async function updateCarsGrid() {
     
                         <div class="carCardBadges">
                             ${
-                              element.condition === "Novo"
+                              element.condition === 0
                                 ? `
                                 <span class="badge badgeNew">Novo</span>
                             `
@@ -470,7 +513,7 @@ async function updateCarsGrid() {
                         </div>
     
                         <h3 class="carName">
-                            <a href="single-item.html">
+                            <a href="single-item.html?car_id=${element.id}">
                                 ${element.model}
                             </a>
                         </h3>
