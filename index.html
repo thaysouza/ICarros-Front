@@ -1,89 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="language" content="pt-BR">
 
-		<!-- OG Tags global início -->
-		<!-- <meta property="og:site" content="https://icarros-gama-douglas.netlify.app/" />
-	<meta property="og:site_name" content="ICarros Academy" />
-	<meta property="og:image" content="https://icarros-gama-douglas.netlify.app/img/ico.jpeg" />
-	<meta property="og:description" content="Falando sobre desenvolvimento de softwares" /> -->
-		<!-- OG Tags global fim -->
+	<title>Compre e venda carros com facilidade - Finder</title>
+	<link rel="icon" type="image/png" href="img/ico.png">
+	<link rel="canonical" href="https://icarros-front.vercel.app/" />
 
-		<!-- OG Tags Twitter iniicio -->
-		<!-- <meta property="twitter:title" content="ICarros Academy"/>
-	<meta property="twitter:description" content="Falando sobre desenvolvimento de softwares" />
-	<meta property="twitter:image" content="img/ico.jpeg" /> -->
-		<!-- OG Tags Twitter fim -->
+	<meta name="description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="Finder" />
+	<meta name="keywords" content="carros, veículos, automóveis, carros novos, carros usados, comprar, vender, facilidade, comparar, compre, venda, finder" />
+	<meta name="copyright" content="© 2022 | Finder" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
 
-		<!-- Tags Google início -->
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description"
-			content="O Finder é um mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores." />
-		<meta name="keywords"
-			content="Finder, Carros, finder, carros, pesquisa, mercado digital, industria automotiva, automovel">
-		<meta name="copyright" content="Desenvolvido por ICarros Academy" />
-		<!-- Tags Google fim -->
+	<!-- OG Tags global - Início -->
+	<meta property="og:type" content="page" />
+	<meta property="og:url" content="https://icarros-front.vercel.app/" />
+	<meta property="og:site" content="https://icarros-front.vercel.app/" />
+	<meta property="og:site_name" content="Compre e venda carros com facilidade - Finder" />
+	<meta property="og:title" content="Compre e venda carros com facilidade - Finder" />
+	<meta property="og:image" content="img/ico.png" />
+	<meta property="og:description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+	<!-- OG Tags global - Fim -->
 
-		<!-- CSS  Inicio-->
-		<link rel="stylesheet" href="./styles/main.css">
-		<link rel="stylesheet" href="./styles/index.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-		<link rel="stylesheet" href="./styles/glider-updated.css">
-		<!-- CSS Fim  -->
+	<meta property="article:author" content="Finder" />
 
-		<!-- Importação de icones -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-		<script src="https://kit.fontawesome.com/93a20b3367.js" crossorigin="anonymous"></script>
-		<!-- Fim da importação -->
+	<!-- OG Tags Twitter - Início -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@" />
+	<meta name="twitter:title" content="Compre e venda carros com facilidade - Finder" />
+	<meta name="twitter:creator" content="@" />
+	<meta name="twitter:description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+	<meta property="twitter:image" content="img/ico.png" />
+	<!-- OG Tags Twitter - Fim -->
 
-		<title>Finder | E-Carros</title>
+	<!-- CSS - Início -->
+	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+	<link rel="stylesheet" href="./styles/glider-updated.css">
+	<!-- CSS - Fim  -->
 
-		<!-- Scripts Inicio -->
-		<script defer src="./js/car-card-slider.js"></script>
-		<script defer src="./js/search.js"></script>
-		<!-- Scripts Fim -->
-	</head>
+	<!-- Ícones - Início -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/93a20b3367.js" crossorigin="anonymous"></script>
+	<!-- Ícones - Fim -->
 
-	<body>
-		<header>
-			<nav id="navHeader">
-				<div class="container">
-					<div class="menuFinder">
-						<div class="menuLogo">
-							<i class="fa fa-search"></i>
-							<p>Finder</p>
-						</div>
-						<div class="menu hidden-when-lg">
-							<ul>
-								<li>|</li>
-								<li>Novos</li>
-								<li>Usados</li>
-								<li>Vender</li>
-								<li>Comprar</li>
-								<li>Novidades e reviews</li>
-							</ul>
-						</div>
+	<!-- Scripts - Início -->
+	<script defer src="./js/car-card-slider.js"></script>
+	<script defer src="./js/search.js"></script>
+	<!-- Scripts - Fim -->
+</head>
 
+<body>
+	<header>
+		<nav id="navHeader">
+			<div class="container">
+				<div class="menuFinder">
+					<div class="menuLogo">
+						<i class="fa fa-search"></i>
+						<p>Finder</p>
 					</div>
-					<div class="menuLogin">
-						<span>
-							<i class="bi bi-person"> Entrar</i>
-						</span>
-						<span id="sellButton">
-							<i class="bi bi-plus"> Vender</i>
-						</span>
+					<div class="menu hidden-when-lg">
+						<ul>
+							<li>|</li>
+							<li>Novos</li>
+							<li>Usados</li>
+							<li>Vender</li>
+							<li>Comprar</li>
+							<li>Novidades e reviews</li>
+						</ul>
 					</div>
-					<div class="menuTogle display-when-lg">
-						<span><i class="bi bi-list"></i></span>
-					</div>
+
 				</div>
-			</nav>
-		</header>
+				<div class="menuLogin">
+					<span>
+						<i class="bi bi-person"> Entrar</i>
+					</span>
+					<span id="sellButton">
+						<i class="bi bi-plus"> Vender</i>
+					</span>
+				</div>
+				<div class="menuTogle display-when-lg">
+					<span><i class="bi bi-list"></i></span>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
 
 		<section id="sectionHeader">
 			<div class="container">
@@ -281,8 +294,8 @@
 
 							<div class="carCardBadges">
 								<!-- <span class="badge badgeNew">
-								Novo
-							</span> -->
+									Novo
+								</span> -->
 								<span class="badge badgeUsed">
 									Usado
 								</span>
@@ -372,8 +385,8 @@
 
 							<div class="carCardBadges">
 								<!-- <span class="badge badgeNew">
-								Novo
-							</span> -->
+									Novo
+								</span> -->
 								<span class="badge badgeUsed">
 									Usado
 								</span>
@@ -468,8 +481,8 @@
 									Novo
 								</span>
 								<!-- <span class="badge badgeUsed">
-								Usado
-							</span> -->
+									Usado
+								</span> -->
 							</div>
 						</div>
 
@@ -725,8 +738,8 @@
 										Novo
 									</span>
 									<!-- <span class="badge badgeUsed">
-										Usado
-									</span> -->
+											Usado
+										</span> -->
 								</div>
 							</div>
 
@@ -813,8 +826,8 @@
 
 								<div class="carCardBadges">
 									<!-- <span class="badge badgeNew">
-										Novo
-									</span> -->
+											Novo
+										</span> -->
 									<span class="badge badgeUsed">
 										Usado
 									</span>
@@ -904,8 +917,8 @@
 
 								<div class="carCardBadges">
 									<!-- <span class="badge badgeNew">
-										Novo
-									</span> -->
+											Novo
+										</span> -->
 									<span class="badge badgeUsed">
 										Usado
 									</span>
@@ -995,8 +1008,8 @@
 
 								<div class="carCardBadges">
 									<!-- <span class="badge badgeNew">
-										Novo
-									</span> -->
+											Novo
+										</span> -->
 									<span class="badge badgeUsed">
 										Usado
 									</span>
@@ -1117,220 +1130,218 @@
 		<section class="container containerApp">
 			<div class="infoApp">
 				<h1>Baixe o nosso app</h1>
-				<p>Baixe o Finder App e junte-se à comunidade de entusiastas de carros. 
-				   Não pare sua busca de carro quando sair do computador com nosso aplicativo
-				   para Android e iOS!</p>   			   
-				 <div class="buttonsApp">
+				<p>Baixe o Finder App e junte-se à comunidade de entusiastas de carros.
+					Não pare sua busca de carro quando sair do computador com nosso aplicativo
+					para Android e iOS!</p>
+				<div class="buttonsApp">
 					<img src="img/app-store.png" alt="">
 					<img src="img/google-play.png" alt="">
-				 </div>
+				</div>
 			</div>
-	
+
 			<div class="imgApp">
-			   <img src="img/illustration.png" alt="">
-        
+				<img src="img/illustration.png" alt="">
+
 
 			</div>
 		</section>
 
-		<main>
-			<section id="html" class=" section-default  ">
-				<div class="container center-content">
-					<div class="main-blog">
-						<h2 class="sectionTitle">Ultimas novidades</h2>
-					</div>
-					<div class="main-blog">
-						<a class="linkable-blog">Go to blog <i class="bi bi-arrow-right"></i></a>
-					</div>
+		<section id="html" class=" section-default  ">
+			<div class="container center-content">
+				<div class="main-blog">
+					<h2 class="sectionTitle">Ultimas novidades</h2>
 				</div>
-				<div class="container center-content">
-					<div class="card-blog">
-						<img class="img-content" src="img/city.jpg" alt="">
-						<div class="link-blog1">
-							<a>Dicas</a>
-						</div>
-						<div class="link-blog2">
-							<a>Loren Ipsuns</a>
-						</div>
-						<div class="card-blog-perfil">
-							<img class="img-content-perfil" src="img/carroPrincipal.png" alt="">
-							<div>
-								<p>Jacob Jones</p>
-								<p class="card-date"> <i class="bi bi-calendar4"></i> 25 de Nov</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="card-blog">
-						<img class="img-content" src="img/GM-tracker_2021.jpg" alt="">
-						<div class="link-blog1">
-							<a>Ofertas</a>
-						</div>
-						<div class="link-blog2">
-							<a>Loren Ipsuns</a>
-						</div>
-						<div class="card-blog-perfil">
-							<img class="img-content-perfil" src="img/carroPrincipal.png" alt="">
-							<div>
-								<p>Jacob Jones</p>
-								<p class="card-date"> <i class="bi bi-calendar4"></i> 25 de Nov</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="card-blog">
-						<img class="img-content" src="img/urus.jpg" alt="">
-						<div class="link-blog1">
-							<a>Ofertas</a>
-						</div>
-						<div class="link-blog2">
-							<a>Loren Ipsuns</a>
-						</div>
-						<div class="card-blog-perfil">
-							<img class="img-content-perfil" src="img/carroPrincipal.png" alt="">
-							<div>
-								<p>Jacob Jones</p>
-								<p class="card-date"> <i class="bi bi-calendar4"></i> 25 de Nov</p>
-							</div>
-						</div>
-					</div>
+				<div class="main-blog">
+					<a class="linkable-blog">Go to blog <i class="bi bi-arrow-right"></i></a>
 				</div>
-			</section>
-
-		</main>
-
-		<footer>
-			<div class="container-footer link-content-head">
-				<div class="footer-links menuLogo">
-					<i class="fa fa-search"></i>
-					<p>Finder</p>
-				</div>
-
-				<div class="link-content">
-					<div class="footer-links dropdown">
-						<a href="#html"> <i class="bi bi-globe"></i> pt-BR <i class="bi bi-caret-down"></i></a>
-						<div class="dropdown-content">
-							<a class="dropdown-links">EN-US</a>
-							<a class="dropdown-links">pt-PT</a>
-						</div>
-					</div>
-					<div class="footer-links">
-						<a href="#html"> | </a>
-					</div>
-					<div class="footer-links dropdown">
-						<a href="#html"><i class="bi bi-geo-alt"></i> São Paulo <i class="bi bi-caret-down"></i></a>
-						<div class="dropdown-content">
-							<a class="dropdown-links">Rio de Janeiro</a>
-							<a class="dropdown-links">Santa Catarina</a>
-							<a class="dropdown-links">Florianópolis</a>
-						</div>
-					</div>
-
-				</div>
-				<div class="divider"></div>
 			</div>
+			<div class="container center-content">
+				<div class="card-blog">
+					<img class="img-content" src="img/cars/fusca.png" alt="">
+					<div class="link-blog1">
+						<a>Dicas</a>
+					</div>
+					<div class="link-blog2">
+						<a>Loren Ipsuns</a>
+					</div>
+					<div class="card-blog-perfil">
+						<img class="img-content-perfil" src="img/iconsUsers/user1.png" alt="">
+						<div>
+							<p>Jacob Jones</p>
+							<p class="card-date"> <i class="bi bi-calendar4"></i> 24 de Nov</p>
+						</div>
+					</div>
 
-			<div class="container-footer">
-				<div class="footer-links-news">
-					<h2>Cadastre-se na newsletter</h2>
-					<a>Não perca nenhuma oferta relevante!</a>
-					<form class="form-footer">
-						<input class="input-footer" href="#js" placeholder="Informe seu email"></input>
-						<button class="button-footer" type="submit">></button>
-					</form>
 				</div>
-				<div class="link-content-mid">
-					<div class="footer-links-mid">
-						<h3 href="#">Comprar ou Vender</h3>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
+				<div class="card-blog">
+					<img class="img-content" src="img/cars/gtr.png" alt="">
+					<div class="link-blog1">
+						<a>Ofertas</a>
+					</div>
+					<div class="link-blog2">
+						<a>Loren Ipsuns</a>
+					</div>
+					<div class="card-blog-perfil">
+						<img class="img-content-perfil" src="img/iconsUsers/user2.png" alt="">
+						<div>
+							<p>Annete Black</p>
+							<p class="card-date"> <i class="bi bi-calendar4"></i> 28 de Nov</p>
+						</div>
 					</div>
 
-					<div class="footer-links-mid">
-						<h3 href="#">Sobre</h3>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-					</div>
-
-					<div class="footer-links-mid">
-						<h3 href="#">Perfil</h3>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-						<a href="#">Loren ipsun</a>
-					</div>
 				</div>
-				<div class="footer-links-adress">
-					<a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> (11) 1111-1111</a>
-					<a class="mail-footer"><i class="bi bi-envelope"></i> email@finder.com.br</a>
-					<div>
-						<button class="link-button"><i class="bi bi-facebook"></i></button>
-						<button class="link-button"><i class="bi bi-twitter"></i></button>
-						<button class="link-button"><i class="bi bi-telegram"></i></button>
-						<button class="link-button"><i class="bi bi-messenger"></i></button>
+				<div class="card-blog">
+					<img class="img-content" src="img/cars/harley.png" alt="">
+					<div class="link-blog1">
+						<a>Ofertas</a>
+					</div>
+					<div class="link-blog2">
+						<a>Loren Ipsuns</a>
+					</div>
+					<div class="card-blog-perfil">
+						<img class="img-content-perfil" src="img/iconsUsers/user3.png" alt="">
+						<div>
+							<p>Ralph Edwards</p>
+							<p class="card-date"> <i class="bi bi-calendar4"></i> 15 de Dez</p>
+						</div>
 					</div>
 				</div>
 			</div>
+		</section>
 
-			<div class="container-footer">
+	</main>
+
+	<footer>
+		<div class="container-footer link-content-head">
+			<div class="footer-links menuLogo">
+				<i class="fa fa-search"></i>
+				<p>Finder</p>
+			</div>
+
+			<div class="link-content">
+				<div class="footer-links dropdown">
+					<a href="#html"> <i class="bi bi-globe"></i> pt-BR <i class="bi bi-caret-down"></i></a>
+					<div class="dropdown-content">
+						<a class="dropdown-links">EN-US</a>
+						<a class="dropdown-links">pt-PT</a>
+					</div>
+				</div>
 				<div class="footer-links">
-					<p class="p-footer">Copyright © Finder | Gama Academy. Todos os direitos reservados - Este é um projeto
-						acadêmico.</p>
+					<a href="#html"> | </a>
+				</div>
+				<div class="footer-links dropdown">
+					<a href="#html"><i class="bi bi-geo-alt"></i> São Paulo <i class="bi bi-caret-down"></i></a>
+					<div class="dropdown-content">
+						<a class="dropdown-links">Rio de Janeiro</a>
+						<a class="dropdown-links">Santa Catarina</a>
+						<a class="dropdown-links">Florianópolis</a>
+					</div>
 				</div>
 
-				<div class="link-content">
-					<div class="footer-links">
-						<p class="p-footer">Termos de uso</p>
-					</div>
-					<div class="footer-links">
-						<p class="p-footer">Política de privacidade</p>
-					</div>
+			</div>
+			<div class="divider"></div>
+		</div>
+
+		<div class="container-footer">
+			<div class="footer-links-news">
+				<h2>Cadastre-se na newsletter</h2>
+				<a>Não perca nenhuma oferta relevante!</a>
+				<form class="form-footer">
+					<input class="input-footer" href="#js" placeholder="Informe seu email"></input>
+					<button class="button-footer" type="submit">></button>
+				</form>
+			</div>
+			<div class="link-content-mid">
+				<div class="footer-links-mid">
+					<h3 href="#">Comprar ou Vender</h3>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+				</div>
+
+				<div class="footer-links-mid">
+					<h3 href="#">Sobre</h3>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+				</div>
+
+				<div class="footer-links-mid">
+					<h3 href="#">Perfil</h3>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
+					<a href="#">Loren ipsun</a>
 				</div>
 			</div>
+			<div class="footer-links-adress">
+				<a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> (11) 1111-1111</a>
+				<a class="mail-footer"><i class="bi bi-envelope"></i> email@finder.com.br</a>
+				<div>
+					<button class="link-button"><i class="bi bi-facebook"></i></button>
+					<button class="link-button"><i class="bi bi-twitter"></i></button>
+					<button class="link-button"><i class="bi bi-telegram"></i></button>
+					<button class="link-button"><i class="bi bi-messenger"></i></button>
+				</div>
+			</div>
+		</div>
 
-		</footer>
+		<div class="container-footer">
+			<div class="footer-links">
+				<p class="p-footer">Copyright © Finder | Gama Academy. Todos os direitos reservados - Este é um projeto
+					acadêmico.</p>
+			</div>
 
-		<!-- Scripts - Início -->
-		<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-		<script>
-			window.addEventListener('load', function () {
-				new Glider(document.querySelector('.glider'), {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					draggable: true,
-					dots: '.dots',
-					arrows: {
-						prev: '.glider-prev',
-						next: '.glider-next'
-					},
-					responsive: [
-						{
-							// screens greater than >= 768px
-							breakpoint: 768,
-							settings: {
-								slidesToShow: 2,
-								slidesToScroll: 2,
-							}
-						}, {
-							// screens greater than >= 1200px
-							breakpoint: 1200,
-							settings: {
-								slidesToShow: 3,
-								slidesToScroll: 3,
-							}
+			<div class="link-content">
+				<div class="footer-links">
+					<p class="p-footer">Termos de uso</p>
+				</div>
+				<div class="footer-links">
+					<p class="p-footer">Política de privacidade</p>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- Scripts - Início -->
+	<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+	<script>
+		window.addEventListener('load', function () {
+			new Glider(document.querySelector('.glider'), {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				draggable: true,
+				dots: '.dots',
+				arrows: {
+					prev: '.glider-prev',
+					next: '.glider-next'
+				},
+				responsive: [
+					{
+						// screens greater than >= 768px
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2,
 						}
-					]
-				});
+					}, {
+						// screens greater than >= 1200px
+						breakpoint: 1200,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3,
+						}
+					}
+				]
 			});
-		</script>
-		<!-- Scripts - Fim -->
-
-	</body>
+		});
+	</script>
+	<!-- Scripts - Fim -->
+</body>
 
 </html>

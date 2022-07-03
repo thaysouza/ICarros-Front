@@ -16,6 +16,8 @@
 
   <!-- Scripts - Início -->
   <script src="./js/car-card-slider.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+  <script src="./js/catalog.js" defer></script>
   <!-- Scripts - Fim -->
 </head>
 
@@ -27,15 +29,16 @@
       <aside>
         <form id="filtersFormAdvanced">
           
-          <fieldset class="radioBtnsGroup">
-            <div>
-              <input type="radio" id="formRadioStatusNew" name="formRadioStatus" checked />
-              <label for="formRadioStatusNew"> Novo </label>
-            </div>
-            <div>
-              <input type="radio" id="formRadioStatusUsed" name="formRadioStatus" />
-              <label for="formRadioStatusUsed"> Usado </label>
-            </div>
+          <fieldset id="formCondition" class="radioBtnsGroup">
+            <!-- <div>
+              <input
+                type="radio"
+                id="formConditionNovo"
+                name="formCondition"
+                checked
+              />
+              <label for="formConditionNovo">Novo</label>
+            </div> -->
           </fieldset>
 
           <hr />
@@ -45,32 +48,22 @@
           <fieldset>
             <legend>Localização</legend>
 
-            <label for="formSelectLocalizacao" class="visually-hidden">
+            <label for="formLocale" class="visually-hidden">
               Localização
             </label>
-            <select name="formSelectLocalizacao" id="formSelectLocalizacao">
-              <option value="">Escolha o local</option>
-              <option value="local1">local 1</option>
-              <option value="local2">local 2</option>
-              <option value="local3">local 3</option>
+            <select name="formLocale" id="formLocale">
+              <!-- <option value="">Escolha o local</option> -->
             </select>
           </fieldset>
 
           <fieldset>
             <legend>Tipo</legend>
 
-            <div>
-              <label for="formCheckSedan">
-                <input type="checkbox" name="formCheckSedan" id="formCheckSedan" value="formCheckSedan" />
+            <div id="formType">
+              <!-- <label for="formTypeSedan">
+                <input type="checkbox" name="formType" id="formTypeSedan" value="formTypeSedan" />
                 Sedan
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckSUV">
-                <input type="checkbox" name="formCheckSUV" id="formCheckSUV" value="formCheckSUV" />
-                SUV
-              </label>
+              </label> -->
             </div>
           </fieldset>
 
@@ -78,26 +71,20 @@
             <legend>Marca e modelo</legend>
 
             <div>
-              <label for="formSelectMarca" class="visually-hidden">
+              <label for="formBrand" class="visually-hidden">
                 Marca
               </label>
-              <select name="formSelectMarca" id="formSelectMarca">
+              <select name="formBrand" id="formBrand">
                 <option value="">Marca</option>
-                <option value="marca1">marca 1</option>
-                <option value="marca2">marca 2</option>
-                <option value="marca3">marca 3</option>
               </select>
             </div>
 
             <div>
-              <label for="formSelectModelo" class="visually-hidden">
+              <label for="formModel" class="visually-hidden">
                 Modelo
               </label>
-              <select name="formSelectModelo" id="formSelectModelo" disabled>
+              <select name="formModel" id="formModel" disabled>
                 <option value="">Modelo</option>
-                <option value="modelo1">modelo 1</option>
-                <option value="modelo2">modelo 2</option>
-                <option value="modelo3">modelo 3</option>
               </select>
             </div>
           </fieldset>
@@ -107,28 +94,22 @@
 
             <div class="doubleFields">
               <div>
-                <label for="formSelectAnoMin" class="visually-hidden">
+                <label for="formYearMin" class="visually-hidden">
                   Ano Min
                 </label>
-                <select name="formSelectAnoMin" id="formSelectAnoMin">
+                <select name="formYearMin" id="formYearMin">
                   <option value="">Todos</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
                 </select>
               </div>
 
               <span class="separator"></span>
 
               <div>
-                <label for="formSelectAnoMax" class="visually-hidden">
+                <label for="formYearMax" class="visually-hidden">
                   Ano Max
                 </label>
-                <select name="formSelectAnoMax" id="formSelectAnoMax">
+                <select name="formYearMax" id="formYearMax">
                   <option value="">Todos</option>
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
                 </select>
               </div>
             </div>
@@ -170,90 +151,57 @@
           </fieldset>
 
           <fieldset>
-            <legend>Tipo do carro</legend>
-
-            <div>
-              <label for="formCheckAWD4WD">
-                <input type="checkbox" name="formCheckAWD4WD" id="formCheckAWD4WD" value="formCheckAWD4WD" />
-                AWD/4WD
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckFrontWheelDrive">
-                <input type="checkbox" name="formCheckFrontWheelDrive" id="formCheckFrontWheelDrive"
-                  value="formCheckFrontWheelDrive" />
-                Front Wheel Drive
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset>
             <legend>Combustível</legend>
 
-            <div>
-              <label for="formCheckDiesel">
-                <input type="checkbox" name="formCheckDiesel" id="formCheckDiesel" value="formCheckDiesel" />
+            <div id="formFuel">
+              <!-- <label for="formFuelDiesel">
+                <input type="checkbox" name="formFuel" id="formFuelDiesel" value="formDiesel" />
                 Diesel
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckEletric">
-                <input type="checkbox" name="formCheckEletric" id="formCheckEletric" value="formCheckEletric" />
-                Eletric
-              </label>
+              </label> -->
             </div>
           </fieldset>
 
           <fieldset>
             <legend>Transmissão</legend>
 
-            <div>
-              <label for="formCheckAutomatic">
-                <input type="checkbox" name="formCheckAutomatic" id="formCheckAutomatic" value="formCheckAutomatic" />
+            <div id="formTransmission">
+              <!-- <label for="formTransmissionAutomatic">
+                <input type="checkbox" name="formTransmission" id="formTransmissionAutomatic" value="formTransmissionAutomatic" />
                 Automatic
-              </label>
-            </div>
-
-            <div>
-              <label for="formCheckManual5Speed">
-                <input type="checkbox" name="formCheckManual5Speed" id="formCheckManual5Speed"
-                  value="formCheckManual5Speed" />
-                Manual 5 Speed
-              </label>
+              </label> -->
             </div>
           </fieldset>
 
           <fieldset>
-            <legend>Kilometragem</legend>
+            <legend>Quilometragem</legend>
 
-            <label for="formSelectKilometragem" class="visually-hidden">
-              Kilometragem
+            <label for="formMileage" class="visually-hidden">
+              Quilometragem
             </label>
-            <select name="formSelectKilometragem" id="formSelectKilometragem">
-              <option value="">Any</option>
-              <option value="kilometragem1">kilometragem 1</option>
-              <option value="kilometragem2">kilometragem 2</option>
-              <option value="kilometragem3">kilometragem 3</option>
+            <select name="formMileage" id="formMileage">
+              <option value="">Todas</option>
             </select>
           </fieldset>
 
           <fieldset>
             <legend>Cor</legend>
 
-            <div>
-              <label for="formCheckPreto">
-                <input type="checkbox" name="formCheckPreto" id="formCheckPreto" value="formCheckPreto" />
+            <div id="formColor">
+              <!-- <label for="formColorPreto">
+                <input type="checkbox" name="formColor" id="formColorPreto" value="formPreto" />
                 Preto
-              </label>
+              </label> -->
             </div>
+          </fieldset>
 
-            <div>
-              <label for="formCheckAzul">
-                <input type="checkbox" name="formCheckAzul" id="formCheckAzul" value="formCheckAzul" />
-                Azul
-              </label>
+          <fieldset>
+            <legend>Adicional</legend>
+
+            <div id="formAdditional">
+              <!-- <label for="formAdditionalTetoSolar">
+                <input type="checkbox" name="formAdditional" id="formAdditionalTetoSolar" value="formAdditionalTetoSolar" />
+                Teto solar
+              </label> -->
             </div>
           </fieldset>
         </form>
@@ -280,21 +228,21 @@
               </div>
 
               <div>
-                <h1>Carros usados</h1>
+                <h1 id="catalogTitle">Carros</h1>
                 
                 <div class="option">
                   <img src="./img/icons/car.svg" alt="">
-                  <span>249 offers</span>
+                  <span id="qtdOffers">0 oferta(s)</span>
                 </div>
               </div>
               
               <div class="filteredCarsOptions">
                 <fieldset>
-                  <label for="formSelectSortBy">
+                  <label for="formSortBy">
                     <img src="./img/icons/align-left.svg" alt="">
                     Ordenar por:
                   </label>
-                  <select name="formSelectSortBy" id="formSelectSortBy">
+                  <select name="formSortBy" id="formSortBy">
                     <option value="maisnovo">Mais novo</option>
                     <option value="maisantigo">Mais antigo</option>
                   </select>
@@ -309,14 +257,14 @@
 
                 <fieldset class="radioBtnsGroup iconBtn">
                   <div>
-                    <input type="radio" id="formRadioShowList" name="formRadioStatus" checked />
-                    <label for="formRadioShowList">
+                    <input type="radio" id="formShowList" name="formStatus" checked />
+                    <label for="formShowList">
                       <img src="./img/icons/list.svg" alt="">
                     </label>
                   </div>
                   <div>
-                    <input type="radio" id="formRadioShowGrid" name="formRadioStatus" />
-                    <label for="formRadioShowGrid">
+                    <input type="radio" id="formShowGrid" name="formStatus" />
+                    <label for="formShowGrid">
                       <img src="./img/icons/grid.svg" alt="">
                     </label>
                   </div>
@@ -326,7 +274,7 @@
             </div>
 
             <div class="filteredCarsGrid">
-              <article class="carCardVertical">
+              <!-- <article class="carCardVertical">
 	
                 <div class="carCardThumbnail">
     
@@ -361,9 +309,9 @@
                     <span class="badge badgeNew">
                       Novo
                     </span>
-                    <!-- <span class="badge badgeUsed">
+                    <span class="badge badgeUsed">
                       Usado
-                    </span> -->
+                    </span>
                   </div>
                 </div>
     
@@ -423,290 +371,17 @@
                   </ul>
                 </div>
     
-              </article>
-    
-              <article class="carCardVertical">
-    
-                <div class="carCardThumbnail">
-    
-                  <div class="carCardSlider">
-                    <div class="mySlideList" id="car5">
-                      <a href="#" class="mySlide active" data-slide-index="1">
-                        <img src="./img/cars/car5.jpeg" alt="Imagem Carro" loading="lazy">
-                      </a>
-                    </div>
-    
-                    <button class="prevCardSlide" onclick="prevCardSlide('car5')">
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                    <button class="nextCardSlide" onclick="nextCardSlide('car5')">
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </div>
-    
-                  <button class="carCardWishlist">
-                    <img src="./img/icons/heart.svg" alt="">
-                  </button>
-    
-                  <div class="carCardBadges">
-                    <!-- <span class="badge badgeNew">
-                      Novo
-                    </span> -->
-                    <span class="badge badgeUsed">
-                      Usado
-                    </span>
-                  </div>
-                </div>
-    
-                <div class="carCardBody">
-                  <div class="carYearCompare">
-                    <div class="carYear">
-                      <small>
-                        1019
-                      </small>
-                    </div>
-    
-                    <label class="carCompare" for="carCompareCar1">
-                      <input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-                      <small>
-                        Compare
-                      </small>
-                    </label>
-                  </div>
-    
-                  <h3 class="carName">
-                    <a href="#">
-                      BMW 640 XI Gran Turismo 
-                    </a>
-                  </h3>
-    
-                  <p class="carPrice">
-                    <strong>
-                      $44,920
-                    </strong>
-                  </p>
-    
-                  <p class="carLocation">
-                    <img src="./img/icons/location.svg" alt="">
-                    <small>
-                      New Jersey
-                    </small>
-                  </p>
-    
-                </div>
-    
-                <div class="carCardFooter">
-                  <ul class="carInfos">
-                    <li title="mileage">
-                      <img src="./img/icons/mileage.svg" alt="">
-                      <small>10K mi</small>
-                    </li>
-    
-                    <li title="transmission">
-                      <img src="./img/icons/transmission.svg" alt="">
-                      <small>Automatic</small>
-                    </li>
-    
-                    <li title="fuel">
-                      <img src="./img/icons/fuel.svg" alt="">
-                      <small>Gasoline</small>
-                    </li>
-                  </ul>
-                </div>
-    
-              </article>
-    
-              <article class="carCardVertical">
-    
-                <div class="carCardThumbnail">
-    
-                  <div class="carCardSlider">
-                    <div class="mySlideList" id="car6">
-                      <a href="#" class="mySlide active" data-slide-index="1">
-                        <img src="./img/cars/car6.jpeg" alt="Imagem Carro" loading="lazy">
-                      </a>
-                    </div>
-    
-                    <button class="prevCardSlide" onclick="prevCardSlide('car6')">
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                    <button class="nextCardSlide" onclick="nextCardSlide('car6')">
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </div>
-    
-                  <button class="carCardWishlist">
-                    <img src="./img/icons/heart.svg" alt="">
-                  </button>
-    
-                  <div class="carCardBadges">
-                    <!-- <span class="badge badgeNew">
-                      Novo
-                    </span> -->
-                    <span class="badge badgeUsed">
-                      Usado
-                    </span>
-                  </div>
-                </div>
-    
-                <div class="carCardBody">
-                  <div class="carYearCompare">
-                    <div class="carYear">
-                      <small>
-                        1019
-                      </small>
-                    </div>
-    
-                    <label class="carCompare" for="carCompareCar1">
-                      <input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-                      <small>
-                        Compare
-                      </small>
-                    </label>
-                  </div>
-    
-                  <h3 class="carName">
-                    <a href="#">
-                      Nissan 370Z Nismo 
-                    </a>
-                  </h3>
-    
-                  <p class="carPrice">
-                    <strong>
-                      $37,900
-                    </strong>
-                  </p>
-    
-                  <p class="carLocation">
-                    <img src="./img/icons/location.svg" alt="">
-                    <small>
-                      New York
-                    </small>
-                  </p>
-    
-                </div>
-    
-                <div class="carCardFooter">
-                  <ul class="carInfos">
-                    <li title="mileage">
-                      <img src="./img/icons/mileage.svg" alt="">
-                      <small>16K mi</small>
-                    </li>
-    
-                    <li title="transmission">
-                      <img src="./img/icons/transmission.svg" alt="">
-                      <small>Automatic</small>
-                    </li>
-    
-                    <li title="fuel">
-                      <img src="./img/icons/fuel.svg" alt="">
-                      <small>Diesel</small>
-                    </li>
-                  </ul>
-                </div>
-    
-              </article>
-  
-              <article class="carCardVertical">
-  
-                <div class="carCardThumbnail">
-      
-                  <div class="carCardSlider">
-                    <div class="mySlideList" id="car7">
-                      <a href="#" class="mySlide active" data-slide-index="1">
-                        <img src="./img/cars/car2.jpeg" alt="Imagem Carro" loading="lazy">
-                      </a>
-                    </div>
-      
-                    <button class="prevCardSlide" onclick="prevCardSlide('car7')">
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                    <button class="nextCardSlide" onclick="nextCardSlide('car7')">
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </div>
-      
-                  <button class="carCardWishlist">
-                    <img src="./img/icons/heart.svg" alt="">
-                  </button>
-      
-                  <div class="carCardBadges">
-                    <!-- <span class="badge badgeNew">
-                      Novo
-                    </span> -->
-                    <span class="badge badgeUsed">
-                      Usado
-                    </span>
-                  </div>
-                </div>
-      
-                <div class="carCardBody">
-                  <div class="carYearCompare">
-                    <div class="carYear">
-                      <small>
-                        1995
-                      </small>
-                    </div>
-      
-                    <label class="carCompare" for="carCompareCar1">
-                      <input type="checkbox" id="carCompareCar1" name="carCompare" value="compare">
-                      <small>
-                        Compare
-                      </small>
-                    </label>
-                  </div>
-      
-                  <h3 class="carName">
-                    <a href="#">
-                      Ford Truck Lifted
-                    </a>
-                  </h3>
-      
-                  <p class="carPrice">
-                    <strong>
-                      $24,000
-                    </strong>
-                  </p>
-      
-                  <p class="carLocation">
-                    <img src="./img/icons/location.svg" alt="">
-                    <small>
-                      Chicago
-                    </small>
-                  </p>
-      
-                </div>
-      
-                <div class="carCardFooter">
-                  <ul class="carInfos">
-                    <li title="mileage">
-                      <img src="./img/icons/mileage.svg" alt="">
-                      <small>278K Mi</small>
-                    </li>
-      
-                    <li title="transmission">
-                      <img src="./img/icons/transmission.svg" alt="">
-                      <small>Manual</small>
-                    </li>
-      
-                    <li title="fuel">
-                      <img src="./img/icons/fuel.svg" alt="">
-                      <small>Diesel</small>
-                    </li>
-                  </ul>
-                </div>
-      
-              </article>
+              </article> -->
             </div>
 
             <div class="filteredCarsFooter">
               <div class="filteredCarsOptions">
                 <fieldset>
-                  <label for="formSelectSortBy">
+                  <label for="formSortBy">
                     <img src="./img/icons/align-left.svg" alt="">
                     Ordenar por:
                   </label>
-                  <select name="formSelectSortBy" id="formSelectSortBy">
+                  <select name="formSortBy" id="formSortBy">
                     <option value="maisnovo">Mais novo</option>
                     <option value="maisantigo">Mais antigo</option>
                   </select>
