@@ -14,6 +14,12 @@
 
   <title>Finder | E-Carros</title>
 
+  <!-- Ícones - Início -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/93a20b3367.js" crossorigin="anonymous"></script>
+  <!-- Ícones - Fim -->
+
   <!-- Scripts - Início -->
   <script src="./js/car-card-slider.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
@@ -28,7 +34,7 @@
 
       <aside>
         <form id="filtersFormAdvanced">
-          
+
           <fieldset id="formCondition" class="radioBtnsGroup">
             <!-- <div>
               <input
@@ -123,8 +129,7 @@
                 <label for="inputPreçoMin" class="visually-hidden">
                   Preço Min
                 </label>
-                <input type="number" name="inputPreçoMin" id="inputPreçoMin" placeholder="Ex.: 10000" min="0"
-                  value="" />
+                <input type="number" name="inputPreçoMin" id="inputPreçoMin" placeholder="Ex.: 10000" min="0" value="" />
               </div>
 
               <span class="separator"></span>
@@ -133,8 +138,7 @@
                 <label for="inputPreçoMax" class="visually-hidden">
                   Preço Max
                 </label>
-                <input type="number" name="inputPreçoMax" id="inputPreçoMax" placeholder="Ex.: 50000" min="0"
-                  value="" />
+                <input type="number" name="inputPreçoMax" id="inputPreçoMax" placeholder="Ex.: 50000" min="0" value="" />
               </div>
             </div>
 
@@ -210,71 +214,71 @@
       <main>
         <section id="filteredCars">
 
-            <div class="filteredCarsHeader">
+          <div class="filteredCarsHeader">
 
-              <div>
-                <ul class="breadcrumbs">
-                  <li>
-                    <a href="index.html">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" disabled>
-                      Carros usados
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h1 id="catalogTitle">Carros</h1>
-                
-                <div class="option">
-                  <img src="./img/icons/car.svg" alt="">
-                  <span id="qtdOffers">0 oferta(s)</span>
-                </div>
-              </div>
-              
-              <div class="filteredCarsOptions">
-                <fieldset>
-                  <label for="formSortBy">
-                    <img src="./img/icons/align-left.svg" alt="">
-                    Ordenar por:
-                  </label>
-                  <select name="formSortBy" id="formSortBy">
-                    <option value="maisnovo">Mais novo</option>
-                    <option value="maisantigo">Mais antigo</option>
-                  </select>
-                  
-                  <div class="btnCompare">
-                    <button>
-                      <img src="./img/icons/switch-horizontal.svg" alt="">
-                      Comparar (0)
-                    </button>
-                  </div>
-                </fieldset>
-
-                <fieldset class="radioBtnsGroup iconBtn">
-                  <div>
-                    <input type="radio" id="formShowList" name="formStatus" checked />
-                    <label for="formShowList">
-                      <img src="./img/icons/list.svg" alt="">
-                    </label>
-                  </div>
-                  <div>
-                    <input type="radio" id="formShowGrid" name="formStatus" />
-                    <label for="formShowGrid">
-                      <img src="./img/icons/grid.svg" alt="">
-                    </label>
-                  </div>
-                </fieldset>
-              </div>
-
+            <div>
+              <ul class="breadcrumbs">
+                <li>
+                  <a href="index.html">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" disabled>
+                    Carros usados
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <div class="filteredCarsGrid">
-              <!-- <article class="carCardVertical">
+            <div>
+              <h1 id="catalogTitle">Carros</h1>
+
+              <div class="option">
+                <img src="./img/icons/car.svg" alt="">
+                <span id="qtdOffers">0 oferta(s)</span>
+              </div>
+            </div>
+
+            <div class="filteredCarsOptions">
+              <fieldset>
+                <label for="formSortBy">
+                  <img src="./img/icons/align-left.svg" alt="">
+                  Ordenar por:
+                </label>
+                <select name="formSortBy" id="formSortBy">
+                  <option value="maisnovo">Mais novo</option>
+                  <option value="maisantigo">Mais antigo</option>
+                </select>
+
+                <div class="btnCompare">
+                  <button>
+                    <img src="./img/icons/switch-horizontal.svg" alt="">
+                    Comparar (0)
+                  </button>
+                </div>
+              </fieldset>
+
+              <fieldset class="radioBtnsGroup iconBtn">
+                <div>
+                  <input type="radio" id="formShowList" name="formStatus" checked />
+                  <label for="formShowList">
+                    <img src="./img/icons/list.svg" alt="">
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" id="formShowGrid" name="formStatus" />
+                  <label for="formShowGrid">
+                    <img src="./img/icons/grid.svg" alt="">
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+          </div>
+
+          <div class="filteredCarsGrid">
+            <!-- <article class="carCardVertical">
 	
                 <div class="carCardThumbnail">
     
@@ -372,74 +376,169 @@
                 </div>
     
               </article> -->
-            </div>
+          </div>
 
-            <div class="filteredCarsFooter">
-              <div class="filteredCarsOptions">
-                <fieldset>
-                  <label for="formSortBy">
-                    <img src="./img/icons/align-left.svg" alt="">
-                    Ordenar por:
-                  </label>
-                  <select name="formSortBy" id="formSortBy">
-                    <option value="maisnovo">Mais novo</option>
-                    <option value="maisantigo">Mais antigo</option>
-                  </select>
-                  
-                  <div class="btnCompare">
-                    <button>
-                      <img src="./img/icons/switch-horizontal.svg" alt="">
-                      Comparar (0)
-                    </button>
-                  </div>
-                </fieldset>
+          <div class="filteredCarsFooter">
+            <div class="filteredCarsOptions">
+              <fieldset>
+                <label for="formSortBy">
+                  <img src="./img/icons/align-left.svg" alt="">
+                  Ordenar por:
+                </label>
+                <select name="formSortBy" id="formSortBy">
+                  <option value="maisnovo">Mais novo</option>
+                  <option value="maisantigo">Mais antigo</option>
+                </select>
 
-                <ul class="pagination">
-                  <li>
-                    <button>
-                      <img src="./img/icons/chevron-left.svg" alt="">
-                    </button>
-                  </li>
-                  <li>
-                    <button class="active">
-                      <span>1</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <span>2</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <span>3</span>
-                    </button>
-                  </li>
-                  <li>
-                    <span>
-                      ...
-                    </span>
-                  </li>
-                  <li>
-                    <button>
-                      <span>8</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <img src="./img/icons/chevron-right.svg" alt="">
-                    </button>
-                  </li>
-                </ul>
-              </div>
+                <div class="btnCompare">
+                  <button>
+                    <img src="./img/icons/switch-horizontal.svg" alt="">
+                    Comparar (0)
+                  </button>
+                </div>
+              </fieldset>
+
+              <ul class="pagination">
+                <li>
+                  <button>
+                    <img src="./img/icons/chevron-left.svg" alt="">
+                  </button>
+                </li>
+                <li>
+                  <button class="active">
+                    <span>1</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span>2</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <span>3</span>
+                  </button>
+                </li>
+                <li>
+                  <span>
+                    ...
+                  </span>
+                </li>
+                <li>
+                  <button>
+                    <span>8</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <img src="./img/icons/chevron-right.svg" alt="">
+                  </button>
+                </li>
+              </ul>
             </div>
+          </div>
 
         </section>
       </main>
 
     </div>
   </div>
+  <footer>
+    <div class="container-footer link-content-head">
+      <div class="footer-links menuLogo">
+        <i class="fa fa-search"></i>
+        <p>Finder</p>
+      </div>
 
+      <div class="link-content">
+        <div class="footer-links dropdown">
+          <a href="#html"> <i class="bi bi-globe"></i> pt-BR <i class="bi bi-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a class="dropdown-links">EN-US</a>
+            <a class="dropdown-links">pt-PT</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#html"> | </a>
+        </div>
+        <div class="footer-links dropdown">
+          <a href="#html"><i class="bi bi-geo-alt"></i> São Paulo <i class="bi bi-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a class="dropdown-links">Rio de Janeiro</a>
+            <a class="dropdown-links">Santa Catarina</a>
+            <a class="dropdown-links">Florianópolis</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="divider"></div>
+    </div>
+
+    <div class="container-footer">
+      <div class="footer-links-news">
+        <h2>Cadastre-se na newsletter</h2>
+        <a>Não perca nenhuma oferta relevante!</a>
+        <form class="form-footer">
+          <input class="input-footer" href="#js" placeholder="Informe seu email"></input>
+          <button class="button-footer" type="submit">></button>
+        </form>
+      </div>
+      <div class="link-content-mid">
+        <div class="footer-links-mid">
+          <h3 href="#">Comprar ou Vender</h3>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+        </div>
+
+        <div class="footer-links-mid">
+          <h3 href="#">Sobre</h3>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+        </div>
+
+        <div class="footer-links-mid">
+          <h3 href="#">Perfil</h3>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+          <a href="#">Loren ipsun</a>
+        </div>
+      </div>
+      <div class="footer-links-adress">
+        <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> (11) 1111-1111</a>
+        <a class="mail-footer"><i class="bi bi-envelope"></i> email@finder.com.br</a>
+        <div>
+          <button class="link-button"><i class="bi bi-facebook"></i></button>
+          <button class="link-button"><i class="bi bi-twitter"></i></button>
+          <button class="link-button"><i class="bi bi-telegram"></i></button>
+          <button class="link-button"><i class="bi bi-messenger"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-footer">
+      <div class="footer-links">
+        <p class="p-footer">Copyright © Finder | Gama Academy. Todos os direitos reservados - Este é um projeto
+          acadêmico.</p>
+      </div>
+
+      <div class="link-content">
+        <div class="footer-links">
+          <p class="p-footer">Termos de uso</p>
+        </div>
+        <div class="footer-links">
+          <p class="p-footer">Política de privacidade</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
 </body>
 
 </html>
