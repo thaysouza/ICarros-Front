@@ -2350,3 +2350,15 @@ i .bi-telegram .bi-twitter .bi-facebook {
 }
 
 /* FOOTER - FIM */
+
+/* loading - INICIO */
+.centerPage{
+	justify-content: center;
+	margin-top: 30vh;
+}
+body { 
+	opacity: 1;
+	transition: opacity .5s;
+}
+/* loading - FIM */
+
