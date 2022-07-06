@@ -2,17 +2,62 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NVN32N6');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="pt-BR">
+
+  <title>Catalog - Finder</title>
+  <link rel="icon" type="image/png" href="./img/ico.png">
+  <link rel="canonical" href="https://icarros-front.vercel.app/" />
+
+  <meta name="description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Finder" />
+  <meta name="keywords" content="carros, veículos, automóveis, carros novos, carros usados, comprar, vender, facilidade, comparar, compre, venda, finder" />
+  <meta name="copyright" content="© 2022 | Finder" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+
+  <!-- OG Tags global - Início -->
+  <meta property="og:type" content="page" />
+  <meta property="og:url" content="https://icarros-front.vercel.app/" />
+  <meta property="og:site" content="https://icarros-front.vercel.app/" />
+  <meta property="og:site_name" content="Compre e venda carros com facilidade - Finder" />
+  <meta property="og:title" content="Compre e venda carros com facilidade - Finder" />
+  <meta property="og:image" content="./img/ico.png" />
+  <meta property="og:description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+  <!-- OG Tags global - Fim -->
+
+  <meta property="article:author" content="Finder" />
+
+  <!-- OG Tags Twitter - Início -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:title" content="Compre e venda carros com facilidade - Finder" />
+  <meta name="twitter:creator" content="@" />
+  <meta name="twitter:description" content="Compre e venda carros com facilidade no Finder, o mercado digital líder para a indústria automotiva que conecta compradores de carros a vendedores" />
+  <meta property="twitter:image" content="./img/ico.png" />
+  <!-- OG Tags Twitter - Fim -->
 
   <!-- CSS - Início-->
   <link rel="stylesheet" href="./styles/main.css" />
-  <link rel="stylesheet" href="./styles/index.css" />
   <link rel="stylesheet" href="./styles/catalog.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
   <!-- CSS - Fim  -->
-
-  <title>Finder | E-Carros</title>
 
   <!-- Ícones - Início -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,9 +70,68 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
   <script src="./js/catalog.js" defer></script>
   <!-- Scripts - Fim -->
+
+  <!-- Google search console-->
+	<meta name="google-site-verification" content="PABjd-2WP_OFeLFLH7s89PHlmHib54tWckkyzBKOUkM" />
+
+	<!-- Hotjar Tracking Code for https://icarros-front.vercel.app/ -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 3049894, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+  
 </head>
 
 <body>
+
+  <header>
+    <nav id="navHeader">
+			<div class="container">
+				<div class="navMenu">
+          <a href="index.html">
+            <img src="./img/logo-site.png" alt="Logo do site" />
+          </a>
+
+          <ul class="hidden-when-lg">
+            <li>|</li>
+            <li>
+              <a href="catalog.html?condicion=Novo">Novos</a>
+            </li>
+            <li>
+              <a href="catalog.html?condicion=Usado">Usados</a>
+            </li>
+            <li>
+              <a href="#">Vender</a>
+            </li>
+            <li>
+              <a href="catalog.html">Comprar</a>
+            </li>
+            <li>
+              <a href="#">Novidades e reviews</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="alignMenu">
+          <button class="myButton transparent">
+            <img src="./img/icons/user.svg" alt="" />
+            Entrar
+          </button>
+
+          <button class="myButton">
+            <img src="./img/icons/plus.svg" alt="" />
+            Vender
+          </button>
+        </div>
+			</div>
+		</nav>
+  </header>
 
   <div class="container">
     <div id="catalogPage">
@@ -443,102 +547,185 @@
 
     </div>
   </div>
-  <footer>
-    <div class="container-footer link-content-head">
-      <div class="footer-links menuLogo">
-        <i class="fa fa-search"></i>
-        <p>Finder</p>
-      </div>
 
-      <div class="link-content">
-        <div class="footer-links dropdown">
-          <a href="#html"> <i class="bi bi-globe"></i> pt-BR <i class="bi bi-caret-down"></i></a>
-          <div class="dropdown-content">
-            <a class="dropdown-links">EN-US</a>
-            <a class="dropdown-links">pt-PT</a>
+  <footer id="footer">
+    <div class="link-content-head">
+      <div class="container">
+        <a href="index.html">
+          <img src="./img/logo-site.png" alt="Logo do site" />
+        </a>
+
+        <fieldset>
+          <label for="languageSite">
+            <img src="./img/icons/globe.svg" alt="" />
+          </label>
+          <select name="languageSite" id="languageSite" onChange="">
+            <option value="0">pt-BR</option>
+            <option value="1">en-US</option>
+          </select>
+
+          <label for="locationSite">
+            <img src="./img/icons/pin.svg" alt="" />
+          </label>
+          <select name="locationSite" id="locationSite" onChange="">
+            <option value="0">São Paulo</option>
+            <option value="1">Brasiília</option>
+            <option value="2">Florianópolis</option>
+            <option value="3">João Pessoa</option>
+          </select>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="link-content-mid">
+      <div class="container">
+        <div class="footer-links-news">
+          <h2>Cadastre-se na newsletter</h2>
+          <p>Não perca nenhuma oferta relevante!</p>
+          <form id="subscribeForm">
+            <fieldset>
+              <div class="subscribeMail">
+                <label for="formCheckEmail">
+                  <img src="./img/icons/mail.svg" alt="" />
+          
+                  <input
+                    type="email"
+                    name="formCheckEmail"
+                    id="formCheckEmail"
+                    onChange=""
+                    placeholder="E-mail"
+                  />
+          
+                  <div class="subscribeButton">
+                    <button class="myButton" type="submit">
+                      <img src="./img//icons/send.svg" alt="" />
+                    </button>
+                  </div>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="footer-links-mid">
+          <h3>Comprar ou Vender</h3>
+
+          <a href="catalog.html">Encontre um carro</a>
+          <a href="#">Venda seu carro</a>
+          <a href="#">Revendedores de carros</a>
+          <a href="#">Comparar carros</a>
+          <a href="#">Avaliação de carros online</a>
+        </div>
+
+        <div class="footer-links-mid">
+          <h3>Sobre</h3>
+
+          <a href="#">Sobre o Finder</a>
+          <a href="#">Contate-nos</a>
+          <a href="#">FAQs & suporte</a>
+          <a href="#">App Mobile</a>
+          <a href="#">Blog</a>
+        </div>
+
+        <div class="footer-links-mid">
+          <h3>Perfil</h3>
+
+          <a href="#">Minha conta</a>
+          <a href="#">Lista de desejos</a>
+          <a href="#">Minhas listagens</a>
+          <a href="#">Add listagem</a>
+        </div>
+
+        <address class="footer-links-adress">
+          <a href="tel:+1111111111">
+            <img src="./img/icons/cellphone.svg" alt="" />
+            (11) 1111-1111
+            </a>
+            <a href="mailto:email@finder.com.br">
+            <img src="./img/icons/mail-2.svg" alt="" />
+            email@finder.com.br
+            </a>
+
+          <div class="social-btns">
+            <button class="iconButton">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.33187 2.32458H7.60996V0.0985833C7.38946 0.06825 6.63112 0 5.74796 0C3.90521 0 2.64288 1.15908 2.64288 3.28942V5.25H0.609375V7.7385H2.64288V14H5.13604V7.73908H7.08729L7.39704 5.25058H5.13546V3.53617C5.13604 2.81692 5.32971 2.32458 6.33187 2.32458Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+
+            <button class="iconButton">
+              <svg
+                width="14"
+                height="12"
+                viewBox="0 0 14 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5615 3.14925C13.1308 2.745 13.6097 2.24042 14 1.65942V1.65883C13.4791 1.88692 12.9249 2.03858 12.3463 2.11208C12.9412 1.75683 13.3957 1.19858 13.6092 0.526C13.0544 0.85675 12.4419 1.09008 11.7892 1.22075C11.2624 0.659583 10.5117 0.3125 9.69267 0.3125C8.10367 0.3125 6.82442 1.60225 6.82442 3.18308C6.82442 3.41058 6.84367 3.62933 6.89092 3.83758C4.50508 3.72092 2.39342 2.57758 0.97475 0.835167C0.727417 1.26508 0.581583 1.75683 0.581583 2.28592C0.581583 3.27992 1.09317 4.16075 1.85675 4.67117C1.39533 4.66242 0.94325 4.52825 0.56 4.31767V4.34917C0.56 5.74392 1.55458 6.90242 2.8595 7.16958C2.62558 7.23375 2.37125 7.26408 2.107 7.26408C1.92325 7.26408 1.73775 7.25358 1.56392 7.21508C1.9355 8.35142 2.99133 9.18733 4.2455 9.21475C3.269 9.97833 2.02883 10.4386 0.686583 10.4386C0.4515 10.4386 0.22575 10.4281 0 10.3995C1.27167 11.2191 2.77783 11.6875 4.403 11.6875C9.46808 11.6875 12.7692 7.46183 12.5615 3.14925Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+
+            <button class="iconButton">
+              <svg
+                width="14"
+                height="12"
+                viewBox="0 0 14 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.49335 7.85541L5.26177 11.1127C5.5931 11.1127 5.7366 10.9704 5.90869 10.7995L7.4621 9.31491L10.6809 11.6722C11.2713 12.0012 11.6872 11.8279 11.8464 11.1291L13.9593 1.22875L13.9599 1.22816C14.1471 0.355496 13.6443 0.0142463 13.0691 0.22833L0.649937 4.98308C-0.197646 5.31208 -0.184813 5.78458 0.505854 5.99866L3.68094 6.98625L11.056 2.3715C11.4031 2.14166 11.7187 2.26883 11.4591 2.49866L5.49335 7.85541Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+
+            <button class="iconButton">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 6.48142C0 8.52075 1.01733 10.3402 2.60808 11.5284V14L4.99158 12.6922C5.62742 12.8677 6.30117 12.9634 6.99942 12.9634C10.8652 12.9634 13.9994 10.0619 13.9994 6.482C14 2.90208 10.8657 0 7 0C3.13425 0 0 2.9015 0 6.48142H0ZM6.2615 4.66608L8.08733 6.56717L11.5214 4.66608L7.69475 8.72725L5.91267 6.82675L2.43425 8.72783L6.2615 4.66608Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
           </div>
-        </div>
-        <div class="footer-links">
-          <a href="#html"> | </a>
-        </div>
-        <div class="footer-links dropdown">
-          <a href="#html"><i class="bi bi-geo-alt"></i> São Paulo <i class="bi bi-caret-down"></i></a>
-          <div class="dropdown-content">
-            <a class="dropdown-links">Rio de Janeiro</a>
-            <a class="dropdown-links">Santa Catarina</a>
-            <a class="dropdown-links">Florianópolis</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="divider"></div>
-    </div>
-
-    <div class="container-footer">
-      <div class="footer-links-news">
-        <h2>Cadastre-se na newsletter</h2>
-        <a>Não perca nenhuma oferta relevante!</a>
-        <form class="form-footer">
-          <input class="input-footer" href="#js" placeholder="Informe seu email"></input>
-          <button class="button-footer" type="submit">></button>
-        </form>
-      </div>
-      <div class="link-content-mid">
-        <div class="footer-links-mid">
-          <h3 href="#">Comprar ou Vender</h3>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-        </div>
-
-        <div class="footer-links-mid">
-          <h3 href="#">Sobre</h3>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-        </div>
-
-        <div class="footer-links-mid">
-          <h3 href="#">Perfil</h3>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-          <a href="#">Loren ipsun</a>
-        </div>
-      </div>
-      <div class="footer-links-adress">
-        <a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> (11) 1111-1111</a>
-        <a class="mail-footer"><i class="bi bi-envelope"></i> email@finder.com.br</a>
-        <div>
-          <button class="link-button"><i class="bi bi-facebook"></i></button>
-          <button class="link-button"><i class="bi bi-twitter"></i></button>
-          <button class="link-button"><i class="bi bi-telegram"></i></button>
-          <button class="link-button"><i class="bi bi-messenger"></i></button>
-        </div>
+        </address>
       </div>
     </div>
 
-    <div class="container-footer">
-      <div class="footer-links">
-        <p class="p-footer">Copyright © Finder | Gama Academy. Todos os direitos reservados - Este é um projeto
-          acadêmico.</p>
-      </div>
+    <div class="link-content-footer">
+      <div class="container">
+        <p>
+          Copyright © Finder | Gama Academy. Todos os direitos reservados -
+          Este é um projeto acadêmico.
+        </p>
 
-      <div class="link-content">
-        <div class="footer-links">
-          <p class="p-footer">Termos de uso</p>
-        </div>
-        <div class="footer-links">
-          <p class="p-footer">Política de privacidade</p>
+        <div class="terms-and-politic">
+          <a href="#">Termos de uso</a>
+          <a href="#">Política de privacidade</a>
         </div>
       </div>
     </div>
-
   </footer>
+
 </body>
 
 </html>

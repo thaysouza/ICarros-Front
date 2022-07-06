@@ -442,7 +442,7 @@ async function updateCarsGrid() {
           .map((item, index) => {
             return `
                     <a
-                        href="single-item.html?car_id=${element.id}"
+                        href="car.html?car_id=${element.id}"
                         class="mySlide active"
                         data-slide-index="${index + 1}"
                         key="${index}"
@@ -513,7 +513,7 @@ async function updateCarsGrid() {
                         </div>
     
                         <h3 class="carName">
-                            <a href="single-item.html?car_id=${element.id}">
+                            <a href="car.html?car_id=${element.id}">
                                 ${element.model}
                             </a>
                         </h3>

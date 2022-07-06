@@ -1,0 +1,745 @@
+/* My Button - START */
+
+.myButton {
+  width: auto;
+  height: fit-content;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  gap: 0.6rem;
+}
+.myButton.transparent {
+  background: transparent;
+}
+
+.myButton:hover {
+  filter: brightness(95%);
+}
+
+/* My Button - END */
+
+/* Icon Button - START */
+
+.iconButton {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow-dafault);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.iconButton.btnWhite {
+  background: #fff;
+}
+
+.iconButton :is(img, svg, i) {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iconButton :is(img, svg, path, i) {
+  color: #fff;
+  fill: #fff;
+}
+
+.iconButton.btnWhite :is(img, svg, path, i) {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+.iconButton:hover {
+  background-color: #fff;
+}
+
+.iconButton:hover :is(img, svg, path, i) {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+/* Icon Button - END */
+
+/* Subscribe Mail - START */
+
+.subscribeMail {
+  display: flex;
+}
+
+.subscribeMail label {
+  position: relative;
+  flex: 1;
+  gap: 0;
+}
+
+.subscribeMail label > img {
+  position: absolute;
+  left: 1.6rem;
+}
+
+.subscribeMail input[type="email"] {
+  height: 100%;
+  padding-left: 5rem !important;
+  border-radius: 8px 0 0 8px;
+  border-right: none !important;
+}
+
+.subscribeMail input[type="email"]:focus {
+  border-right: none !important;
+}
+
+.subscribeMail input[type="email"]:focus + .subscribeButton {
+  outline: none !important;
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: var(--box-shadow-dafault);
+  border-left: none !important;
+}
+
+.subscribeMail .subscribeButton {
+  height: 100%;
+  padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0 8px 8px 0;
+  border-left: none !important;
+  margin: 0;
+}
+
+.subscribeMail :is(input[type="submit"], button, a) {
+  width: max-content;
+  font-size: 1.6rem;
+  /* padding: 1rem 2rem; */
+  padding: 1.5rem;
+}
+
+/* Subscribe Mail - END */
+
+/* Navbar - START */
+
+#navHeader {
+  color: white;
+  padding: 2rem 0;
+}
+
+#navHeader .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navHeader .navMenu {
+  display: flex;
+  align-items: center;
+}
+
+#navHeader .alignMenu {
+  display: flex;
+}
+
+#navHeader ul {
+  display: flex;
+  font-weight: 300;
+}
+
+#navHeader ul li {
+  margin: 0 25px 0 0;
+  cursor: pointer;
+}
+#navHeader ul li:nth-child(1) {
+  opacity: 0.15;
+  margin-right: 3rem;
+  margin-left: 5.8rem;
+  cursor: default;
+}
+
+/* Navbar - END */
+
+/* Footer - START */
+
+#footer {
+  width: 100%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+#footer :is(h2, h3, p) {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+#footer h2 {
+  font-size: 2rem;
+}
+
+#footer :is(p, small) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#footer :is(.link-content-head, .link-content-mid, .link-content-footer) {
+  width: 100%;
+}
+
+#footer
+  :is(.link-content-head, .link-content-mid, .link-content-footer)
+  .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+#footer :is(.link-content-head, .link-content-mid, .link-content-footer) a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#footer
+  :is(.link-content-head, .link-content-mid, .link-content-footer)
+  a:hover {
+  color: #fff;
+}
+
+@media (max-width: 556px) {
+  #footer
+    :is(.link-content-head, .link-content-mid, .link-content-footer)
+    .container {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#footer .link-content-head {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 3rem 0;
+}
+
+#footer .link-content-head .container {
+  align-items: center;
+}
+
+/* Options */
+#footer .link-content-head fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#footer .link-content-head select {
+  background-color: transparent;
+  /* border: none; */
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 0.8rem;
+  width: min-content;
+}
+
+#footer .link-content-mid {
+  padding: 5rem 0;
+}
+
+#footer
+  .link-content-mid
+  :is(.footer-links-news, .footer-links-mid, .footer-links-adress) {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+}
+
+#footer .link-content-mid .social-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 556px) {
+  #footer
+    .link-content-mid
+    :is(.footer-links-news, .footer-links-mid, .footer-links-adress) {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#footer .link-content-footer {
+  padding: 4.8rem 0;
+}
+
+#footer .link-content-footer .terms-and-politic {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Footer - END */
+
+/* CAR CARDS (VERTICAL AND HORIZONTAL) - START */
+
+.carCardVertical,
+.carCardHorizontal {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow-large);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-radius: 12px;
+  position: relative;
+  color: white;
+}
+
+/* Thumbnail */
+
+:is(.carCardVertical, .carCardHorizontal) .carCardThumbnail {
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+/* Slider */
+
+.carCardSlider,
+.mySlideList {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carCardSlider .mySlideList img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carCardThumbnail:hover .carCardSlider .mySlideList img {
+  /* Darkens the image when hovering */
+  filter: brightness(0.8);
+}
+
+.carCardSlider .mySlideList .mySlide {
+  /* Hide the images by default */
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carCardSlider .mySlideList .mySlide.active {
+  border: 2px solid var(--secondary-color);
+  opacity: 1;
+  display: flex;
+}
+
+.prevCardSlide,
+.nextCardSlide {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  transform: scale(0);
+  transition: transform linear 0.2s;
+  cursor: pointer;
+}
+
+.prevCardSlide {
+  left: 8px;
+}
+
+.nextCardSlide {
+  right: 8px;
+}
+
+:is(.prevCardSlide, .nextCardSlide):hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+:is(.prevCardSlide, .nextCardSlide) img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+}
+
+.carCardThumbnail:hover :is(.prevCardSlide, .nextCardSlide) {
+  transform: scale(1);
+}
+
+/* Wishlist */
+
+.carCardWishlist {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: var(--box-shadow-dafault);
+  padding: 8px;
+  transform: scale(0);
+  transition: all linear 0.2s;
+  cursor: pointer;
+}
+
+.carCardWishlist img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carCardThumbnail:hover .carCardWishlist {
+  transform: scale(1);
+}
+
+/* Badges */
+
+.carCardBadges {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.carCardBadges .badge {
+  padding: 2px 10px;
+  border-radius: 6px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.carCardBadges .badge.badgeNew {
+  background-color: var(--warning-color);
+}
+
+.carCardBadges .badge.badgeUsed {
+  background-color: var(--info-color);
+}
+
+/* Card body */
+
+.carCardBody {
+  padding: 20px 20px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.carYearCompare {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.carCompare {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.carCompare input {
+  width: 12px;
+  height: 12px;
+}
+
+.carCompare input[type="checkbox"]:not(:checked) {
+  all: unset;
+  width: 9.82px;
+  height: 9.82px;
+  padding: 0;
+  background-color: transparent;
+  border: 1.1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px !important;
+}
+
+.carCompare input[type="checkbox"] {
+  accent-color: var(--primary-color);
+}
+
+.carName {
+  max-width: 100%;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carName a {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.carLocation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.7);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.carPrice {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+/* Card Footer */
+
+.carCardFooter {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Car infos */
+
+.carInfos {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 16px;
+}
+
+.carInfos li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1f1b2d;
+  padding: 8px;
+  border-radius: 12px;
+  gap: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+
+  max-width: 100%;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carInfos li img {
+  width: 20px;
+}
+
+.carInfos li small {
+  max-width: 100%;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Making the horizontal card responsive */
+
+@media (min-width: 768px) {
+  .carCardHorizontal {
+    flex-direction: row;
+    max-height: 240px;
+  }
+
+  .carCardHorizontal .carCardThumbnail {
+    width: 100%;
+    max-width: 260px;
+    height: 100%;
+  }
+
+  .carCardHorizontal .carCardBodyFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+/* CAR CARDS (VERTICAL AND HORIZONTAL) - END */
+
+/* SECTION HEADER - START */
+
+.sectionHeader {
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+  align-items: flex-END;
+  gap: 2rem;
+}
+
+.sectionHeader a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.sectionHeader .sectionHeaderOptions {
+  display: flex;
+  margin-top: auto;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-START;
+    justify-content: flex-START;
+  }
+}
+
+/* SECTION HEADER - END */
+
+/* BREADCRUMBS - START */
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.8rem;
+}
+
+.breadcrumbs a {
+  font-size: 1.4rem !important;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child) a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  background-image: url("../img/icons/chevron-right.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  content: "";
+  margin-left: 0.8rem;
+}
+
+/* BREADCRUMBS - END */
+
+/* Radio Btns Group - START */
+
+.radioBtnsGroup {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem !important;
+}
+
+.radioBtnsGroup input[type="radio"] {
+  display: none;
+}
+
+.radioBtnsGroup input[type="radio"]:checked + label {
+  color: var(--primary-color);
+  background: white;
+}
+
+.radioBtnsGroup input[type="radio"]:checked + label :is(svg, path, i) {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+.radioBtnsGroup.iconBtn input[type="radio"]:checked + label {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.radioBtnsGroup.iconBtn label {
+  padding: 8px;
+  background: transparent;
+}
+
+.radioBtnsGroup label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 8px 16px;
+  color: white;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.radioBtnsGroup label:hover {
+  filter: brightness(0.9);
+}
+
+/* Radio Btns Group - END */

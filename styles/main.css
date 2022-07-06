@@ -54,14 +54,35 @@ html {
 body {
   color: var(--white);
   background: var(--gray-900);
+  overflow-x: hidden;
 }
 
-.container {
-  display: flex;
-  width: 100%;
-  max-width: 1296px;
-  margin: auto;
-  padding: 0 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
 }
 
 a {
@@ -82,11 +103,36 @@ button {
   color: var(--white);
 }
 
-.sectionTitle {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.8rem;
-  line-height: 130%;
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 7.2rem; */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 1.6rem;
+}
+
+section .container {
+  flex-direction: column;
+}
+
+.visually-hidden {
+  /* This class hides an element in all devices except for the Screen Readers */
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 @media (min-width: 768px) {
@@ -122,15 +168,121 @@ button {
   }
 }
 
-.visually-hidden {
-  /* This class hides an element in all devices except for the Screen Readers */
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+/* Form Fields */
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+fieldset {
+  width: auto;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+fieldset legend {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+
+fieldset > div > label {
+  margin-bottom: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+fieldset .doubleFields {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+fieldset .doubleFields > div {
+  width: 100%;
+}
+
+fieldset .doubleFields .separator {
+  width: 3rem;
+  margin: 0 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: white;
+
+  padding: 1.25rem 1.6rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: fit-content;
+}
+
+input[type="checkbox"]:not(:checked) {
+  all: unset;
+  width: 9.82px;
+  height: 9.82px;
+  padding: 0;
+  background-color: transparent;
+  border: 1.1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px !important;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--primary-color);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 1.2rem) center !important;
+  background: rgba(255, 255, 255, 0.04) url("../img/icons/chevron-down.svg")
+    no-repeat;
+  padding-right: 3rem;
+}
+
+select option {
+  color: initial;
+}
+
+select::-ms-expand {
+  /* To remove the arrow of select element in IE */
+  display: none;
+}
+
+:is(input, textarea, select):focus {
+  outline: none !important;
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: var(--box-shadow-dafault);
+}
+:is(input, textarea, select):disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+:is(input, textarea):-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+:is(input, textarea)::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
